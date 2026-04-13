@@ -1,0 +1,114 @@
+.section {
+  background: #0a0a0a;
+  padding: clamp(6rem, 10vw, 12rem) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.statsBlock {
+  width: 100%;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statValue {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  color: #f0efe8;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.description {
+  font-size: 18px;
+  color: #888;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.timeCard {
+  background: #151515;
+  border: 1px solid #1e1e1e;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.timeTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0efe8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.timeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.timeRow:last-child {
+  border-bottom: none;
+}
+
+.timeLabel {
+  font-size: 14px;
+  color: #888;
+}
+
+.timeValue {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f0efe8;
+}
+
+.timeValueGreen {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF4B1F;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .section {
+    padding: clamp(4rem, 8vw, 8rem) 0;
+  }
+}

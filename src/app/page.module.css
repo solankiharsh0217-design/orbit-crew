@@ -1,0 +1,210 @@
+.main {
+  width: 100%;
+}
+
+/* Services Section */
+.servicesSection {
+  background-color: var(--color-bg-light);
+  padding: clamp(6rem, 10vw, 12rem) 0;
+}
+
+.sectionHeader {
+  margin-bottom: 80px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.serviceItem {
+  background: #111;
+  padding: 60px;
+  border-radius: 8px;
+  transition: transform 0.6s var(--transition-smooth);
+}
+
+.serviceItem:hover {
+  transform: translateY(-10px);
+}
+
+.serviceTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  opacity: 0.3;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.serviceItem:hover .serviceNumber {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+.serviceArrow {
+  color: var(--color-text-white);
+  opacity: 0.3;
+  transform: rotate(-45deg);
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.serviceItem:hover .serviceArrow {
+  opacity: 1;
+  transform: rotate(0) translateX(5px);
+  color: var(--color-accent);
+}
+
+.deliverables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  background: rgba(255, 75, 31, 0.15);
+  color: var(--color-accent);
+  border-radius: 4px;
+}
+
+/* Work Section */
+.workSection {
+  background: var(--color-bg-dark);
+  padding: clamp(6rem, 10vw, 12rem) 0;
+  min-height: 150vh;
+}
+
+.workStickyTitle {
+  margin-bottom: 80px;
+}
+
+.workCards {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.workCard {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 80px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.workCardContent {
+  max-width: 600px;
+}
+
+.workCat {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+}
+
+.workCardContent h3 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #f0efe8;
+  margin: 16px 0;
+}
+
+.workCardContent p {
+  font-size: 1.1rem;
+  color: #f0efe8;
+  opacity: 0.6;
+}
+
+/* Clients Section */
+.clientsSection {
+  padding: 10vw 0;
+  background: var(--color-bg-dark);
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2px;
+  background: rgba(0,0,0,0.1);
+}
+
+.clientItem {
+  background: #111;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-white);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.clientItem:hover {
+  opacity: 1;
+}
+
+/* CTA Section */
+.ctaSection {
+  position: relative;
+  padding: 15vw 0;
+  background: var(--color-bg-dark);
+  overflow: hidden;
+  text-align: center;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.dotGrid {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--color-accent) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .workCard {
+    padding: 48px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceItem {
+    padding: 40px;
+  }
+  
+  .workCard {
+    padding: 32px;
+  }
+}

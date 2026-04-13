@@ -1,0 +1,136 @@
+.section {
+  background: #0a0a0a;
+  padding: clamp(6rem, 10vw, 12rem) 0;
+}
+
+.header {
+  margin-bottom: 64px;
+}
+
+.header .label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #f0efe8;
+  margin-top: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.itemHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #1e1e1e;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  text-align: left;
+  background: transparent;
+  color: #f0efe8;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.itemHeader:hover {
+  opacity: 0.7;
+}
+
+.number {
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+}
+
+.name {
+  flex: 1;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: #888;
+  min-width: 32px;
+  transition: transform 0.3s ease;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+.content {
+  overflow: hidden;
+}
+
+.contentInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+.subServices {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subServices li {
+  font-size: 16px;
+  color: #888;
+  position: relative;
+  padding-left: 20px;
+}
+
+.subServices li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #FF4B1F;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .itemHeader {
+    gap: 16px;
+    padding: 24px 0;
+  }
+  
+  .contentInner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .section {
+    padding: clamp(4rem, 8vw, 8rem) 0;
+  }
+}
