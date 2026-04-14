@@ -48,7 +48,7 @@ export default function Process() {
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" as const }}
               >
                 <span className={styles.stepNumber}>{step.number}</span>
                 <h3 className={styles.stepTitle}>{step.title}</h3>

@@ -77,8 +77,8 @@ export default function Services() {
                       animate="open"
                       exit="collapsed"
                       variants={{
-                        open: { opacity: 1, height: "auto", transition: { duration: 0.5, ease: "easeOut" } },
-                        collapsed: { opacity: 0, height: 0, transition: { duration: 0.4, ease: "easeIn" } }
+                        open: { opacity: 1, height: "auto", transition: { duration: 0.5, ease: "easeOut" as const } },
+                        collapsed: { opacity: 0, height: 0, transition: { duration: 0.4, ease: "easeIn" as const } }
                       }}
                       className={styles.content}
                       style={{ overflow: 'hidden' }}

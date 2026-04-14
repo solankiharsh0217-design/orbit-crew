@@ -30,7 +30,7 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
       initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
       whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] as const }}
     >
       {children}
     </motion.div>
@@ -128,7 +128,7 @@ export default function Home() {
           initial={{ y: -100 }}
           whileInView={{ y: 100 }}
           viewport={{ margin: "200px", once: false }}
-          transition={{ ease: "linear", duration: 1.5 }}
+          transition={{ ease: "linear" as const, duration: 1.5 }}
           style={{ position: 'absolute', top: -150, left: 0, width: '100%', height: 'calc(100% + 300px)' }}
         >
           <img 

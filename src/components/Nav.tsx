@@ -19,8 +19,8 @@ const socialLinks = [
 ]
 
 const overlayVariants = {
-  closed: { x: '100%', transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } },
-  open: { x: '0%', transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } }
+  closed: { x: '100%', transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] as const } },
+  open: { x: '0%', transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] as const } }
 }
 
 const linkVars = {
@@ -28,7 +28,7 @@ const linkVars = {
   open: (i: number) => ({
     opacity: 1, 
     y: 0, 
-    transition: { delay: 0.2 + (i * 0.08), duration: 0.5, ease: 'easeOut' }
+    transition: { delay: 0.2 + (i * 0.08), duration: 0.5, ease: 'easeOut' as const }
   })
 }
 

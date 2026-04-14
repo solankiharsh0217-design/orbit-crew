@@ -23,7 +23,7 @@ const charVars = {
   visible: { 
     y: 0, 
     opacity: 1, 
-    transition: { ease: [0.16, 1, 0.3, 1], duration: 1 } 
+    transition: { ease: [0.16, 1, 0.3, 1] as const, duration: 1 } 
   }
 }
 
@@ -32,7 +32,7 @@ const subtextVars = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { delay: 0.4, ease: "easeOut", duration: 0.8 } 
+    transition: { delay: 0.4, ease: "easeOut" as const, duration: 0.8 } 
   }
 }
 

@@ -28,7 +28,7 @@ export default function ProjectGrid() {
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" as const }}
             >
               <Link href="/work" className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
