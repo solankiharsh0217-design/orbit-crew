@@ -1,14 +1,8 @@
 'use client'
 
-import { useRef } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './ProjectGrid.module.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   { number: '01', name: 'E-commerce Platform Build', tag: 'White-label dev', image: '/images/project-1.png' },
@@ -18,32 +12,6 @@ const projects = [
 ]
 
 export default function ProjectGrid() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const cardsRef = useRef<HTMLDivElement[]>([])
-
-  useGSAP(() => {
-    cardsRef.current.forEach((card, i) => {
-      if (!card) return
-      
-      gsap.fromTo(
-        card,
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          delay: i * 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      )
-    })
-  }, { scope: containerRef })
-
   return (
     <section className={styles.section}>
       <div className="container">
@@ -52,12 +20,15 @@ export default function ProjectGrid() {
           <h2 className={styles.title}>Execution delivered for agency partners</h2>
         </div>
 
-        <div ref={containerRef} className={styles.grid}>
+        <div className={styles.grid}>
           {projects.map((project, i) => (
-            <div 
+            <motion.div 
               key={i} 
-              ref={(el) => { if (el) cardsRef.current[i] = el }}
-              className={`${styles.card} glass-card interactive-hover`}
+              className={`${styles.card} glass-card`}
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
             >
               <Link href="/work" className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
@@ -73,17 +44,12 @@ export default function ProjectGrid() {
                     <span className={styles.tag}>{project.tag}</span>
                   </div>
                   <h3 className={styles.projectName}>{project.name}</h3>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    style={{ color: '#e8533a' }}
-                    className={styles.viewLink}
-                  >
+                  <div className={styles.viewLink}>
                     Delivered white-label →
-                  </motion.div>
+                  </div>
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -52,33 +52,38 @@ function CapabilityCard({ cap, i }: { cap: any, i: number }) {
   const rotateX = useSpring(mouseY, { stiffness: 300, damping: 20 });
   const rotateY = useSpring(mouseX, { stiffness: 300, damping: 20 });
 
+  const slug = cap.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
   return (
     <Reveal delay={i * 0.1}>
-      <motion.div 
-        className={`${styles.capabilityItem} glass-card interactive-hover`}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={() => {
-          mouseX.set(0);
-          mouseY.set(0);
-        }}
-        style={{
-          rotateX,
-          rotateY,
-          transformPerspective: 1000,
-        }}
-      >
-        <div className={styles.capabilityTop}>
-          <span className={styles.capabilityNumber}>{cap.number}</span>
-          <ArrowRight className={styles.capabilityArrow} size={32} />
-        </div>
-        <h3 className="h3" style={{ margin: '24px 0 16px' }}>{cap.title}</h3>
-        <p className="body-large" style={{ opacity: 0.6 }}>{cap.desc}</p>
-        <div className={styles.deliverables}>
-          {cap.deliverables.map((d: string, j: number) => (
-            <span key={j} className={styles.tag}>{d}</span>
-          ))}
-        </div>
-      </motion.div>
+      <Link href={`/capabilities/${slug}`} style={{ textDecoration: 'none', height: '100%', display: 'flex' }}>
+        <motion.div 
+          className={`${styles.capabilityItem} glass-card interactive-hover`}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={() => {
+            mouseX.set(0);
+            mouseY.set(0);
+          }}
+          style={{
+            rotateX,
+            rotateY,
+            transformPerspective: 1000,
+            width: '100%',
+          }}
+        >
+          <div className={styles.capabilityTop}>
+            <span className={styles.capabilityNumber}>{cap.number}</span>
+            <ArrowRight className={styles.capabilityArrow} size={32} />
+          </div>
+          <h3 className="h3" style={{ margin: '24px 0 16px' }}>{cap.title}</h3>
+          <p className="body-large" style={{ opacity: 0.6 }}>{cap.desc}</p>
+          <div className={styles.deliverables}>
+            {cap.deliverables.map((d: string, j: number) => (
+              <span key={j} className={styles.tag}>{d}</span>
+            ))}
+          </div>
+        </motion.div>
+      </Link>
     </Reveal>
   )
 }

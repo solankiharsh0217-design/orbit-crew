@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import CountUp from 'react-countup'
-import { useInView } from 'react-intersection-observer'
+import { useInView } from 'framer-motion'
 import styles from './Stats.module.css'
 
 const stats = [
@@ -15,10 +15,8 @@ const stats = [
 export default function Stats() {
   const [localTime, setLocalTime] = useState('')
   const [userTime, setUserTime] = useState('')
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  })
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, amount: 0.3 })
 
   useEffect(() => {
     const updateTimes = () => {
@@ -56,9 +54,9 @@ export default function Stats() {
                   <span className={styles.statValue}>
                     {inView ? (
                       <CountUp
-                        end={stat.value}
-                        duration={2}
-                        delay={i * 0.2}
+                         end={stat.value}
+                         duration={2}
+                         delay={i * 0.2}
                       />
                     ) : (
                       0

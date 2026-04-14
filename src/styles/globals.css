@@ -22,7 +22,6 @@
 html {
   scroll-behavior: auto;
   background-color: var(--color-bg-dark);
-  cursor: none; /* Hide default cursor since we use custom */
 }
 
 body {
@@ -33,7 +32,6 @@ body {
   background-color: var(--color-bg-dark);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  cursor: none;
 }
 
 /* Aurora Background */

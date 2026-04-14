@@ -59,6 +59,7 @@
   align-items: center;
   text-align: center;
   padding: 0 16px;
+  height: 100%;
 }
 
 .stepNumber {

@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
+import { motion, AnimatePresence } from 'framer-motion'
 import styles from './Nav.module.css'
 
 const navLinks = [
@@ -19,60 +18,22 @@ const socialLinks = [
   { name: 'Instagram', href: '#' },
 ]
 
+const overlayVariants = {
+  closed: { x: '100%', transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } },
+  open: { x: '0%', transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } }
+}
+
+const linkVars = {
+  closed: { opacity: 0, y: 40 },
+  open: (i: number) => ({
+    opacity: 1, 
+    y: 0, 
+    transition: { delay: 0.2 + (i * 0.08), duration: 0.5, ease: 'easeOut' }
+  })
+}
+
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
-  const overlayRef = useRef<HTMLDivElement>(null)
-  const linksRef = useRef<HTMLDivElement>(null)
-  const socialRef = useRef<HTMLDivElement>(null)
-  const ctaRef = useRef<HTMLDivElement>(null)
-  const closeRef = useRef<HTMLButtonElement>(null)
-
-  useGSAP(() => {
-    if (isOpen) {
-      gsap.to(overlayRef.current, {
-        x: '0%',
-        duration: 0.6,
-        ease: 'power4.inOut',
-      })
-      
-      gsap.fromTo(
-        closeRef.current,
-        { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 0.4, delay: 0.3 }
-      )
-
-      gsap.fromTo(
-        linksRef.current?.children || [],
-        { opacity: 0, y: 40 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          duration: 0.5, 
-          stagger: 0.08,
-          delay: 0.2,
-          ease: 'power3.out'
-        }
-      )
-
-      gsap.fromTo(
-        ctaRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.4, delay: 0.5 }
-      )
-
-      gsap.fromTo(
-        socialRef.current?.children || [],
-        { opacity: 0 },
-        { opacity: 1, duration: 0.3, stagger: 0.05, delay: 0.6 }
-      )
-    } else {
-      gsap.to(overlayRef.current, {
-        x: '100%',
-        duration: 0.6,
-        ease: 'power4.inOut',
-      })
-    }
-  }, [isOpen])
 
   useEffect(() => {
     if (isOpen) {
@@ -100,48 +61,60 @@ export default function Nav() {
         </button>
       </nav>
 
-      <div 
-        ref={overlayRef}
-        className={styles.overlay}
-        style={{ transform: 'translateX(100%)' }}
-      >
-        <button 
-          ref={closeRef}
-          className={styles.closeBtn}
-          onClick={() => setIsOpen(false)}
-        >
-          Close
-        </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            className={styles.overlay}
+            variants={overlayVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+          >
+            <motion.button 
+              className={styles.closeBtn}
+              onClick={() => setIsOpen(false)}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+            >
+              Close
+            </motion.button>
 
-        <div className={styles.content}>
-          <div ref={linksRef} className={styles.links}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={styles.navLink}
-                onClick={() => setIsOpen(false)}
+            <div className={styles.content}>
+              <div className={styles.links}>
+                {navLinks.map((link, i) => (
+                  <motion.div custom={i} variants={linkVars} initial="closed" animate="open" exit="closed" key={link.name}>
+                    <Link
+                      href={link.href}
+                      className={styles.navLink}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div 
+                className={styles.socials}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
               >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          
-
-          <div ref={socialRef} className={styles.socials}>
-            {socialLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className={styles.socialLink}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+                {socialLinks.map((link) => (
+                  <a 
+                    key={link.name} 
+                    href={link.href} 
+                    className={styles.socialLink}
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

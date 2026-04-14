@@ -16,12 +16,19 @@
   margin-top: 48px;
 }
 
+.modelsGrid > div {
+  height: 100%;
+}
+
 .modelCard {
   background: #111;
   padding: 32px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: transform 0.4s var(--transition-smooth), border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .modelCard:hover {

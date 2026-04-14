@@ -4,7 +4,6 @@ import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
-import CustomCursor from '@/components/CustomCursor'
 
 const syne = Syne({ 
   subsets: ['latin'],
@@ -32,7 +31,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.variable} ${inter.variable}`}>
         <div className="aurora-bg" />
-        <CustomCursor />
         <SmoothScroll>
           <Nav />
           <main>{children}</main>
