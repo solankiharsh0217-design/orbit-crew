@@ -1,10 +1,10 @@
 .marquee {
   width: 100%;
   overflow: hidden;
-  background: #0a0a0a;
-  border-top: 1px solid #1e1e1e;
-  border-bottom: 1px solid #1e1e1e;
-  padding: 14px 0;
+  background: var(--color-bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 0;
 }
 
 .track {
@@ -14,13 +14,14 @@
 }
 
 .item {
-  font-size: 13px;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #888;
+  letter-spacing: 0.1em;
+  color: #666;
   white-space: nowrap;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 @keyframes scroll {

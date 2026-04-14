@@ -11,10 +11,10 @@ import styles from './ProjectGrid.module.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
-  { number: '01', name: 'Scaled Agency 4x', tag: 'Webflow + AI', image: '/images/project-1.png' },
-  { number: '02', name: '12 Pages in 3 Weeks', tag: 'Landing Pages', image: '/images/project-2.png' },
-  { number: '03', name: 'SaaS MVP in 8 Weeks', tag: 'Product Design', image: '/images/project-3.png' },
-  { number: '04', name: 'Brand Identity System', tag: 'Branding', image: '/images/project-1.png' },
+  { number: '01', name: 'E-commerce Platform Build', tag: 'White-label dev', image: '/images/project-1.png' },
+  { number: '02', name: '12 Landing Pages in 3 Weeks', tag: 'Execution support', image: '/images/project-2.png' },
+  { number: '03', name: 'SaaS MVP in 8 Weeks', tag: 'Development partner', image: '/images/project-3.png' },
+  { number: '04', name: 'Webflow Migration', tag: 'Agency delivery', image: '/images/project-1.png' },
 ]
 
 export default function ProjectGrid() {
@@ -49,7 +49,7 @@ export default function ProjectGrid() {
       <div className="container">
         <div className={styles.header}>
           <span className="label" style={{ color: '#888' }}>Portfolio</span>
-          <h2 className={styles.title}>Selected Work</h2>
+          <h2 className={styles.title}>Execution delivered for agency partners</h2>
         </div>
 
         <div ref={containerRef} className={styles.grid}>
@@ -57,7 +57,7 @@ export default function ProjectGrid() {
             <div 
               key={i} 
               ref={(el) => { if (el) cardsRef.current[i] = el }}
-              className={styles.card}
+              className={`${styles.card} glass-card interactive-hover`}
             >
               <Link href="/work" className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
@@ -79,7 +79,7 @@ export default function ProjectGrid() {
                     style={{ color: '#e8533a' }}
                     className={styles.viewLink}
                   >
-                    View Project →
+                    Delivered white-label →
                   </motion.div>
                 </div>
               </Link>

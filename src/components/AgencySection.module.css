@@ -1,0 +1,93 @@
+.notAgency {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: var(--color-bg-light);
+  text-align: center;
+}
+
+.partnership {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: var(--color-bg-dark);
+}
+
+.modelsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.modelCard {
+  background: #111;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s var(--transition-smooth), border-color 0.4s ease;
+}
+
+.modelCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 75, 31, 0.3);
+}
+
+.modelNumber {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.builtForAgencies {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: var(--color-bg-light);
+}
+
+.bulletsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 48px;
+  margin-top: 48px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #f0efe8;
+}
+
+.check {
+  color: var(--color-accent);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .modelsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bulletsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .modelsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modelCard {
+    padding: 24px;
+  }
+  
+  .bulletsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

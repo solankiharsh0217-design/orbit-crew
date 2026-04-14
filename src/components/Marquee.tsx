@@ -1,13 +1,13 @@
 import styles from './Marquee.module.css'
 
 const items = [
-  'WE ARE ORBITCREW',
+  'WHITE-LABEL EXECUTION',
   '◆',
-  'QUALITY-FIRST STUDIO',
+  'AGENCY PARTNERS',
   '◆',
-  'BRAND IDENTITY',
+  'SCALABLE DELIVERY',
   '◆',
-  'DIGITAL DESIGN',
+  'NO CLIENT POACHING',
   '◆',
 ]
 

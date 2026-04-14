@@ -1,17 +1,44 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion } from 'framer-motion'
+import { useRef, useEffect } from 'react'
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import styles from './Hero.module.css'
+
+const trustSignals = [
+  '100% white-label',
+  'Built for agencies only',
+  'No client poaching',
+  'Flexible delivery capacity',
+]
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const charsRef = useRef<HTMLSpanElement[]>([])
   const subtextRef = useRef<HTMLParagraphElement>(null)
 
-  const heading = "OrbitCrew."
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+
+  const springX = useSpring(mouseX, { stiffness: 100, damping: 30 })
+  const springY = useSpring(mouseY, { stiffness: 100, damping: 30 })
+
+  const img1X = useTransform(springX, [-500, 500], [-30, 30])
+  const img1Y = useTransform(springY, [-500, 500], [-30, 30])
+  const img2X = useTransform(springX, [-500, 500], [50, -50])
+  const img2Y = useTransform(springY, [-500, 500], [50, -50])
+
+  useEffect(() => {
+    const handleMouse = (e: MouseEvent) => {
+      mouseX.set(e.clientX - window.innerWidth / 2)
+      mouseY.set(e.clientY - window.innerHeight / 2)
+    }
+    window.addEventListener('mousemove', handleMouse)
+    return () => window.removeEventListener('mousemove', handleMouse)
+  }, [mouseX, mouseY])
+
+  const heading = "Agencies win. We deliver."
 
   useGSAP(() => {
     gsap.fromTo(
@@ -44,6 +71,20 @@ export default function Hero() {
       <div className={styles.overlay} />
       <img src="/images/hero-main.png" alt="OrbitCrew" className={styles.heroImage} />
       
+      {/* Floating Interactive Images */}
+      <motion.img 
+        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" 
+        className={`${styles.floatingImage} ${styles.float1}`}
+        style={{ x: img1X, y: img1Y }}
+        alt="abstract bubble"
+      />
+      <motion.img 
+        src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop" 
+        className={`${styles.floatingImage} ${styles.float2}`}
+        style={{ x: img2X, y: img2Y }}
+        alt="abstract grid"
+      />
+      
       <div className={styles.content}>
         <h1 className={styles.heading}>
           {heading.split('').map((char, i) => (
@@ -58,8 +99,16 @@ export default function Hero() {
         </h1>
         
         <p ref={subtextRef} className={styles.subtext}>
-          We design brands and interactive experiences for fast-growing startups
+          A white-label execution partner helping agencies scale delivery without hiring in-house developers.
         </p>
+
+        <div className={styles.trustSignals}>
+          {trustSignals.map((signal, i) => (
+            <span key={i} className={styles.trustBadge}>
+              {signal}
+            </span>
+          ))}
+        </div>
       </div>
 
       <motion.div 
@@ -67,7 +116,7 @@ export default function Hero() {
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >
-        <span className={styles.exploreLabel}>Explore</span>
+        <span className={styles.exploreLabel}>Partner with us</span>
         <svg 
           width="20" 
           height="20" 

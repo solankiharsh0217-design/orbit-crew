@@ -1,9 +1,10 @@
 :root {
-  --color-bg-dark: #0a0a0a;
-  --color-bg-light: #0a0a0a;
+  --color-bg-dark: #050505;
+  --color-bg-light: rgba(17, 17, 17, 0.4);
   --color-text-white: #f0efe8;
   --color-text-black: #f0efe8;
   --color-accent: #FF4B1F;
+  --color-purple: #6B21A8;
   
   --font-display: var(--font-display), sans-serif;
   --font-body: var(--font-body), sans-serif;
@@ -21,6 +22,7 @@
 html {
   scroll-behavior: auto;
   background-color: var(--color-bg-dark);
+  cursor: none; /* Hide default cursor since we use custom */
 }
 
 body {
@@ -31,7 +33,62 @@ body {
   background-color: var(--color-bg-dark);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  cursor: none;
 }
+
+/* Aurora Background */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--color-bg-dark);
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: float 20s infinite ease-in-out alternate;
+}
+
+.aurora-bg::before {
+  top: -10vw;
+  left: -10vw;
+  background: var(--color-accent);
+}
+
+.aurora-bg::after {
+  bottom: -10vw;
+  right: -10vw;
+  background: var(--color-purple);
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10vw, 5vh) scale(1.1); }
+  100% { transform: translate(-5vw, 15vh) scale(0.9); }
+}
+
+/* Glass UI Classes */
+.glass-card {
+  background: linear-gradient(145deg, rgba(20,20,20, 0.6), rgba(5,5,5, 0.8));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 
 a {
   color: inherit;
@@ -58,6 +115,16 @@ img {
   letter-spacing: -0.06em;
   line-height: 0.85;
   text-transform: uppercase;
+  background: linear-gradient(90deg, #f0efe8, #888, #f0efe8);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
 }
 
 .h1 {

@@ -8,12 +8,13 @@
   flex-direction: column;
   text-align: center;
   overflow: hidden;
+  padding: 120px 24px 80px;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #080808, #111);
+  background: linear-gradient(to bottom, transparent, rgba(5,5,5,0.8));
   z-index: 0;
 }
 
@@ -23,23 +24,53 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.3;
   z-index: 0;
+}
+
+.floatingImage {
+  position: absolute;
+  border-radius: 20px;
+  object-fit: cover;
+  opacity: 0.25;
+  filter: blur(4px) saturate(1.5);
+  z-index: 0;
+  pointer-events: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.float1 {
+  top: 15%;
+  left: 10%;
+  width: clamp(200px, 20vw, 400px);
+  height: clamp(300px, 30vw, 500px);
+  transform: rotate(-10deg);
+}
+
+.float2 {
+  bottom: 10%;
+  right: 5%;
+  width: clamp(250px, 25vw, 450px);
+  height: clamp(250px, 25vw, 450px);
+  border-radius: 50%;
+  transform: rotate(15deg);
 }
 
 .content {
   position: relative;
   z-index: 1;
+  max-width: 900px;
 }
 
 .heading {
   font-family: var(--font-display);
-  font-size: clamp(60px, 10vw, 160px);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
   color: #f0efe8;
-  line-height: 0.95;
+  line-height: 1;
   letter-spacing: -0.03em;
   overflow: hidden;
+  text-shadow: 0 0 40px rgba(255, 75, 31, 0.4), 0 0 80px rgba(107, 33, 168, 0.3);
 }
 
 .char {
@@ -49,11 +80,31 @@
 
 .subtext {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   color: #888;
-  max-width: 400px;
+  max-width: 500px;
   margin: 24px auto 0;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.trustSignals {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.trustBadge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: #f0efe8;
 }
 
 .explore {
@@ -77,7 +128,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 24px;
+    padding: 100px 24px 60px;
   }
   
   .subtext {
@@ -86,5 +137,14 @@
   
   .explore {
     bottom: 32px;
+  }
+  
+  .trustSignals {
+    gap: 8px;
+  }
+  
+  .trustBadge {
+    padding: 6px 12px;
+    font-size: 10px;
   }
 }

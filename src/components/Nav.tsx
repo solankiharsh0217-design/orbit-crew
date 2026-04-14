@@ -8,12 +8,15 @@ import styles from './Nav.module.css'
 
 const navLinks = [
   { name: 'Home', href: '/' },
+  { name: 'For Agencies', href: '/agencies' },
+  { name: 'Execution', href: '/work' },
+  { name: 'Partner', href: '/contact' },
 ]
 
 const socialLinks = [
   { name: 'LinkedIn', href: '#' },
+  { name: 'Twitter', href: '#' },
   { name: 'Instagram', href: '#' },
-  { name: 'X', href: '#' },
 ]
 
 export default function Nav() {

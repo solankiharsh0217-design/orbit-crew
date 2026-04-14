@@ -6,10 +6,10 @@ import { useInView } from 'react-intersection-observer'
 import styles from './Stats.module.css'
 
 const stats = [
-  { value: 12, label: 'Countries Built', suffix: '' },
-  { value: 8, label: 'Years of Practice', suffix: '+' },
-  { value: 24, label: 'International Awards', suffix: '' },
-  { value: 60, label: 'Projects Completed', suffix: '+' },
+  { value: 50, label: 'Agency Partners', suffix: '+' },
+  { value: 8, label: 'Years of Delivery', suffix: '' },
+  { value: 200, label: 'Projects Delivered', suffix: '+' },
+  { value: 15, label: 'Active Pods', suffix: '' },
 ]
 
 export default function Stats() {
@@ -72,7 +72,7 @@ export default function Stats() {
 
             <p className={styles.description}>
               OrbitCrewDigital is a Europe-based execution partner for agencies worldwide. 
-              We help creative studios scale delivery without the hiring risk — providing 
+              We help agencies scale delivery without the hiring risk — providing 
               senior-level production capacity under your brand.
             </p>
           </div>

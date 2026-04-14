@@ -9,10 +9,10 @@ import styles from './Process.module.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const steps = [
-  { number: '01', title: 'Discover', desc: 'Explore the market and context' },
-  { number: '02', title: 'Define', desc: 'Clarify focus and direction' },
-  { number: '03', title: 'Validate', desc: 'Test ideas and directions' },
-  { number: '04', title: 'Deliver', desc: 'Craft and launch' },
+  { number: '01', title: 'Brief Review', desc: 'Align on scope and timeline' },
+  { number: '02', title: 'Resource Match', desc: 'Assign the right execution team' },
+  { number: '03', title: 'Delivery', desc: 'Execute under your brand' },
+  { number: '04', title: 'Handoff', desc: 'Seamless transition to you' },
 ]
 
 export default function Process() {
@@ -69,8 +69,8 @@ export default function Process() {
           <span className="label" style={{ color: '#888' }}>Methodology</span>
           <h2 className={styles.title}>Process</h2>
           <p className={styles.subtitle}>
-            Our process is collaborative and deliberate — built to deliver 
-            exceptional work while keeping your goals front and center.
+            Built for seamless agency integration — we adapt to your workflow, 
+            timeline, and brand standards.
           </p>
         </div>
 
