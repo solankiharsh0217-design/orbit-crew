@@ -5,7 +5,6 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
-import ProjectGrid from '@/components/ProjectGrid'
 import AgencySection from '@/components/AgencySection'
 import Stats from '@/components/Stats'
 import Process from '@/components/Process'
@@ -116,8 +115,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Project Grid - Already updated in component */}
-      <ProjectGrid />
 
       {/* Process Section */}
       <Process />
@@ -166,25 +163,54 @@ export default function Home() {
       <section className={styles.ctaSection}>
         <div className="container">
           <div className={styles.ctaContent}>
+
+            {/* Eyebrow label */}
             <Reveal>
+              <span className="label" style={{ display: 'inline-block', marginBottom: 28 }}>Ready to scale?</span>
+            </Reveal>
+
+            <Reveal delay={0.05}>
               <h2 className="display-hero" style={{ fontSize: 'clamp(3rem, 10vw, 7rem)' }}>
                 Add delivery capacity<br />without hiring
               </h2>
             </Reveal>
-            <Reveal delay={0.1}>
-              <p className="body-large" style={{ margin: '40px 0' }}>
-                Scale your agency&apos;s delivery without the overhead of building an internal team.
+
+            <Reveal delay={0.15}>
+              <p className="body-large" style={{ margin: '36px auto', maxWidth: 560 }}>
+                Scale your agency&apos;s delivery without the overhead of building an internal team. We slot in, stay invisible, and ship.
               </p>
             </Reveal>
-            <Reveal delay={0.2}>
-              <button className="btn-primary">
-                Book a partner call
-              </button>
+
+            {/* CTA Buttons */}
+            <Reveal delay={0.25}>
+              <div className={styles.ctaButtons}>
+                <Link href="/contact" className={`btn-primary ${styles.ctaBtnPrimary}`}>
+                  Book a partner call
+                  <ArrowRight size={18} style={{ marginLeft: 8 }} />
+                </Link>
+                <Link href="/portfolio" className={`btn-secondary ${styles.ctaBtnSecondary}`}>
+                  See our work
+                </Link>
+              </div>
             </Reveal>
+
+            {/* Trust signals */}
+            <Reveal delay={0.35}>
+              <div className={styles.ctaTrust}>
+                {['NDA signed upfront', 'No client poaching', 'Async-friendly', 'Cancel anytime'].map((t, i) => (
+                  <span key={i} className={styles.ctaTrustBadge}>
+                    <span className={styles.ctaTrustDot} />
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+
           </div>
         </div>
         <div className={styles.ctaBg}>
           <div className={styles.dotGrid} />
+          <div className={styles.ctaGlow} />
         </div>
       </section>
     </main>

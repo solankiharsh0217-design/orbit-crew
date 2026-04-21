@@ -7,8 +7,13 @@ export default function Footer() {
       <div className={styles.top}>
         <h2 className={styles.ctaTitle}>Let&apos;s partner</h2>
         <div className={styles.ctaLinks}>
-          <Link href="/contact" className={styles.ctaLink}>Book a call</Link>
-          <a href="mailto:partners@orbitcrew.com" className={styles.ctaLink}>Email us</a>
+          <Link href="/contact" className={styles.ctaLinkPrimary}>
+            Book a call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginLeft: 10, transition: 'transform 0.3s ease' }}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </Link>
+          <a href="mailto:partners@orbitcrew.com" className={styles.ctaLinkSecondary}>
+            Email us
+          </a>
         </div>
       </div>
 
@@ -24,9 +29,10 @@ export default function Footer() {
           <h4 className={styles.colTitle}>Navigation</h4>
           <nav className={styles.nav}>
             <Link href="/" className={styles.navLink}>Home</Link>
-            <Link href="/about" className={styles.navLink}>For Agencies</Link>
-            <Link href="/work" className={styles.navLink}>Execution</Link>
-            <Link href="/contact" className={styles.navLink}>Partner</Link>
+            <Link href="/agencies" className={styles.navLink}>Focus</Link>
+            <Link href="/portfolio" className={styles.navLink}>Portfolio</Link>
+            <Link href="/capabilities" className={styles.navLink}>Expertise</Link>
+            <Link href="/contact" className={styles.navLink}>Contact</Link>
           </nav>
         </div>
 

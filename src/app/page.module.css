@@ -140,6 +140,74 @@
   background-size: 40px 40px;
 }
 
+.ctaGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vw;
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 75, 31, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1.2rem 2.4rem;
+  box-shadow: 0 0 40px rgba(255, 75, 31, 0.35);
+  transition: box-shadow 0.4s ease, transform 0.4s var(--transition-smooth);
+}
+
+.ctaBtnPrimary:hover {
+  box-shadow: 0 0 60px rgba(255, 75, 31, 0.55);
+  transform: scale(1.05);
+}
+
+.ctaBtnSecondary {
+  font-size: 1rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.ctaTrust {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.ctaTrustBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(240, 239, 232, 0.45);
+  letter-spacing: 0.02em;
+}
+
+.ctaTrustDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
 @media (max-width: 1024px) {
   .capabilitiesGrid {
     grid-template-columns: 1fr;

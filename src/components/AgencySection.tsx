@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import styles from './AgencySection.module.css'
 
 const partnershipModels = [
@@ -38,6 +39,36 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
       {children}
     </motion.div>
   )
+}
+
+function VerticalTimeline({ items }: { items: string[] }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
+  
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  return (
+    <div ref={containerRef} className={styles.timelineContainer}>
+      <div className={styles.timelineLine} />
+      <motion.div className={styles.timelineProgress} style={{ height }} />
+      {items.map((item, i) => (
+        <Reveal key={i} delay={0.1}>
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineDot} />
+            <div className={styles.timelineContent}>
+              <h3 className="h3" style={{ fontSize: '1.25rem', marginBottom: '8px' }}>
+                Step 0{i + 1}
+              </h3>
+              <p className="body-large" style={{ opacity: 0.8 }}>{item}</p>
+            </div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  );
 }
 
 export default function AgencySection() {
@@ -91,16 +122,7 @@ export default function AgencySection() {
             <h2 className="h2" style={{ marginTop: 20 }}>Built for agencies only</h2>
           </Reveal>
 
-          <div className={styles.bulletsGrid}>
-            {builtForAgencies.map((item, i) => (
-              <Reveal key={i} delay={0.1 + i * 0.05}>
-                <div className={styles.bulletItem}>
-                  <span className={styles.check}>✓</span>
-                  <span>{item}</span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <VerticalTimeline items={builtForAgencies} />
         </div>
       </section>
     </>

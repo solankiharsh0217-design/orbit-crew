@@ -41,8 +41,9 @@
   font-size: 3rem;
   font-weight: 800;
   color: var(--color-accent);
-  opacity: 0.2;
+  opacity: 1;
   line-height: 1;
+  text-shadow: 0 0 15px rgba(255, 75, 31, 0.4);
 }
 
 .builtForAgencies {
@@ -50,28 +51,79 @@
   background: var(--color-bg-light);
 }
 
-.bulletsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px 48px;
-  margin-top: 48px;
-  max-width: 1100px;
+.timelineContainer {
+  margin-top: 60px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.bulletItem {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1rem;
-  color: #f0efe8;
+  flex-direction: column;
+  position: relative;
 }
 
-.check {
-  color: var(--color-accent);
-  font-size: 1rem;
-  flex-shrink: 0;
+.timelineLine {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.timelineProgress {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  width: 2px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transform-origin: top;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 17px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-bg-dark);
+  border: 2px solid var(--color-accent);
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.timelineItem:hover .timelineDot {
+  background: var(--color-accent);
+  box-shadow: 0 0 15px var(--color-accent);
+  transform: scale(1.3);
+}
+
+.timelineContent {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s var(--transition-smooth);
+  cursor: pointer;
+}
+
+.timelineContent:hover {
+  transform: translateX(10px);
+  border-color: rgba(255, 75, 31, 0.3);
 }
 
 @media (max-width: 1024px) {
