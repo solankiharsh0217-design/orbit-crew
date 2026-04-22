@@ -73,7 +73,7 @@ export default function Hero() {
           animate="visible"
           variants={subtextVars}
         >
-          A white-label execution partner helping agencies scale delivery without hiring in-house developers.
+          Ship client projects 3x faster without the overhead of hiring in-house developers. We act as your invisible execution arm.
         </motion.p>
 
         <motion.div 

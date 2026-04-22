@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 import styles from './ProjectGrid.module.css'
 
 const projects = [
-  { number: '01', name: 'E-commerce Platform Build', tag: 'White-label dev', image: '/images/project-1.png' },
-  { number: '02', name: '12 Landing Pages in 3 Weeks', tag: 'Execution support', image: '/images/project-2.png' },
-  { number: '03', name: 'SaaS MVP in 8 Weeks', tag: 'Development partner', image: '/images/project-3.png' },
-  { number: '04', name: 'Webflow Migration', tag: 'Agency delivery', image: '/images/project-1.png' },
+  { slug: 'ecommerce-platform', number: '01', name: 'E-commerce Platform Build', tag: 'White-label dev', image: '/images/project-1.png' },
+  { slug: 'landing-pages', number: '02', name: '12 Landing Pages in 3 Weeks', tag: 'Execution support', image: '/images/project-2.png' },
+  { slug: 'saas-mvp', number: '03', name: 'SaaS MVP in 8 Weeks', tag: 'Development partner', image: '/images/project-3.png' },
+  { slug: 'webflow-migration', number: '04', name: 'Webflow Migration', tag: 'Agency delivery', image: '/images/project-1.png' },
 ]
 
 export default function ProjectGrid() {
@@ -30,7 +30,7 @@ export default function ProjectGrid() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" as const }}
             >
-              <Link href="/work" className={styles.cardLink}>
+              <Link href={`/work/${project.slug}`} className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
                   <img 
                     src={project.image}

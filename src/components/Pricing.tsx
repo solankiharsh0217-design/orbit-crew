@@ -68,6 +68,9 @@ export default function Pricing() {
                 </Link>
 
                 <p className={styles.note}>Booking Open — only 2 spots left</p>
+                <p style={{ marginTop: 16, fontSize: 14, color: '#888', fontStyle: 'italic', lineHeight: 1.5 }}>
+                  Cheaper than a mid-level hire. Output of an entire senior pod. Stop paying idle developers between client projects.
+                </p>
 
                 <ul className={styles.features}>
                   {monthlyFeatures.map((feature, i) => (

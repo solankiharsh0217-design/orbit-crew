@@ -8,11 +8,11 @@ import SpotlightCard from './SpotlightCard'
 const partnershipModels = [
   {
     title: 'Project-based delivery support',
-    desc: 'Scale capacity for specific client engagements. We execute within your timeline and under your brand.',
+    desc: 'Stop turning away lucrative client projects because your team is at capacity. We act as an elastic extension of your agency.',
   },
   {
     title: 'Dedicated execution pods',
-    desc: 'Ongoing resources that integrate into your team. Same people, same workflow, dedicated to your pipeline.',
+    desc: 'Instantly spin up a full-stack dev team. No recruiting fees, no onboarding drag, and zero idle overhead between projects.',
   },
   {
     title: 'Capability expansion support',

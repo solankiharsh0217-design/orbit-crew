@@ -35,8 +35,9 @@ const DB: Record<string, { title: string, subtitle: string, overview: string }> 
   }
 }
 
-export default function CapabilityPage({ params }: { params: { slug: string } }) {
-  const data = DB[params.slug]
+export default async function CapabilityPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const data = DB[resolvedParams.slug]
 
   if (!data) {
     return (

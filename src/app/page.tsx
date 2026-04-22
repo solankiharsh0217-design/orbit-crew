@@ -11,16 +11,16 @@ import Process from '@/components/Process'
 import styles from './page.module.css'
 
 const executionCapabilities = [
-  { number: '01', title: 'Web Development', desc: 'Full-stack builds, React, Next.js, custom platforms', deliverables: ['Next.js', 'React', 'TypeScript'] },
-  { number: '02', title: 'Webflow Production', desc: 'Design-to-build, CMS setup, migrations', deliverables: ['CMS', 'Animations', 'SEO'] },
-  { number: '03', title: 'Landing Pages & Funnels', desc: 'High-converting pages, A/B testing, lead capture', deliverables: ['Conversion', 'Speed', 'Mobile'] },
-  { number: '04', title: 'AI Automation', desc: 'Workflow design, Zapier, n8n, custom integrations', deliverables: ['Zapier', 'n8n', 'Workflows'] },
-  { number: '05', title: 'Internal Tools & Dashboards', desc: 'Custom admin panels, CRMs, data visualization', deliverables: ['React', 'Node.js', 'Data Viz'] },
-  { number: '06', title: 'MVP Builds', desc: 'Fast validation builds for agency client ideas', deliverables: ['Speed to Market', 'Scalable', 'MVP'] },
+  { number: '01', title: 'Web Development', desc: 'Full-stack headless builds explicitly designed for agency handoffs.', deliverables: ['Next.js', 'React', 'TypeScript'] },
+  { number: '02', title: 'Webflow Production', desc: 'Pixel-perfect Figma translation equipped with powerful CMS architectures.', deliverables: ['CMS', 'Animations', 'SEO'] },
+  { number: '03', title: 'Landing Pages & Funnels', desc: 'Rapid-deployment, A/B tested pipelines that slash CPA for your media buyers.', deliverables: ['Conversion', 'Speed', 'Mobile'] },
+  { number: '04', title: 'AI Automation', desc: 'Secure n8n and Zapier connective tissue mapped to your LLMs.', deliverables: ['Zapier', 'n8n', 'Workflows'] },
+  { number: '05', title: 'Internal Tools & Dashboards', desc: 'White-labeled React portals securely wired to their operational databases.', deliverables: ['React', 'Node.js', 'Data Viz'] },
+  { number: '06', title: 'MVP Builds', desc: 'Zero-to-One validation builds shipped in 21 days for early stage agency clients.', deliverables: ['Speed to Market', 'Scalable', 'MVP'] },
 ]
 
 const agencyPartners = [
-  'Digital Agency', 'Performance Agency', 'Growth Agency', 'Design Studio', 'Tech Consultancy', 'Marketing Firm'
+  'B2B Growth Firms', 'Enterprise Branding Studios', 'Shopify Plus Agencies', 'Performance Ad Agencies', 'Creative Boutiques', 'Tech Consultancies'
 ]
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {

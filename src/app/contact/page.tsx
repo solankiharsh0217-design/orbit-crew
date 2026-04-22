@@ -172,10 +172,10 @@ export default function ContactPage() {
                   </label>
 
                   <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    <span className="label" style={{ color: '#888' }}>Tell us about your pipeline</span>
+                    <span className="label" style={{ color: '#888' }}>What bottleneck is constraining your agency's growth right now?</span>
                     <textarea
                       rows={5}
-                      placeholder="What kind of work are you looking to offload? What's your typical timeline? Monthly volume?"
+                      placeholder="e.g. 'We keep turning away complex Next.js builds because our team only knows Webflow' or 'We need 3 landing pages a week but can't hire fast enough.'"
                       style={{ ...inputStyle, borderColor: focusedField === 'msg' ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)', resize: 'vertical' }}
                       onFocus={() => setFocusedField('msg')}
                       onBlur={() => setFocusedField(null)}
