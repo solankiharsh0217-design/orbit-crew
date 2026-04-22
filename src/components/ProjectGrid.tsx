@@ -30,7 +30,7 @@ export default function ProjectGrid() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" as const }}
             >
-              <Link href={`/work/${project.slug}`} className={styles.cardLink}>
+              <Link href={`/work/${project.slug}`} className={styles.cardLink} aria-label={project.name}>
                 <div className={styles.imageWrapper}>
                   <img 
                     src={project.image}

@@ -55,7 +55,7 @@ function CapabilityCard({ cap, i }: { cap: any, i: number }) {
 
   return (
     <Reveal delay={i * 0.1}>
-      <Link href={`/capabilities/${slug}`} style={{ textDecoration: 'none', height: '100%', display: 'flex' }}>
+      <div style={{ transformStyle: 'preserve-3d', perspective: 1000 }}>
         <motion.div 
           className={`${styles.capabilityItem} glass-card interactive-hover`}
           onMouseMove={handleMouseMove}
@@ -66,23 +66,24 @@ function CapabilityCard({ cap, i }: { cap: any, i: number }) {
           style={{
             rotateX,
             rotateY,
-            transformPerspective: 1000,
             width: '100%',
           }}
         >
-          <div className={styles.capabilityTop}>
-            <span className={styles.capabilityNumber}>{cap.number}</span>
-            <ArrowRight className={styles.capabilityArrow} size={32} />
-          </div>
-          <h3 className="h3" style={{ margin: '24px 0 16px' }}>{cap.title}</h3>
-          <p className="body-large" style={{ opacity: 0.6 }}>{cap.desc}</p>
-          <div className={styles.deliverables}>
-            {cap.deliverables.map((d: string, j: number) => (
-              <span key={j} className={styles.tag}>{d}</span>
-            ))}
-          </div>
+          <Link href={`/capabilities/${slug}`} style={{ textDecoration: 'none', height: '100%', display: 'flex' }}>
+            <div className={styles.capabilityTop}>
+              <span className={styles.capabilityNumber}>{cap.number}</span>
+              <ArrowRight className={styles.capabilityArrow} size={32} />
+            </div>
+            <h3 className="h3" style={{ margin: '24px 0 16px' }}>{cap.title}</h3>
+            <p className="body-large" style={{ opacity: 0.6 }}>{cap.desc}</p>
+            <div className={styles.deliverables}>
+              {cap.deliverables.map((d: string, j: number) => (
+                <span key={j} className={styles.tag}>{d}</span>
+              ))}
+            </div>
+          </Link>
         </motion.div>
-      </Link>
+      </div>
     </Reveal>
   )
 }
