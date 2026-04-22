@@ -34,8 +34,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Aurora Background */
-.aurora-bg {
+/* Mesh Ambient Background */
+.mesh-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,44 +47,103 @@ body {
   background: var(--color-bg-dark);
 }
 
-.aurora-bg::before,
-.aurora-bg::after {
+.mesh-bg::before,
+.mesh-bg::after,
+.mesh-bg .blob {
   content: "";
   position: absolute;
-  width: 60vw;
-  height: 60vw;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.15;
-  animation: float 20s infinite ease-in-out alternate;
+  filter: blur(140px);
+  opacity: 0.2;
+  animation: meshFloat 25s infinite ease-in-out alternate;
 }
 
-.aurora-bg::before {
-  top: -10vw;
-  left: -10vw;
-  background: var(--color-accent);
-}
-
-.aurora-bg::after {
-  bottom: -10vw;
-  right: -10vw;
+.mesh-bg::before {
+  width: 70vw;
+  height: 70vh;
+  top: -20vh;
+  left: -20vw;
   background: var(--color-purple);
-  animation-delay: -10s;
 }
 
-@keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(10vw, 5vh) scale(1.1); }
-  100% { transform: translate(-5vw, 15vh) scale(0.9); }
+.mesh-bg::after {
+  width: 60vw;
+  height: 60vh;
+  bottom: -20vh;
+  right: -10vw;
+  background: var(--color-accent);
+  animation-delay: -12s;
+}
+
+.mesh-bg .blob {
+  width: 50vw;
+  height: 50vh;
+  top: 30vh;
+  left: 30vw;
+  background: #0033cc;
+  animation-delay: -5s;
+}
+
+@keyframes meshFloat {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(15vw, 10vh) scale(1.2) rotate(180deg); }
+  100% { transform: translate(-10vw, 20vh) scale(0.8) rotate(360deg); }
 }
 
 /* Glass UI Classes */
 .glass-card {
-  background: linear-gradient(145deg, rgba(20,20,20, 0.6), rgba(5,5,5, 0.8));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(15, 15, 15, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Interactive Spotlight CSS (Requires JS to feed --mouse-x / --mouse-y) */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(10, 10, 10, 0.5);
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.15),
+    transparent 40%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.04),
+    transparent 40%
+  );
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
 }
 
 
@@ -177,11 +236,28 @@ img {
   font-size: 1rem;
   font-weight: 600;
   border-radius: 100px;
-  transition: transform 0.4s var(--transition-smooth);
+  transition: all 0.4s var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 75, 31, 0.2);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s var(--transition-smooth);
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 75, 31, 0.4);
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-secondary {

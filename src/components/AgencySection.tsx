@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import styles from './AgencySection.module.css'
+import SpotlightCard from './SpotlightCard'
 
 const partnershipModels = [
   {
@@ -194,11 +195,11 @@ export default function AgencySection() {
           <div className={styles.modelsGrid}>
             {partnershipModels.map((model, i) => (
               <Reveal key={i} delay={0.1 + i * 0.1}>
-                <div className={styles.modelCard}>
+                <SpotlightCard className={styles.modelCard}>
                   <span className={styles.modelNumber}>0{i + 1}</span>
                   <h3 className="h3" style={{ marginTop: 16 }}>{model.title}</h3>
                   <p style={{ marginTop: 12, opacity: 0.6 }}>{model.desc}</p>
-                </div>
+                </SpotlightCard>
               </Reveal>
             ))}
           </div>

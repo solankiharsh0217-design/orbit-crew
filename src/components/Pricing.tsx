@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Pricing.module.css'
+import SpotlightCard from './SpotlightCard'
 
 const monthlyFeatures = [
   'Unlimited requests',
@@ -54,7 +55,7 @@ export default function Pricing() {
             </button>
           </div>
 
-          <div className={styles.card}>
+          <SpotlightCard className={styles.card}>
             {plan === 'monthly' ? (
               <>
                 <div className={styles.priceBlock}>
@@ -92,7 +93,7 @@ export default function Pricing() {
                 </Link>
               </>
             )}
-          </div>
+          </SpotlightCard>
 
           <div className={styles.testimonial}>
             <Image

@@ -75,13 +75,13 @@
 
 .divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03); /* Softer aesthetic divider */
   width: 100%;
 }
 
 .middle {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   padding: clamp(3rem, 6vw, 5rem) 4vw;
 }

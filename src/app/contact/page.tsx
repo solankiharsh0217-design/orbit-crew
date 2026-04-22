@@ -43,7 +43,9 @@ export default function ContactPage() {
     <main style={{ minHeight: '100vh', background: 'var(--color-bg-dark)' }}>
 
       {/* BACKGROUND */}
-      <div className="aurora-bg" aria-hidden />
+      <div className="mesh-bg" aria-hidden>
+        <div className="blob" />
+      </div>
 
       <div className="container" style={{ paddingTop: '140px', paddingBottom: '100px', position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>

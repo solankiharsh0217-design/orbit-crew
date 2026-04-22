@@ -30,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable} ${inter.variable}`}>
-        <div className="aurora-bg" />
+        <div className="mesh-bg" aria-hidden>
+          <div className="blob" />
+        </div>
         <SmoothScroll>
           <Nav />
           <main>{children}</main>

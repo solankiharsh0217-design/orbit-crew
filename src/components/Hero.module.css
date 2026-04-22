@@ -38,11 +38,16 @@
   font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 700;
-  color: #ffffff;
   line-height: 1.1;
   letter-spacing: -0.02em;
   overflow: hidden;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  /* Premium masked gradient text */
+  background: linear-gradient(135deg, #ffffff 30%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Combine with soft glow */
+  filter: drop-shadow(0 4px 30px rgba(255, 255, 255, 0.2));
 }
 
 .char {
@@ -75,9 +80,17 @@
   letter-spacing: 0.08em;
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 100px;
   color: #f0efe8;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s var(--transition-smooth);
+}
+
+.trustBadge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .explore {

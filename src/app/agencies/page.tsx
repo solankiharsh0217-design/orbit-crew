@@ -4,6 +4,8 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import AgencySection from '@/components/AgencySection'
+import Accordion from '@/components/Accordion'
+import Counter from '@/components/Counter'
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
@@ -18,10 +20,10 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 }
 
 const stats = [
-  { value: '100%', label: 'White-label delivery' },
-  { value: '3x', label: 'Faster than hiring' },
-  { value: '50+', label: 'Agency partnerships' },
-  { value: '0', label: 'Client conflicts' },
+  { value: 100, suffix: '%', label: 'White-label delivery' },
+  { value: 3, suffix: 'x', label: 'Faster than hiring' },
+  { value: 50, suffix: '+', label: 'Agency partnerships' },
+  { value: 0, suffix: '', label: 'Client conflicts' },
 ]
 
 const faqs = [
@@ -43,23 +45,7 @@ const faqs = [
   },
 ]
 
-function FaqItem({ q, a }: { q: string; a: string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      style={{
-        padding: '32px 0',
-        borderBottom: '1px solid rgba(255,255,255,0.07)',
-      }}
-    >
-      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', fontWeight: 600, marginBottom: 12 }}>{q}</h3>
-      <p className="body-large" style={{ opacity: 0.55 }}>{a}</p>
-    </motion.div>
-  )
-}
+
 
 export default function AgenciesPage() {
   const heroRef = useRef<HTMLElement>(null)
@@ -75,9 +61,11 @@ export default function AgenciesPage() {
         {/* Parallax orb */}
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
-          className="aurora-bg"
+          className="mesh-bg"
           aria-hidden
-        />
+        >
+          <div className="blob" />
+        </motion.div>
 
         <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: '140px', paddingBottom: '80px' }}>
           <Reveal>
@@ -115,7 +103,9 @@ export default function AgenciesPage() {
                 transition={{ delay: i * 0.1, duration: 0.7 }}
                 style={{ textAlign: 'center' }}
               >
-                <p style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, color: 'var(--color-accent)', letterSpacing: '-0.04em', lineHeight: 1 }}>{s.value}</p>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, color: 'var(--color-accent)', letterSpacing: '-0.04em', lineHeight: 1 }}>
+                  <Counter value={s.value} suffix={s.suffix} />
+                </p>
                 <p className="label" style={{ marginTop: 8, opacity: 0.5 }}>{s.label}</p>
               </motion.div>
             ))}
@@ -134,7 +124,7 @@ export default function AgenciesPage() {
             <h2 className="h2" style={{ marginTop: 20, maxWidth: 600 }}>What agencies ask us</h2>
           </motion.div>
           <div style={{ marginTop: 60, maxWidth: 900 }}>
-            {faqs.map((faq, i) => <FaqItem key={i} {...faq} />)}
+            <Accordion items={faqs} />
           </div>
         </div>
       </section>
