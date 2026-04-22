@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
@@ -35,9 +36,102 @@ const contactInfo = [
   { label: 'Timezone', value: 'IST / GMT+5:30' },
 ]
 
+const needOptions = [
+  'Project-based delivery support',
+  'Dedicated execution pod',
+  'Capability expansion',
+  'Not sure — let\'s talk',
+]
+
+function CustomSelect({ value, onChange, options, placeholder }: { value: string; onChange: (v: string) => void; options: string[]; placeholder: string }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  return (
+    <div ref={ref} style={{ position: 'relative' }}>
+      <motion.button
+        type="button"
+        onClick={() => setOpen(!open)}
+        style={{
+          ...inputStyle,
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          borderColor: open ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)',
+        }}
+      >
+        <span style={{ color: value ? '#f0efe8' : 'rgba(255,255,255,0.4)' }}>
+          {value || placeholder}
+        </span>
+        <ChevronDown
+          size={18}
+          style={{
+            transition: 'transform 0.2s',
+            transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+            opacity: 0.5,
+          }}
+        />
+      </motion.button>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{
+            position: 'absolute',
+            top: 'calc(100% + 8px)',
+            left: 0,
+            right: 0,
+            background: 'rgba(15, 15, 20, 0.98)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: 10,
+            border: '1px solid rgba(255,255,255,0.1)',
+            overflow: 'hidden',
+            zIndex: 50,
+          }}
+        >
+          {options.map((opt) => (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => { onChange(opt); setOpen(false) }}
+              style={{
+                width: '100%',
+                padding: '14px 20px',
+                background: 'transparent',
+                border: 'none',
+                color: '#f0efe8',
+                fontSize: '1rem',
+                fontFamily: 'var(--font-body)',
+                textAlign: 'left',
+                cursor: 'pointer',
+                transition: 'background 0.15s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,75,31,0.15)')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+            >
+              {opt}
+            </button>
+          ))}
+        </motion.div>
+      )}
+    </div>
+  )
+}
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
   const [focusedField, setFocusedField] = useState<string | null>(null)
+  const [selectedNeed, setSelectedNeed] = useState('')
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--color-bg-dark)' }}>
@@ -158,17 +252,12 @@ export default function ContactPage() {
 
                   <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     <span className="label" style={{ color: '#888' }}>What do you need?</span>
-                    <select
-                      style={{ ...inputStyle, cursor: 'pointer' }}
-                      onFocus={() => setFocusedField('need')}
-                      onBlur={() => setFocusedField(null)}
-                    >
-                      <option value="">Select an option</option>
-                      <option>Project-based delivery support</option>
-                      <option>Dedicated execution pod</option>
-                      <option>Capability expansion</option>
-                      <option>Not sure — let's talk</option>
-                    </select>
+                    <CustomSelect
+                      value={selectedNeed}
+                      onChange={setSelectedNeed}
+                      options={needOptions}
+                      placeholder="Select an option"
+                    />
                   </label>
 
                   <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
