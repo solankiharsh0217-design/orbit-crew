@@ -19,7 +19,6 @@ export default function Process() {
     offset: ["start 70%", "end 70%"]
   })
 
-  // Scrub progress line scale from 0 to 1
   const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (

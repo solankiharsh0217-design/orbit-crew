@@ -1,7 +1,7 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import styles from './AgencySection.module.css'
 
 const partnershipModels = [
@@ -20,12 +20,42 @@ const partnershipModels = [
 ]
 
 const builtForAgencies = [
-  'White-label execution',
-  'NDA-first partnerships',
-  'No client poaching',
-  'Works inside your stack',
-  'Async collaboration friendly',
-  'Scales with your pipeline',
+  { 
+    title: 'White-label execution', 
+    shortDesc: 'We operate invisibly under your brand',
+    fullDesc: 'All work is delivered under your agency\'s brand. We never contact your clients directly. They think you have an incredible in-house team.',
+    details: ['Your branding', 'Direct communication', 'Client ownership', 'Professional tone']
+  },
+  { 
+    title: 'NDA-first partnerships', 
+    shortDesc: 'Your secrets stay safe with us',
+    fullDesc: 'We sign NDAs before any discussion. Your client relationships, processes, and strategies are fully protected.',
+    details: ['Signed NDAs', 'Confidentiality', 'Data protection', 'Secure processes']
+  },
+  { 
+    title: 'No client poaching', 
+    shortDesc: 'We never compete with your clients',
+    fullDesc: 'We have a strict no-poaching policy. We will never approach, pitch, or work with your clients — now or in the future.',
+    details: ['Contract bound', 'Ethical standards', 'Long-term commitment', 'Trust first']
+  },
+  { 
+    title: 'Works inside your stack', 
+    shortDesc: 'We adapt to your tools and workflows',
+    fullDesc: 'We integrate seamlessly with your existing tools — Slack, Notion, Jira, Asana, GitHub, or whatever you use. No friction, just smooth collaboration.',
+    details: ['Tool agnostic', 'Flexible setup', 'Quick onboarding', 'Your workflow']
+  },
+  { 
+    title: 'Async collaboration friendly', 
+    shortDesc: 'Work happens on your terms',
+    fullDesc: 'We thrive in async environments. Detailed briefs, Loom videos, written updates — we keep things moving without constant meetings.',
+    details: ['Written updates', 'Video briefs', 'Timezone friendly', 'Low meeting load']
+  },
+  { 
+    title: 'Scales with your pipeline', 
+    shortDesc: 'Grow delivery without growing overhead',
+    fullDesc: 'Need more hands? We scale up. Need less? We scale down. You only pay for what you use, with complete flexibility.',
+    details: ['Flexible capacity', 'Cost effective', 'Rapid scaling', 'No hiring stress']
+  },
 ]
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -41,33 +71,95 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   )
 }
 
-function VerticalTimeline({ items }: { items: string[] }) {
+function VerticalTimeline({ items }: { items: { title: string; shortDesc: string; fullDesc: string; details: string[] }[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start center", "end center"]
+    offset: ["start 80%", "end 20%"]
   });
-  
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  const progressHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div ref={containerRef} className={styles.timelineContainer}>
       <div className={styles.timelineLine} />
-      <motion.div className={styles.timelineProgress} style={{ height }} />
+      <motion.div 
+        className={styles.timelineProgress}
+        style={{ height: progressHeight }}
+      />
       {items.map((item, i) => (
-        <Reveal key={i} delay={0.1}>
-          <div className={styles.timelineItem}>
-            <div className={styles.timelineDot} />
-            <div className={styles.timelineContent}>
-              <h3 className="h3" style={{ fontSize: '1.25rem', marginBottom: '8px' }}>
-                Step 0{i + 1}
-              </h3>
-              <p className="body-large" style={{ opacity: 0.8 }}>{item}</p>
-            </div>
-          </div>
-        </Reveal>
+        <TimelineItem 
+          key={i} 
+          index={i} 
+          item={item}
+          isActive={activeIndex === i}
+          onMouseEnter={() => setActiveIndex(i)}
+          onMouseLeave={() => setActiveIndex(null)}
+        />
       ))}
     </div>
+  );
+}
+
+function TimelineItem({ index, item, isActive, onMouseEnter, onMouseLeave }: { 
+  index: number; 
+  item: { title: string; shortDesc: string; fullDesc: string; details: string[] };
+  isActive: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+}) {
+  return (
+    <motion.div 
+      className={styles.timelineItem}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      data-active={isActive}
+      style={{ paddingTop: index === 0 ? 0 : 20 }}
+    >
+      <motion.div 
+        className={styles.timelineDot}
+        animate={{ 
+          scale: isActive ? 1.8 : 1,
+          boxShadow: isActive ? '0 0 30px #FF4B1F' : '0 0 0px transparent',
+          borderColor: isActive ? '#FF4B1F' : '#FF4B1F',
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      />
+      <motion.div 
+        className={styles.timelineContent}
+        animate={{ 
+          x: isActive ? 10 : 0,
+          borderColor: isActive ? 'rgba(255, 75, 31, 0.5)' : 'rgba(255, 255, 255, 0.05)',
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        <h3 className="h3" style={{ fontSize: '1.25rem', marginBottom: '8px', textAlign: 'left' }}>
+          {item.title}
+        </h3>
+        <p className="body-large" style={{ opacity: 0.8, textAlign: 'left' }}>{item.shortDesc}</p>
+      </motion.div>
+      
+      <motion.div 
+        className={`${styles.hoverCard} glass-card`}
+        initial={{ opacity: 0, x: -20, scale: 0.95 }}
+        animate={{ 
+          opacity: isActive ? 1 : 0,
+          x: isActive ? 0 : -20,
+          scale: isActive ? 1 : 0.95,
+          pointerEvents: isActive ? 'auto' : 'none'
+        }}
+        transition={{ duration: 0.3, ease: "easeOut" as const }}
+      >
+        <p className={styles.cardDesc}>{item.fullDesc}</p>
+        <div className={styles.cardDetails}>
+          {item.details.map((detail, j) => (
+            <span key={j} className={styles.detailTag}>{detail}</span>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
@@ -122,7 +214,7 @@ export default function AgencySection() {
             <h2 className="h2" style={{ marginTop: 20 }}>Built for agencies only</h2>
           </Reveal>
 
-          <VerticalTimeline items={builtForAgencies} />
+          <VerticalTimeline items={builtForAgencies as any} />
         </div>
       </section>
     </>

@@ -29,9 +29,8 @@ export default function Footer() {
           <h4 className={styles.colTitle}>Navigation</h4>
           <nav className={styles.nav}>
             <Link href="/" className={styles.navLink}>Home</Link>
-            <Link href="/agencies" className={styles.navLink}>Focus</Link>
-            <Link href="/portfolio" className={styles.navLink}>Portfolio</Link>
-            <Link href="/capabilities" className={styles.navLink}>Expertise</Link>
+            <Link href="/agencies" className={styles.navLink}>Our Focus</Link>
+            <Link href="/capabilities/web-development" className={styles.navLink}>Capabilities</Link>
             <Link href="/contact" className={styles.navLink}>Contact</Link>
           </nav>
         </div>

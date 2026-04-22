@@ -8,9 +8,8 @@ import styles from './Nav.module.css'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Focus', href: '/agencies' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Expertise', href: '/capabilities' },
+  { name: 'Our Focus', href: '/agencies' },
+  { name: 'Capabilities', href: '/capabilities' },
   { name: 'Contact', href: '/contact' },
 ]
 
