@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -20,10 +21,19 @@ export default function Footer() {
       <div className={styles.divider} />
 
       <div className={styles.middle}>
-        <div className={styles.col}>
-          <span className={styles.logo}>OrbitCrew<span>.</span></span>
-          <p className={styles.tagline}>White-label execution for agencies.</p>
-        </div>
+<div className={styles.col}>
+      <Link href="/" className={styles.logo}>
+        <Image 
+          src="/logo.png?v=3" 
+          alt="OrbitCrew" 
+          width={200} 
+          height={55} 
+          className={styles.logoImage}
+          unoptimized
+        />
+      </Link>
+      <p className={styles.tagline}>White-label execution for agencies.</p>
+    </div>
 
         <div className={styles.col}>
           <h4 className={styles.colTitle}>Navigation</h4>

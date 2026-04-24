@@ -12,7 +12,8 @@ const items = [
 ]
 
 export default function Marquee() {
-  const duplicatedItems = [...items, ...items]
+  // Duplicate 4 times for seamless infinite loop
+  const duplicatedItems = [...items, ...items, ...items, ...items]
 
   return (
     <div className={styles.marquee}>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from './Nav.module.css'
@@ -34,10 +35,18 @@ export default function Nav() {
 
   return (
     <>
-      <nav className={styles.nav}>
-        <Link href="/" className={styles.logo}>
-          OrbitCrew<span>.</span>
-        </Link>
+<nav className={styles.nav}>
+      <Link href="/" className={styles.logo}>
+        <Image 
+          src="/logo.png?v=3" 
+          alt="OrbitCrew" 
+          width={280} 
+          height={80} 
+          className={styles.logoImage}
+          priority
+          unoptimized
+        />
+      </Link>
         
         <button
           className={styles.menuBtn}

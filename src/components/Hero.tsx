@@ -1,6 +1,9 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import Link from 'next/link'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import styles from './Hero.module.css'
 
 const trustSignals = [
@@ -10,103 +13,80 @@ const trustSignals = [
   'Flexible delivery capacity',
 ]
 
-const containerVars = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1, 
-    transition: { staggerChildren: 0.035 } 
-  }
-}
-
-const charVars = {
-  hidden: { y: 120, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1, 
-    transition: { ease: [0.16, 1, 0.3, 1] as const, duration: 1 } 
-  }
-}
-
-const subtextVars = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { delay: 0.4, ease: "easeOut" as const, duration: 0.8 } 
-  }
-}
-
 export default function Hero() {
   const heading = "Agencies win. We deliver."
-  const words = heading.split(' ')
+  const sectionRef = useRef<HTMLElement>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start']
+  })
+
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const contentY = useTransform(scrollYProgress, [0, 0.5], [0, -30])
 
   return (
-    <section className={styles.hero}>
-      <div className={styles.overlay} />
-      <img src="/images/hero-main.png" alt="OrbitCrew" className={styles.heroImage} />
-      
-      <div className={styles.content}>
-        <motion.h1 
-          className={styles.heading}
-          variants={containerVars}
-          initial="hidden"
-          animate="visible"
-        >
-          {words.map((word, wordIndex) => (
-            <span key={wordIndex} style={{ display: 'inline-block', whiteSpace: 'nowrap', marginRight: '0.25em' }}>
-              {word.split('').map((char, charIndex) => (
-                <motion.span 
-                  key={charIndex} 
-                  variants={charVars}
-                  className={styles.char}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </span>
-          ))}
-        </motion.h1>
-        
-        <motion.p 
-          className={styles.subtext}
-          initial="hidden"
-          animate="visible"
-          variants={subtextVars}
-        >
-          Ship client projects 3x faster without the overhead of hiring in-house developers. We act as your invisible execution arm.
-        </motion.p>
+    <section ref={sectionRef} className={styles.hero}>
+      {/* Static background image */}
+      <div className={styles.imageWrapper}>
+        <img
+          src="/images/hero-bg.png"
+          alt="OrbitCrew"
+          className={styles.heroImage}
+        />
+        {/* Simple dark overlay */}
+        <div className={styles.overlay} />
+      </div>
 
-        <motion.div 
-          className={styles.trustSignals}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1 }}
-        >
+      {/* Main content - simplified animations */}
+      <motion.div
+        className={styles.content}
+        style={{ opacity: contentOpacity, y: contentY }}
+      >
+        {/* Eyebrow label */}
+        <div className={styles.eyebrow}>
+          <span className={styles.eyebrowDot} />
+          White-Label Execution Partner
+        </div>
+
+        {/* Simple heading - no character animation */}
+        <h1 className={styles.heading}>
+          {heading}
+        </h1>
+
+        <p className={styles.subtext}>
+          Ship client projects 3x faster without the overhead of hiring in-house developers. We act as your invisible execution arm.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className={styles.ctaButtons}>
+          <Link href="/contact" className={styles.ctaPrimary}>
+            Book a Discovery Call
+            <ArrowRight size={18} />
+          </Link>
+          <Link href="/agencies" className={styles.ctaSecondary}>
+            See How It Works
+          </Link>
+        </div>
+
+        {/* Trust signals - static */}
+        <div className={styles.trustSignals}>
           {trustSignals.map((signal, i) => (
             <span key={i} className={styles.trustBadge}>
+              <span className={styles.checkmark}>✓</span>
               {signal}
             </span>
           ))}
-        </motion.div>
-      </div>
-
-      <motion.div 
-        className={styles.explore}
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <span className={styles.exploreLabel}>Partner with us</span>
-        <svg 
-          width="20" 
-          height="20" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          strokeWidth="2"
-        >
-          <path d="M12 5v14M19 12l-7 7-7-7" />
-        </svg>
+        </div>
       </motion.div>
+
+      {/* Simple scroll indicator */}
+      <div className={styles.scrollIndicator}>
+        <div className={styles.scrollLine}>
+          <div className={styles.scrollProgress} />
+        </div>
+        <span>Scroll to explore</span>
+      </div>
     </section>
   )
 }

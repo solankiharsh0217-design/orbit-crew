@@ -1,5 +1,6 @@
 .main {
   width: 100%;
+  background: transparent;
 }
 
 /* Capabilities Section */
@@ -21,16 +22,40 @@
 
 .capabilityItem {
   padding: 40px;
-  border-radius: 8px;
-  transition: transform 0.4s var(--transition-smooth), border-color 0.4s ease;
+  border-radius: 16px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.capabilityItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(23, 96, 194, 0) 0%,
+    rgba(23, 96, 194, 0.03) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.capabilityItem:hover::before {
+  opacity: 1;
 }
 
 .capabilityItem:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 75, 31, 0.3);
+  transform: translateY(-8px);
+  border-color: rgba(23, 96, 194, 0.2);
+  box-shadow: 0 20px 60px rgba(16, 43, 78, 0.12);
 }
 
 .capabilityTop {
@@ -78,7 +103,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 5px 10px;
-  background: rgba(255, 75, 31, 0.12);
+  background: rgba(23, 96, 194, 0.12);
   color: var(--color-accent);
   border-radius: 4px;
 }
@@ -150,7 +175,7 @@
   max-width: 900px;
   max-height: 900px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 75, 31, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(23, 96, 194, 0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -167,12 +192,12 @@
   align-items: center;
   font-size: 1rem;
   padding: 1.2rem 2.4rem;
-  box-shadow: 0 0 40px rgba(255, 75, 31, 0.35);
+  box-shadow: 0 0 40px rgba(23, 96, 194, 0.25);
   transition: box-shadow 0.4s ease, transform 0.4s var(--transition-smooth);
 }
 
 .ctaBtnPrimary:hover {
-  box-shadow: 0 0 60px rgba(255, 75, 31, 0.55);
+  box-shadow: 0 0 60px rgba(23, 96, 194, 0.4);
   transform: scale(1.05);
 }
 
@@ -195,7 +220,8 @@
   gap: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(240, 239, 232, 0.45);
+  color: #102B4E;
+  opacity: 0.65;
   letter-spacing: 0.02em;
 }
 

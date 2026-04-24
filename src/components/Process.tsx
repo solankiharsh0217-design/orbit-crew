@@ -55,8 +55,8 @@ function HorizontalTimelineItem({ index, step, isActive, onMouseEnter, onMouseLe
           className={styles.timelineDot}
           animate={{ 
             scale: isActive ? 1.8 : 1,
-            boxShadow: isActive ? '0 0 30px #FF4B1F' : '0 0 0px transparent',
-            borderColor: isActive ? '#FF4B1F' : '#FF4B1F',
+            boxShadow: isActive ? '0 0 30px #1760C2' : '0 0 0px transparent',
+            borderColor: isActive ? '#1760C2' : '#1760C2',
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         />

@@ -123,8 +123,8 @@ function TimelineItem({ index, item, isActive, onMouseEnter, onMouseLeave }: {
         className={styles.timelineDot}
         animate={{ 
           scale: isActive ? 1.8 : 1,
-          boxShadow: isActive ? '0 0 30px #FF4B1F' : '0 0 0px transparent',
-          borderColor: isActive ? '#FF4B1F' : '#FF4B1F',
+          boxShadow: isActive ? '0 0 30px #1760C2' : '0 0 0px transparent',
+          borderColor: isActive ? '#1760C2' : '#1760C2',
         }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       />
@@ -132,7 +132,7 @@ function TimelineItem({ index, item, isActive, onMouseEnter, onMouseLeave }: {
         className={styles.timelineContent}
         animate={{ 
           x: isActive ? 10 : 0,
-          borderColor: isActive ? 'rgba(255, 75, 31, 0.5)' : 'rgba(255, 255, 255, 0.05)',
+          borderColor: isActive ? 'rgba(23, 96, 194, 0.5)' : 'rgba(16, 43, 78, 0.08)',
         }}
         transition={{ duration: 0.3 }}
       >

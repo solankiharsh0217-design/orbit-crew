@@ -4,14 +4,15 @@ import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
+import PageLoadAnimation from '@/components/PageLoadAnimation'
 
-const syne = Syne({ 
+const syne = Syne({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-display'
 })
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-body'
@@ -30,13 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable} ${inter.variable}`}>
-        <div className="mesh-bg" aria-hidden>
-          <div className="blob" />
-        </div>
         <SmoothScroll>
-          <Nav />
-          <main>{children}</main>
-          <Footer />
+          <PageLoadAnimation>
+            <Nav />
+            <main>{children}</main>
+            <Footer />
+          </PageLoadAnimation>
         </SmoothScroll>
       </body>
     </html>

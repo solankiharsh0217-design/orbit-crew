@@ -31,27 +31,27 @@
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 800;
-  color: #f0efe8;
+  color: var(--color-text-white);
   line-height: 1;
 }
 
 .statLabel {
   font-size: 12px;
-  color: #888;
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .description {
   font-size: 17px;
-  color: #888;
+  color: var(--color-text-muted);
   line-height: 1.7;
   max-width: 550px;
 }
 
 .timeCard {
-  background: #111;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-light);
+  border: 1px solid rgba(16, 43, 78, 0.08);
   border-radius: 8px;
   padding: 28px;
 }
@@ -59,7 +59,7 @@
 .timeTitle {
   font-size: 12px;
   font-weight: 600;
-  color: #f0efe8;
+  color: var(--color-text-white);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
@@ -70,7 +70,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(16, 43, 78, 0.08);
 }
 
 .timeRow:last-child {
@@ -79,13 +79,13 @@
 
 .timeLabel {
   font-size: 13px;
-  color: #888;
+  color: var(--color-text-muted);
 }
 
 .timeValue {
   font-size: 14px;
   font-weight: 600;
-  color: #f0efe8;
+  color: var(--color-text-white);
 }
 
 .timeValueGreen {
