@@ -26,7 +26,6 @@
   width: auto;
   max-height: 70px;
   object-fit: contain;
-  /* Ensure transparent background shows */
   background: transparent !important;
 }
 
@@ -52,48 +51,54 @@
   border-color: var(--color-text-white) !important;
 }
 
-/* Full-screen overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: var(--color-bg-secondary);
-  z-index: 999;
+/* Desktop Login Buttons */
+.desktopLogin {
   display: flex;
-  flex-direction: column;
-  padding: 40px;
-  will-change: transform;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
-.closeBtn {
-  position: absolute;
-  top: 28px;
-  right: 40px;
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  color: var(--color-text-white);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 10px 20px;
-  border: 1px solid rgba(16, 43, 78, 0.2) !important;
-  border-radius: 50px;
-  background: transparent;
-  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 
-.closeBtn:hover {
-  background: var(--color-text-white);
-  color: var(--color-bg-dark);
+.staffBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-white);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.menuBtn:hover {
-  background: var(--color-text-white);
-  color: var(--color-bg-dark);
-  border-color: var(--color-text-white) !important;
+.staffBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.adminBtn {
+  background: var(--color-accent);
+  color: var(--color-text-white);
+  border-color: var(--color-accent);
+}
+
+.adminBtn:hover {
+  background: #ff6b3d;
+  border-color: #ff6b3d;
+  transform: translateY(-2px);
 }
 
 /* Full-screen overlay */
@@ -160,57 +165,6 @@
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5.5vw, 5rem);
   font-weight: 700;
-  color: var(--color-text-muted);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 12px 0;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.navLink:hover {
-  color: var(--color-text-white);
-}
-
-.navLinkNum {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--color-text-muted);
-  letter-spacing: 0.05em;
-  flex-shrink: 0;
-  align-self: flex-start;
-  padding-top: 8px;
-}
-
-.socials {
-  display: flex;
-  gap: 32px;
-  margin-top: 48px;
-}
-
-.socialLink {
-  font-size: 12px;
-  color: var(--color-text-white);
-  opacity: 0.5;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.socialLink:hover {
-  opacity: 1;
-}
-
-.navLink {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
-  font-weight: 700;
   color: #102B4E;
   opacity: 0.7;
   line-height: 1.2;
@@ -246,6 +200,24 @@
 
 .navLinkActive .navLinkNum {
   color: var(--color-accent);
+}
+
+/* Mobile Menu Login Links */
+.loginLink {
+  color: var(--color-accent) !important;
+}
+
+.loginLink:hover {
+  color: #ff6b3d !important;
+}
+
+.loginLinkContent {
+  display: flex;
+  align-items: center;
+}
+
+.adminLink {
+  color: #ff6b3d !important;
 }
 
 .socials {
@@ -290,5 +262,15 @@
   .socials {
     gap: 20px;
     margin-top: 32px;
+  }
+
+  .desktopLogin {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .loginLink {
+    display: flex;
   }
 }
