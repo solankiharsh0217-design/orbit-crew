@@ -164,7 +164,7 @@ export function MagneticText({
   const ref = useRef<HTMLSpanElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
-  const handleMouseMove = (e: React.MouseEvent) {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (!ref.current) return
     const rect = ref.current.getBoundingClientRect()
     const x = (e.clientX - rect.left - rect.width / 2) / 8
