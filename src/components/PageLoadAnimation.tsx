@@ -30,7 +30,7 @@ export default function PageLoadAnimation({ children }: { children: React.ReactN
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as const }}
             style={{
               position: 'fixed',
               inset: 0,
@@ -45,7 +45,7 @@ export default function PageLoadAnimation({ children }: { children: React.ReactN
               initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
               animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
               exit={{ opacity: 0, scale: 1.1, filter: 'blur(20px)' }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -63,7 +63,7 @@ export default function PageLoadAnimation({ children }: { children: React.ReactN
                     transition={{
                       duration: 0.6,
                       delay: 0.1 + i * 0.05,
-                      ease: [0.16, 1, 0.3, 1],
+                      ease: [0.16, 1, 0.3, 1] as const,
                     }}
                     style={{
                       fontFamily: 'var(--font-display)',
@@ -78,7 +78,7 @@ export default function PageLoadAnimation({ children }: { children: React.ReactN
                 <motion.span
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.4, delay: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
                   style={{
                     fontFamily: 'var(--font-display)',
                     fontSize: 'clamp(2rem, 5vw, 3rem)',
@@ -94,7 +94,7 @@ export default function PageLoadAnimation({ children }: { children: React.ReactN
               <motion.div
                 initial={{ width: 0, opacity: 0 }}
                 animate={{ width: 120, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] as const }}
                 style={{
                   height: '2px',
                   background: 'linear-gradient(90deg, #1760C2, #60A5FA)',
@@ -112,7 +112,7 @@ export default function PageLoadAnimation({ children }: { children: React.ReactN
           opacity: showContent ? 1 : 0, 
           scale: showContent ? 1 : 0.98 
         }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
       >
         {children}
       </motion.div>

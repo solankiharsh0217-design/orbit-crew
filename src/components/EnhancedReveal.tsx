@@ -95,11 +95,11 @@ export function EnhancedReveal({
       ref={ref}
       initial={getInitialState()}
       animate={isInView ? getAnimateState() : getInitialState()}
-      transition={{
-        duration: 1,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      }}
+  transition={{
+    duration: 1,
+    delay,
+    ease: [0.16, 1, 0.3, 1] as const,
+  }}
       className={className}
     >
       {children}
@@ -152,11 +152,11 @@ export function StaggerReveal({
               ? { opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }
               : { opacity: 0, ...getOffset(), filter: 'blur(10px)' }
           }
-          transition={{
-            duration: 0.8,
-            delay: baseDelay + i * staggerDelay,
-            ease: [0.16, 1, 0.3, 1],
-          }}
+      transition={{
+        duration: 0.8,
+        delay: baseDelay + i * staggerDelay,
+        ease: [0.16, 1, 0.3, 1] as const,
+      }}
         >
           {child}
         </motion.div>

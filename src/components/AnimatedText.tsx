@@ -51,7 +51,7 @@ export default function AnimatedText({
       filter: 'blur(0px)',
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   }
@@ -142,11 +142,11 @@ export function ClipReveal({
       ref={ref}
       initial={{ clipPath: clipPaths.hidden }}
       animate={isInView ? { clipPath: clipPaths.visible } : { clipPath: clipPaths.hidden }}
-      transition={{
-        duration: 1,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      }}
+  transition={{
+      duration: 1,
+      delay,
+      ease: [0.16, 1, 0.3, 1] as const,
+    }}
     >
       {children}
     </motion.div>

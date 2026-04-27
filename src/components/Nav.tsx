@@ -64,7 +64,7 @@ export default function Nav() {
             initial={{ x: '100%' }}
             animate={{ x: '0%' }}
             exit={{ x: '100%' }}
-            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] as const }}
           >
             <motion.button
               className={styles.closeBtn}
@@ -85,7 +85,7 @@ export default function Nav() {
                       initial={{ y: '100%' }}
                       animate={{ y: '0%' }}
                       exit={{ y: '100%' }}
-                      transition={{ delay: 0.15 + i * 0.07, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                      transition={{ delay: 0.15 + i * 0.07, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
                     >
                       <Link
                         href={link.href}
