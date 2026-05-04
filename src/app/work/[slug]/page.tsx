@@ -29,6 +29,10 @@ const DB: Record<string, { title: string, tag: string, overview: string, result:
   }
 }
 
+export function generateStaticParams() {
+  return Object.keys(DB).map((slug) => ({ slug }))
+}
+
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const data = DB[resolvedParams.slug]
