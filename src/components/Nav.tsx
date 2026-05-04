@@ -24,7 +24,7 @@ const socialLinks = [
 // External login links
 const loginLinks = [
   { name: 'Staff Login', href: 'https://orbit-crew-hrms.pages.dev/login', icon: LogIn },
-  { name: 'Admin Login', href: 'https://orbit-crew-hrms.pages.dev/login', icon: Shield },
+  { name: 'Client Login', href: 'https://orbitcrew-dashboard.pages.dev/', icon: Shield },
 ]
 
 export default function Nav() {
@@ -67,13 +67,13 @@ export default function Nav() {
             <span>Staff Login</span>
           </a>
           <a
-            href="https://orbit-crew-hrms.pages.dev/login"
+            href="https://orbitcrew-dashboard.pages.dev/"
             className={`${styles.loginBtn} ${styles.adminBtn}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Shield size={16} />
-            <span>Admin</span>
+            <span>Client Login</span>
           </a>
         </div>
 
@@ -160,7 +160,7 @@ export default function Nav() {
                     transition={{ delay: 0.15 + (navLinks.length + 1) * 0.07, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
                   >
                     <a
-                      href="https://orbit-crew-hrms.pages.dev/login"
+                      href="https://orbitcrew-dashboard.pages.dev/"
                       className={`${styles.navLink} ${styles.loginLink} ${styles.adminLink}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -169,7 +169,7 @@ export default function Nav() {
                       <span className={styles.navLinkNum}>0{navLinks.length + 2}</span>
                       <span className={styles.loginLinkContent}>
                         <Shield size={24} style={{ marginRight: '12px' }} />
-                        Admin Login
+                        Client Login
                       </span>
                     </a>
                   </motion.div>
