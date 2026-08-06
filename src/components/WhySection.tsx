@@ -1,113 +1,53 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default function WhySection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cardElements = cardsRef.current?.querySelectorAll(".home-why__floating-card-wrapper");
-      if (cardElements) {
-        // Timeline for scroll-triggered fan-out from bottom center point
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 65%",
-            end: "top 20%",
-            toggleActions: "play none none reverse",
-          },
-        });
-
-        // Cards start clustered at bottom center point and fan out
-        cardElements.forEach((card, index) => {
-          gsap.set(card, {
-            opacity: 0,
-            scale: 0.3,
-            y: 220,
-            x: index === 0 ? 0 : index % 2 === 1 ? -120 : 120,
-          });
-        });
-
-        tl.to(cardElements, {
-          opacity: 1,
-          scale: 1,
-          x: 0,
-          y: 0,
-          duration: 1,
-          stagger: 0.12,
-          ease: "back.out(1.4)",
-        });
-
-        // Continuous subtle float motion after fan-out completes
-        cardElements.forEach((card, index) => {
-          gsap.to(card, {
-            y: index % 2 === 0 ? -12 : 12,
-            duration: 3.5 + index * 0.5,
-            ease: "sine.inOut",
-            repeat: -1,
-            yoyo: true,
-            delay: 1.2 + index * 0.15,
-          });
-        });
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   const cards = [
     {
       id: 1,
       title: "Guaranteed Conversion Boost.",
       description: "We don't just build pretty pages. Every layout, headline, and button is engineered with conversion science to maximize incoming leads and phone calls.",
-      positionClass: "-top-[2%] left-[36%]",
+      positionClass: "-top-[18%] left-1/2 -translate-x-1/2",
     },
     {
-      id: 4,
+      id: 2,
       title: "100% Mobile & Tablet Ready.",
       description: "Over 70% of your prospective clients visit on mobile phones. Our websites load instantly and look flawless on every iOS and Android device.",
-      positionClass: "top-[4%] left-[2%]",
+      positionClass: "top-[12%] left-[2%]",
     },
     {
       id: 3,
       title: "Zero Technical Drag.",
       description: "You don't need any technical skills. We handle all design, setup, domain connection, and launch so you can focus on running your business.",
-      positionClass: "top-[10%] right-[2%]",
+      positionClass: "top-[12%] right-[2%]",
     },
     {
-      id: 2,
+      id: 4,
       title: "Optional 24/7 Phone Answering.",
       description: "Add an optional AI voice agent to your business line. Never lose a customer inquiry or appointment after hours or when your staff is busy.",
-      positionClass: "top-[46%] left-[2%]",
+      positionClass: "top-[64%] left-[4%]",
     },
     {
       id: 5,
       title: "White-Label & NDA Protected.",
       description: "Working as an agency or business partner? We sign NDAs upfront, never contact your clients, and deliver everything under your brand name.",
-      positionClass: "top-[52%] right-[2%]",
+      positionClass: "top-[64%] right-[4%]",
     },
   ];
 
   return (
-    <section ref={sectionRef} id="why" className="home-why relative page-section scroll-mt-[250px] overflow-hidden py-[120px] bg-black">
+    <section id="why" className="home-why relative page-section scroll-mt-[200px] overflow-hidden py-12 bg-black">
       {/* Background Stars Texture */}
       <div className="home-why__background-stars absolute inset-0 pointer-events-none">
         <img
           src="/hugo-assets/images/background_stars.png"
           alt="Background stars"
-          className="absolute w-full h-full object-cover opacity-80"
+          className="absolute w-full h-full object-cover opacity-60"
         />
       </div>
 
       <div className="page-wrapper relative z-1">
-        {/* Giant "Why?" Title with Glass Mask and Drifting Clouds */}
-        <div className="home-why__title relative text-center select-none font-display font-bold text-[clamp(120px,18.5vw,280px)] leading-[1.77] [text-shadow:_0_0_240px_#0745a6]">
+        {/* Giant "Why?" Title in the Middle */}
+        <div className="home-why__title relative text-center select-none font-display font-bold text-[clamp(100px,15vw,220px)] leading-[1.2] [text-shadow:_0_0_180px_#0745a6]">
           <span className="bg-gradient-to-b from-black/10 via-[#021736] via-40% to-[#d8e7fd] bg-clip-text text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.15)]">
             Why?
           </span>
@@ -140,21 +80,18 @@ export default function WhySection() {
           </div>
         </div>
 
-        {/* 5 Floating Cards Container with GSAP Fan-Out Animation */}
-        <div
-          ref={cardsRef}
-          className="home-why__floating-cards relative min-h-[700px] mt-[-100px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-4 max-[1080px]:mt-8 max-[1080px]:min-h-0 max-[640px]:grid-cols-1"
-        >
+        {/* 5 Tight Cards Floating Around "Why?" (No Wave Motion, No GSAP Fan-Out) */}
+        <div className="home-why__floating-cards relative min-h-[460px] mt-[-60px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-4 max-[1080px]:mt-6 max-[1080px]:min-h-0 max-[640px]:grid-cols-1">
           {cards.map((card) => (
             <div
               key={card.id}
-              className={`home-why__floating-card-wrapper absolute will-change-transform max-[1080px]:relative max-[1080px]:inset-auto z-10 ${card.positionClass}`}
+              className={`home-why__floating-card-wrapper absolute max-[1080px]:relative max-[1080px]:inset-auto z-10 ${card.positionClass}`}
             >
-              <div className="home-why__floating-card relative w-[min(30vw,470px)] max-[1080px]:w-full p-6 flex flex-col gap-3 bg-[#1c1c1c] rounded-2xl border border-white/10 shadow-[0_12px_24px_-8px_rgba(0,0,0,0.6)] transition-transform duration-200 hover:-translate-y-1">
-                <h3 className="home-why__floating-card-title text-lg text-white font-medium font-display">
+              <div className="home-why__floating-card relative w-[min(26vw,380px)] max-[1080px]:w-full p-5 flex flex-col gap-2 bg-[#1c1c1c] rounded-2xl border border-white/10 shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-all duration-200 hover:-translate-y-1 hover:border-[#2377F6]/50">
+                <h3 className="home-why__floating-card-title text-base text-white font-medium font-display">
                   {card.title}
                 </h3>
-                <p className="home-why__floating-card-description text-sm text-[#a8a8a8] leading-5">
+                <p className="home-why__floating-card-description text-xs text-[#a8a8a8] leading-5">
                   {card.description}
                 </p>
               </div>
