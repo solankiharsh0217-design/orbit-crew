@@ -221,6 +221,7 @@ export default function Lightfall({
   const rendererRef = useRef<any>(null);
   const mouseTargetRef = useRef<[number, number]>([0, 0]);
   const lastTimeRef = useRef<number>(0);
+  const isVisibleRef = useRef<boolean>(true);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -237,7 +238,6 @@ export default function Lightfall({
     const gl = renderer.gl;
     const canvas = gl.canvas;
 
-    // Explicitly set WebGL clear color to pitch black
     gl.clearColor(0, 0, 0, 1);
 
     canvas.style.width = "100%";
@@ -246,7 +246,6 @@ export default function Lightfall({
     canvas.style.backgroundColor = "#000000";
     container.appendChild(canvas);
 
-    // Prevent WebGL context loss crashes on long scroll
     const handleContextLost = (e: Event) => {
       e.preventDefault();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -313,6 +312,7 @@ export default function Lightfall({
     ro.observe(container);
 
     const onPointerMove = (e: MouseEvent) => {
+      if (!isVisibleRef.current) return;
       const rect = canvas.getBoundingClientRect();
       const scale = renderer.dpr || 1;
       const x = (e.clientX - rect.left) * scale;
@@ -327,7 +327,8 @@ export default function Lightfall({
     let animationFrameId: number;
 
     const update = (t: number) => {
-      if (!paused && rendererRef.current && meshRef.current) {
+      // ONLY render if the hero container is actually visible in the viewport!
+      if (!paused && isVisibleRef.current && rendererRef.current && meshRef.current) {
         const delta = t - (lastTimeRef.current || t);
         lastTimeRef.current = t;
         uniforms.iTime.value += delta * 0.001;
@@ -341,8 +342,32 @@ export default function Lightfall({
 
         renderer.render({ scene: mesh });
       }
-      animationFrameId = requestAnimationFrame(update);
+      
+      if (isVisibleRef.current) {
+        animationFrameId = requestAnimationFrame(update);
+      }
     };
+
+    // IntersectionObserver to auto-pause RAF loop when off-screen
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        const isIntersecting = entry ? entry.isIntersecting : true;
+        isVisibleRef.current = isIntersecting;
+
+        if (isIntersecting) {
+          lastTimeRef.current = performance.now();
+          if (rafRef.current) cancelAnimationFrame(rafRef.current);
+          animationFrameId = requestAnimationFrame(update);
+          rafRef.current = animationFrameId;
+        } else {
+          if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        }
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(container);
 
     animationFrameId = requestAnimationFrame(update);
     rafRef.current = animationFrameId;
@@ -352,6 +377,7 @@ export default function Lightfall({
       if (mouseInteraction) window.removeEventListener("pointermove", onPointerMove);
       canvas.removeEventListener("webglcontextlost", handleContextLost);
       canvas.removeEventListener("webglcontextrestored", handleContextRestored);
+      observer.disconnect();
       ro.disconnect();
       if (canvas && canvas.parentNode) {
         canvas.parentNode.removeChild(canvas);
