@@ -47,43 +47,46 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="home-hero relative min-h-[max(600px,calc(100vh-320px))] flex flex-col overflow-hidden">
-      {/* Interactive WebGL Lightfall Background Canvas */}
-      <div className="absolute inset-0 pointer-events-none opacity-50 z-0">
+    <section ref={sectionRef} className="home-hero relative min-h-[max(640px,calc(100vh-200px))] flex flex-col justify-center overflow-hidden bg-black">
+      {/* Seamless WebGL Lightfall Background with Masked Radial & Bottom Fade */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden [mask-image:radial-gradient(ellipse_100%_80%_at_50%_40%,black_40%,transparent_95%)]">
         <Lightfall
-          colors={["#2377F6", "#1972f5", "#74dc9e", "#995cf5"]}
+          colors={["#2377F6", "#1972f5", "#0957D9", "#4488ff"]}
           backgroundColor="#000000"
-          speed={0.6}
-          streakCount={4}
-          streakWidth={1}
-          streakLength={1.2}
-          glow={1}
-          density={0.6}
-          twinkle={1}
-          zoom={2.2}
-          backgroundGlow={0.6}
-          opacity={0.8}
+          speed={0.4}
+          streakCount={3}
+          streakWidth={0.8}
+          streakLength={0.8}
+          glow={0.6}
+          density={0.35}
+          twinkle={0.8}
+          zoom={1.8}
+          backgroundGlow={0.25}
+          opacity={0.45}
           mouseInteraction={true}
-          mouseStrength={0.6}
-          mouseRadius={1}
+          mouseStrength={0.4}
+          mouseRadius={0.8}
         />
       </div>
 
+      {/* Subtle Dark Radial Gradient Overlay for Perfect Text Contrast */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.3)_60%,rgba(0,0,0,0.85)_100%)] pointer-events-none z-0" />
+
       <div className="page-wrapper home-hero__wrapper flex flex-col flex-1 relative z-1">
-        <div className="home-hero__content page-section flex flex-col flex-1 pb-4 pt-[84px] max-[640px]:pt-6">
+        <div className="home-hero__content page-section flex flex-col flex-1 pb-12 pt-[100px] max-[640px]:pt-8">
           <div className="home-hero__inner relative flex flex-col flex-1 max-[880px]:flex-col">
             
             {/* Left Content Column */}
-            <div className="home-hero__text relative z-1 pointer-events-none flex flex-col flex-1 max-[880px]:static max-[880px]:text-left">
+            <div className="home-hero__text relative z-1 pointer-events-none flex flex-col flex-1 justify-center max-[880px]:static max-[880px]:text-left">
               <div className="pointer-events-auto">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/15 border border-[#2377F6]/40 text-[#2377F6] text-xs font-mono mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(35,119,246,0.2)]">
                   <span className="w-2 h-2 rounded-full bg-[#2377F6] animate-pulse" />
                   OrbitCrew Digital Execution
                 </div>
 
                 <h1
                   ref={titleRef}
-                  className="home-hero__title common-title common-title--2xl common-title--white w-[calc(75%-100px)] max-w-full mb-6 max-[880px]:w-full"
+                  className="home-hero__title common-title common-title--2xl common-title--white w-[calc(75%-80px)] max-w-full mb-6 max-[880px]:w-full font-display font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]"
                   style={{ textWrap: "balance" }}
                 >
                   Turn low-converting websites into 24/7 revenue engines.
@@ -91,7 +94,7 @@ export default function Hero() {
 
                 <p
                   ref={subtitleRef}
-                  className="home-hero__subtitle w-1/2 max-w-[540px] text-base leading-6 text-[#a8a8a8] mb-8 max-[880px]:w-full max-[880px]:max-w-full"
+                  className="home-hero__subtitle w-1/2 max-w-[540px] text-lg leading-7 text-[#c4c4c4] mb-8 max-[880px]:w-full max-[880px]:max-w-full font-sans"
                   style={{ textWrap: "balance" }}
                 >
                   We build high-conversion Next.js websites and deploy AI text &amp; voice conversational agents connected directly to your mobile numbers and workflow automations.
@@ -100,7 +103,7 @@ export default function Hero() {
                 <div ref={ctasRef} className="home-hero__ctas flex flex-col items-start gap-4">
                   <div className="common-trial-cta flex gap-4 items-center max-[540px]:flex-col max-[540px]:w-full">
                     <div className="common-trial-cta__buttons-group flex gap-4 min-w-[200px] max-[540px]:w-full max-[540px]:flex-col">
-                      <a href="/contact" className="common-button common-button--primary">
+                      <a href="/contact" className="common-button common-button--primary shadow-[0_4px_20px_rgba(35,119,246,0.4)]">
                         Book a Discovery Call
                       </a>
                       <a href="/services" className="common-button common-button--secondary-dark">
@@ -108,7 +111,7 @@ export default function Hero() {
                       </a>
                     </div>
                   </div>
-                  <p className="text-xs text-[#707070]">
+                  <p className="text-xs text-[#8c8c8c] tracking-wide">
                     100% White-Label &middot; NDA Signed Upfront &middot; Zero Client Poaching
                   </p>
                 </div>
@@ -120,21 +123,21 @@ export default function Hero() {
               ref={sceneRef}
               className="home-hero__scene absolute inset-0 z-0 flex justify-end flex-row max-[880px]:static max-[880px]:justify-center pointer-events-none"
             >
-              <div className="home-hero__scene-image home-hero__scene-image--raster pt-[76px] text-right max-[880px]:pt-8 max-[880px]:text-center relative">
+              <div className="home-hero__scene-image home-hero__scene-image--raster pt-[60px] text-right max-[880px]:pt-8 max-[880px]:text-center relative">
                 <img
                   src="/hugo-assets/images/scene_raster.webp"
                   alt="OrbitCrew AI Ecosystem"
-                  className="inline-block max-w-[760px] max-h-full aspect-[2407/2084] translate-x-[5%] max-[1280px]:max-w-[640px] max-[1080px]:max-w-[540px] max-[880px]:max-w-full max-[880px]:translate-x-0"
+                  className="inline-block max-w-[760px] max-h-full aspect-[2407/2084] translate-x-[5%] max-[1280px]:max-w-[640px] max-[1080px]:max-w-[540px] max-[880px]:max-w-full max-[880px]:translate-x-0 filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
                 />
 
                 {/* Floating Service Badges Overlay */}
-                <div className="absolute top-[35%] right-[10%] bg-[#1c1c1c]/90 border border-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-xs text-white shadow-xl max-[880px]:hidden">
+                <div className="absolute top-[35%] right-[10%] bg-[#1c1c1c]/90 border border-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs text-white shadow-[0_10px_25px_rgba(0,0,0,0.5)] max-[880px]:hidden">
                   <span className="text-[#2377F6] font-bold">⚡ High Conversion</span> Website Dev
                 </div>
-                <div className="absolute top-[60%] right-[35%] bg-[#1c1c1c]/90 border border-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-xs text-white shadow-xl max-[880px]:hidden">
+                <div className="absolute top-[60%] right-[35%] bg-[#1c1c1c]/90 border border-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs text-white shadow-[0_10px_25px_rgba(0,0,0,0.5)] max-[880px]:hidden">
                   <span className="text-[#74dc9e] font-bold">📞 Voice &amp; Text</span> Mobile Telephony
                 </div>
-                <div className="absolute top-[78%] right-[15%] bg-[#1c1c1c]/90 border border-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-xs text-white shadow-xl max-[880px]:hidden">
+                <div className="absolute top-[78%] right-[15%] bg-[#1c1c1c]/90 border border-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs text-white shadow-[0_10px_25px_rgba(0,0,0,0.5)] max-[880px]:hidden">
                   <span className="text-[#995cf5] font-bold">⚙️ Automated</span> CRM &amp; Workflows
                 </div>
               </div>
