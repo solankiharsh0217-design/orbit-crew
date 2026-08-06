@@ -17,16 +17,16 @@ export default function Header() {
   ];
 
   return (
-    <header className="page-header absolute z-[99999] top-0 left-0 right-0 bg-transparent">
+    <header className="page-header absolute z-[99999] top-0 left-0 right-0 bg-transparent pt-6 pointer-events-none">
       <div className="page-wrapper page-header__wrapper relative">
-        <div className="page-header__inner flex items-center justify-between py-6 px-4 gap-4 max-[540px]:px-2">
+        <div className="page-header__inner flex items-center justify-between px-4 gap-4 max-[540px]:px-2">
           {/* Left: Logo */}
-          <div className="page-header__left flex-1 min-w-0">
+          <div className="page-header__left flex-1 min-w-0 pointer-events-auto">
             <SiteSwitcher />
           </div>
 
-          {/* Middle: Transparent Floating Navigation Links */}
-          <nav className="page-header__middle flex justify-center items-center gap-1 bg-[#1c1c1c]/80 border border-white/10 backdrop-blur-md py-1.5 px-3 rounded-full shadow-2xl">
+          {/* Middle: Transparent Floating Pill Navigation Bar */}
+          <nav className="page-header__middle flex justify-center items-center gap-1 bg-[#1c1c1c]/80 border border-white/10 backdrop-blur-md py-1.5 px-3 rounded-full shadow-2xl pointer-events-auto">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -47,7 +47,7 @@ export default function Header() {
           </nav>
 
           {/* Right: Action Button */}
-          <div className="page-header__right flex justify-end items-center gap-2">
+          <div className="page-header__right flex justify-end items-center gap-2 pointer-events-auto">
             <Link href="/contact" className="common-button common-button--primary text-xs shadow-[0_4px_16px_rgba(35,119,246,0.4)]">
               Get Free Website Audit →
             </Link>

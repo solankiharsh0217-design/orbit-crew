@@ -10,37 +10,37 @@ const features = [
   {
     title: "High-Speed Mobile & Desktop Design.",
     description: "Built to load in less than 1 second on every smartphone and laptop. No lag, no long waiting times — visitors see your services immediately and never leave for competitors.",
-    bgClass: "home-features__card--brown bg-[#2c150c]",
-    gradientColor: "#2c150c",
-    image: "/hugo-assets/images/integrations.png",
+    bgClass: "home-features__card--brown bg-[#1c1c1c] border border-white/10",
+    gradientColor: "#0a0a0a",
+    image: "/hugo-assets/images/card_mobile_speed.jpg",
   },
   {
     title: "Frictionless Call & Booking Buttons.",
     description: "We place high-converting 'Call Now' and 'Book Appointment' buttons right where your customers look first. Zero friction between browsing your site and becoming a client.",
-    bgClass: "home-features__card--light-blue bg-[#032b35]",
-    gradientColor: "#032b35",
-    image: "/hugo-assets/images/activate.png",
+    bgClass: "home-features__card--light-blue bg-[#1c1c1c] border border-white/10",
+    gradientColor: "#0a0a0a",
+    image: "/hugo-assets/images/card_call_button.jpg",
   },
   {
     title: "Optional 24/7 AI Phone Answering Add-On.",
     description: "Never miss a customer phone call again. Our AI phone assistant answers calls on your business line 24/7, answers questions, and schedules appointments automatically.",
-    bgClass: "home-features__card--light-orange bg-[#361e02]",
-    gradientColor: "#361e02",
-    image: "/hugo-assets/images/configure.png",
+    bgClass: "home-features__card--light-orange bg-[#1c1c1c] border border-white/10",
+    gradientColor: "#0a0a0a",
+    image: "/hugo-assets/images/card_ai_phone.jpg",
   },
   {
     title: "Optional AI Web & WhatsApp Chatbot.",
     description: "An intelligent chat assistant on your website and WhatsApp that answers customer questions 24/7 and captures contact details even while you sleep.",
-    bgClass: "home-features__card--light-green bg-[#1d2c0c]",
-    gradientColor: "#1d2c0c",
-    image: "/hugo-assets/images/workflow.png",
+    bgClass: "home-features__card--light-green bg-[#1c1c1c] border border-white/10",
+    gradientColor: "#0a0a0a",
+    image: "/hugo-assets/images/card_whatsapp_chat.jpg",
   },
   {
     title: "Instant Lead Alerts Directly To Your Phone.",
     description: "Every new website inquiry, appointment booking, or phone call transcript is forwarded to your phone immediately via SMS or email so you can close deals fast.",
-    bgClass: "home-features__card--red bg-[#34040b]",
-    gradientColor: "#34040b",
-    image: "/hugo-assets/images/analytics.png",
+    bgClass: "home-features__card--red bg-[#1c1c1c] border border-white/10",
+    gradientColor: "#0a0a0a",
+    image: "/hugo-assets/images/card_lead_alert.jpg",
   },
 ];
 
@@ -79,6 +79,9 @@ export default function FeaturesSection() {
     <section ref={sectionRef} id="how-we-do-it" className="home-features page-section flex flex-col gap-[84px] max-[640px]:gap-10">
       <div className="page-wrapper">
         <div className="home-features__title sticky top-[10vh] text-center z-1 mb-[84px]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
+            Proven Conversion Blueprint
+          </div>
           <h2 className="common-title common-title--large common-title--white font-display">
             How We Turn Your Website Into A Customer Generator.
           </h2>
@@ -91,36 +94,30 @@ export default function FeaturesSection() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className={`home-features__card sticky p-8 w-full aspect-[1256/480] transition-all duration-200 rounded-2xl shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12),0_1px_2px_-1px_rgba(0,0,0,0.08),inset_0_-1px_0_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.32)] overflow-hidden ${feature.bgClass} max-[640px]:h-[400px] max-[640px]:aspect-auto`}
+              className={`home-features__card sticky p-8 w-full aspect-[1256/480] transition-all duration-200 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden ${feature.bgClass} max-[640px]:h-[400px] max-[640px]:aspect-auto`}
               style={{
                 top: `calc(30vh + ${idx * 16}px)`,
                 zIndex: idx + 2,
               }}
             >
-              {/* Product Screenshot */}
-              <div className="home-features__card-screenshot absolute top-[8%] -right-[15%] w-[70%] max-[1080px]:w-[140%] max-[1080px]:left-[20%] pointer-events-none">
+              {/* Isolated 3D Asset Image */}
+              <div className="home-features__card-screenshot absolute top-[5%] -right-[5%] w-[55%] max-[1080px]:w-[100%] max-[1080px]:left-[10%] pointer-events-none">
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full object-cover rounded-xl shadow-2xl border border-white/10"
+                  className="w-full h-auto object-contain rounded-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
                 />
               </div>
 
-              {/* Bottom Gradient & Blur */}
-              <div
-                className="home-features__card-gradient w-full h-full absolute left-0 top-0 pointer-events-none"
-                style={{
-                  background: `linear-gradient(to top, ${feature.gradientColor} 0%, transparent 60%)`,
-                }}
-              />
-              <div className="home-features__card-blur w-full h-[45%] absolute left-0 -bottom-[2px] backdrop-blur-[10px] [mask:linear-gradient(0deg,rgb(0,0,0)_60%,transparent)] pointer-events-none" />
-
               {/* Card Text Content */}
-              <div className="home-features__card-content relative h-full flex flex-col justify-end gap-4 z-10 max-w-[691px]">
+              <div className="home-features__card-content relative h-full flex flex-col justify-center gap-4 z-10 max-w-[580px]">
+                <span className="text-xs font-mono text-[#2377F6] font-bold">
+                  STEP 0{idx + 1}
+                </span>
                 <h3 className="common-title common-title--small common-title--white font-display">
                   {feature.title}
                 </h3>
-                <p className="home-features__card-description text-white/70 text-base leading-6">
+                <p className="home-features__card-description text-white/80 text-base leading-7">
                   {feature.description}
                 </p>
               </div>

@@ -22,9 +22,9 @@ export default function RootLayout({
         <SmoothScroll>
           <div className="page-container relative bg-black min-h-screen text-[#a8a8a8]">
             <BackgroundGlow />
-            <div className="page-content pt-[60px] relative z-1">
+            <div className="page-content relative z-1">
               <Header />
-              <main className="home relative min-h-[calc(100vh-200px)]">
+              <main className="home relative min-h-screen">
                 {children}
               </main>
               <Footer />
