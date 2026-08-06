@@ -14,33 +14,45 @@ export default function WhySection() {
     const ctx = gsap.context(() => {
       const cardElements = cardsRef.current?.querySelectorAll(".home-why__floating-card-wrapper");
       if (cardElements) {
-        // Scroll entrance reveal
-        cardElements.forEach((card, index) => {
-          gsap.fromTo(
-            card,
-            { opacity: 0, y: 40 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.8,
-              delay: index * 0.1,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "top 70%",
-                toggleActions: "play none none reverse",
-              },
-            }
-          );
+        // Timeline for scroll-triggered fan-out from bottom center point
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 65%",
+            end: "top 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
 
-          // Continuous subtle float motion
+        // Cards start clustered at bottom center point and fan out
+        cardElements.forEach((card, index) => {
+          gsap.set(card, {
+            opacity: 0,
+            scale: 0.3,
+            y: 220,
+            x: index === 0 ? 0 : index % 2 === 1 ? -120 : 120,
+          });
+        });
+
+        tl.to(cardElements, {
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          y: 0,
+          duration: 1,
+          stagger: 0.12,
+          ease: "back.out(1.4)",
+        });
+
+        // Continuous subtle float motion after fan-out completes
+        cardElements.forEach((card, index) => {
           gsap.to(card, {
-            y: index % 2 === 0 ? -10 : 10,
+            y: index % 2 === 0 ? -12 : 12,
             duration: 3.5 + index * 0.5,
             ease: "sine.inOut",
             repeat: -1,
             yoyo: true,
-            delay: index * 0.2,
+            delay: 1.2 + index * 0.15,
           });
         });
       }
@@ -128,7 +140,7 @@ export default function WhySection() {
           </div>
         </div>
 
-        {/* 5 Clean Floating Cards Container (Zero SVG Circular Rings) */}
+        {/* 5 Floating Cards Container with GSAP Fan-Out Animation */}
         <div
           ref={cardsRef}
           className="home-why__floating-cards relative min-h-[700px] mt-[-100px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-4 max-[1080px]:mt-8 max-[1080px]:min-h-0 max-[640px]:grid-cols-1"
