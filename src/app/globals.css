@@ -268,4 +268,25 @@
     88% { opacity: 1; }
     100% { transform: translate3d(calc(-100%*(var(--clouds-percent-img-width, 160) - 100)/var(--clouds-percent-img-width, 160)),-50px,0) scale(1.1) rotate(-20deg); opacity: 0.12; }
   }
+
+  /* Home Cases Hover Expansion */
+  .home-cases__grid {
+    display: flex;
+    gap: 24px;
+  }
+  @media (max-width: 1080px) {
+    .home-cases__grid {
+      display: grid !important;
+      grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+  }
+  .home-cases__item {
+    flex: 1 1 0%;
+    transition: flex 0.4s cubic-bezier(0.33, 1, 0.68, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media (min-width: 1081px) {
+    .home-cases__item:hover {
+      flex: 2.5 2.5 0% !important;
+    }
+  }
 }

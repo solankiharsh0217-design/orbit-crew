@@ -41,13 +41,13 @@ export default function CaseStudies() {
         </div>
 
         {/* Hover-expand flex container layout matching screenshot */}
-        <div className="home-cases__grid flex gap-6 max-[1167px]:grid max-[1167px]:grid-cols-2 max-[880px]:grid-cols-1">
+        <div className="home-cases__grid">
           {teamMembers.map((c, idx) => (
             <div
               key={idx}
-              className="home-cases__item group relative flex-1 transition-all duration-300 ease-[cubic-bezier(0.33,1,0.68,1)] h-[520px] p-6 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between overflow-hidden cursor-pointer hover:flex-[2.2] hover:border-[#2377F6] hover:shadow-[0_0_30px_rgba(35,119,246,0.3)]"
+              className="home-cases__item group relative h-[520px] p-6 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between overflow-hidden cursor-pointer hover:border-[#2377F6] hover:shadow-[0_0_30px_rgba(35,119,246,0.3)]"
             >
-              {/* Team Photo Background */}
+              {/* Team Photo Background Layer */}
               <div className="absolute inset-0 z-0 rounded-[inherit] overflow-hidden pointer-events-none">
                 <img
                   src={c.image}
@@ -56,7 +56,7 @@ export default function CaseStudies() {
                 />
               </div>
 
-              {/* Dark Gradient Overlay for Crisp Legibility */}
+              {/* Dark Gradient Overlay for Crisp Text Contrast */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 pointer-events-none z-1" />
 
               {/* Header: Role Pill & Arrow Icon */}
