@@ -47,33 +47,33 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="home-hero relative min-h-[max(640px,calc(100vh-200px))] flex flex-col justify-center overflow-hidden bg-black">
-      {/* Seamless WebGL Lightfall Background with Masked Radial & Bottom Fade */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden [mask-image:radial-gradient(ellipse_100%_80%_at_50%_40%,black_40%,transparent_95%)]">
+    <section ref={sectionRef} className="home-hero relative min-h-screen w-full flex flex-col justify-center overflow-hidden bg-black">
+      {/* Full Viewport WebGL Lightfall Background */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         <Lightfall
           colors={["#2377F6", "#1972f5", "#0957D9", "#4488ff"]}
           backgroundColor="#000000"
           speed={0.4}
-          streakCount={3}
-          streakWidth={0.8}
-          streakLength={0.8}
-          glow={0.6}
-          density={0.35}
+          streakCount={4}
+          streakWidth={0.9}
+          streakLength={0.9}
+          glow={0.7}
+          density={0.4}
           twinkle={0.8}
           zoom={1.8}
-          backgroundGlow={0.25}
-          opacity={0.45}
+          backgroundGlow={0.3}
+          opacity={0.5}
           mouseInteraction={true}
-          mouseStrength={0.4}
+          mouseStrength={0.5}
           mouseRadius={0.8}
         />
       </div>
 
-      {/* Subtle Dark Radial Gradient Overlay for Perfect Text Contrast */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.3)_60%,rgba(0,0,0,0.85)_100%)] pointer-events-none z-0" />
+      {/* Smooth Ambient Gradient for Readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black pointer-events-none z-0" />
 
       <div className="page-wrapper home-hero__wrapper flex flex-col flex-1 relative z-1">
-        <div className="home-hero__content page-section flex flex-col flex-1 pb-12 pt-[100px] max-[640px]:pt-8">
+        <div className="home-hero__content page-section flex flex-col flex-1 pb-16 pt-[120px] max-[640px]:pt-12">
           <div className="home-hero__inner relative flex flex-col flex-1 max-[880px]:flex-col">
             
             {/* Left Content Column */}
@@ -86,7 +86,7 @@ export default function Hero() {
 
                 <h1
                   ref={titleRef}
-                  className="home-hero__title common-title common-title--2xl common-title--white w-[calc(75%-80px)] max-w-full mb-6 max-[880px]:w-full font-display font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]"
+                  className="home-hero__title common-title common-title--2xl common-title--white w-[calc(75%-80px)] max-w-full mb-6 max-[880px]:w-full font-display font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]"
                   style={{ textWrap: "balance" }}
                 >
                   Turn low-converting websites into 24/7 revenue engines.
@@ -94,7 +94,7 @@ export default function Hero() {
 
                 <p
                   ref={subtitleRef}
-                  className="home-hero__subtitle w-1/2 max-w-[540px] text-lg leading-7 text-[#c4c4c4] mb-8 max-[880px]:w-full max-[880px]:max-w-full font-sans"
+                  className="home-hero__subtitle w-1/2 max-w-[540px] text-lg leading-7 text-[#c4c4c4] mb-8 max-[880px]:w-full max-[880px]:max-w-full font-sans drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
                   style={{ textWrap: "balance" }}
                 >
                   We build high-conversion Next.js websites and deploy AI text &amp; voice conversational agents connected directly to your mobile numbers and workflow automations.
