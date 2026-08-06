@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lightfall from "./Lightfall";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +48,28 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} className="home-hero relative min-h-[max(600px,calc(100vh-320px))] flex flex-col overflow-hidden">
-      <div className="page-wrapper home-hero__wrapper flex flex-col flex-1">
+      {/* Interactive WebGL Lightfall Background Canvas */}
+      <div className="absolute inset-0 pointer-events-none opacity-50 z-0">
+        <Lightfall
+          colors={["#2377F6", "#1972f5", "#74dc9e", "#995cf5"]}
+          backgroundColor="#000000"
+          speed={0.6}
+          streakCount={4}
+          streakWidth={1}
+          streakLength={1.2}
+          glow={1}
+          density={0.6}
+          twinkle={1}
+          zoom={2.2}
+          backgroundGlow={0.6}
+          opacity={0.8}
+          mouseInteraction={true}
+          mouseStrength={0.6}
+          mouseRadius={1}
+        />
+      </div>
+
+      <div className="page-wrapper home-hero__wrapper flex flex-col flex-1 relative z-1">
         <div className="home-hero__content page-section flex flex-col flex-1 pb-4 pt-[84px] max-[640px]:pt-6">
           <div className="home-hero__inner relative flex flex-col flex-1 max-[880px]:flex-col">
             
@@ -78,10 +100,10 @@ export default function Hero() {
                 <div ref={ctasRef} className="home-hero__ctas flex flex-col items-start gap-4">
                   <div className="common-trial-cta flex gap-4 items-center max-[540px]:flex-col max-[540px]:w-full">
                     <div className="common-trial-cta__buttons-group flex gap-4 min-w-[200px] max-[540px]:w-full max-[540px]:flex-col">
-                      <a href="#pricing" className="common-button common-button--primary">
+                      <a href="/contact" className="common-button common-button--primary">
                         Book a Discovery Call
                       </a>
-                      <a href="#how-it-works" className="common-button common-button--secondary-dark">
+                      <a href="/services" className="common-button common-button--secondary-dark">
                         See How It Works
                       </a>
                     </div>
