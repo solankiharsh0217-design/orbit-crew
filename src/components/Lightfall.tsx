@@ -100,7 +100,6 @@ vec2 sceneC(vec2 frag, vec2 r) {
   float z = 0.0;
   float d = 1e3;
   vec4 O = vec4(0.0);
-  // Optimized raymarching loop iterations for 60fps performance
   for (int k = 0; k < 12; k++) {
     if (d <= 1e-4) break;
     O = z * normalize(vec4(P, uZoom, 0.0)) - vec4(0.0, 4.0, 1.0, 0.0) / 4.5;
@@ -227,7 +226,6 @@ export default function Lightfall({
     const container = containerRef.current;
     if (!container) return;
 
-    // Lightweight DPR cap to prevent GPU lag spikes on high-DPI screens
     const effectiveDpr = dpr ?? (typeof window !== "undefined" ? Math.min(window.devicePixelRatio || 1, 1.25) : 1);
 
     const renderer = new Renderer({
@@ -239,10 +237,29 @@ export default function Lightfall({
     const gl = renderer.gl;
     const canvas = gl.canvas;
 
+    // Explicitly set WebGL clear color to pitch black
+    gl.clearColor(0, 0, 0, 1);
+
     canvas.style.width = "100%";
     canvas.style.height = "100%";
     canvas.style.display = "block";
+    canvas.style.backgroundColor = "#000000";
     container.appendChild(canvas);
+
+    // Prevent WebGL context loss crashes on long scroll
+    const handleContextLost = (e: Event) => {
+      e.preventDefault();
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+
+    const handleContextRestored = () => {
+      if (rendererRef.current) {
+        gl.clearColor(0, 0, 0, 1);
+      }
+    };
+
+    canvas.addEventListener("webglcontextlost", handleContextLost, false);
+    canvas.addEventListener("webglcontextrestored", handleContextRestored, false);
 
     const { arr, count, avg } = prepColors(colors);
 
@@ -333,6 +350,8 @@ export default function Lightfall({
     return () => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
       if (mouseInteraction) window.removeEventListener("pointermove", onPointerMove);
+      canvas.removeEventListener("webglcontextlost", handleContextLost);
+      canvas.removeEventListener("webglcontextrestored", handleContextRestored);
       ro.disconnect();
       if (canvas && canvas.parentNode) {
         canvas.parentNode.removeChild(canvas);
@@ -361,8 +380,8 @@ export default function Lightfall({
   return (
     <div
       ref={containerRef}
-      className={`lightfall-container ${className}`}
-      style={{ mixBlendMode }}
+      className={`lightfall-container bg-black ${className}`}
+      style={{ mixBlendMode, backgroundColor: "#000000" }}
     />
   );
 }

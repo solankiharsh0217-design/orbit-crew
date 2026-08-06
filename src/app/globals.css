@@ -78,7 +78,8 @@
   }
 
   html {
-    background: #000;
+    background: #000000 !important;
+    background-color: #000000 !important;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -90,7 +91,8 @@
     color: #a8a8a8;
     font-size: 14px;
     line-height: 20px;
-    background: #000;
+    background: #000000 !important;
+    background-color: #000000 !important;
     overflow-x: clip;
   }
 

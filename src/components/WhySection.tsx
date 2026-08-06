@@ -55,7 +55,7 @@ export default function WhySection() {
           {/* Title Background Layer with Drifting Clouds */}
           <div className="home-why__title-background absolute left-1/2 -top-[10%] -translate-x-1/2 w-[max(min(1512px,110%),600px)] aspect-[1512/648] pointer-events-none">
             <div
-              className="home-why__background-clouds absolute inset-0 w-full h-full overflow-hidden mix-blend-screen opacity-30"
+              className="home-why__background-clouds absolute inset-0 w-full h-full overflow-hidden opacity-20"
               style={{
                 maskImage: 'url("/hugo-assets/svgs/logo_glass.svg")',
                 maskSize: "100% 100%",
@@ -80,7 +80,7 @@ export default function WhySection() {
           </div>
         </div>
 
-        {/* 5 Tight Cards Floating Around "Why?" (No Wave Motion, No GSAP Fan-Out) */}
+        {/* 5 Tight Cards Floating Around "Why?" */}
         <div className="home-why__floating-cards relative min-h-[460px] mt-[-60px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-4 max-[1080px]:mt-6 max-[1080px]:min-h-0 max-[640px]:grid-cols-1">
           {cards.map((card) => (
             <div
