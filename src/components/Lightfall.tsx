@@ -100,7 +100,8 @@ vec2 sceneC(vec2 frag, vec2 r) {
   float z = 0.0;
   float d = 1e3;
   vec4 O = vec4(0.0);
-  for (int k = 0; k < 39; k++) {
+  // Optimized raymarching loop iterations for 60fps performance
+  for (int k = 0; k < 12; k++) {
     if (d <= 1e-4) break;
     O = z * normalize(vec4(P, uZoom, 0.0)) - vec4(0.0, 4.0, 1.0, 0.0) / 4.5;
     d = 1.0 - sqrt(length(O * O));
@@ -141,7 +142,7 @@ void mainImage(out vec4 o, vec2 C) {
   vec2 rr = vec2(max(length(fw), 1e-5));
   float tail = 19.0 / max(uStreakLength, 0.05);
 
-  for (int m = 0; m < 16; m++) {
+  for (int m = 0; m < 12; m++) {
     if (m >= uStreakCount) break;
     float jf = float(m) + 1.0;
     float ic = fract(sin(dot(vec2(jf, floor(C.x / Y.x + 0.5)), vec2(7.0, 11.0)) * 73.0));
@@ -192,24 +193,24 @@ export interface LightfallProps {
 }
 
 export default function Lightfall({
-  className,
+  className = "",
   dpr,
   paused = false,
-  colors = ["#2377F6", "#1972f5", "#74dc9e", "#995cf5"],
+  colors = ["#2377F6", "#1972f5", "#0957D9"],
   backgroundColor = "#000000",
-  speed = 0.5,
-  streakCount = 4,
-  streakWidth = 1,
-  streakLength = 1,
-  glow = 1,
-  density = 0.6,
-  twinkle = 1,
-  zoom = 2.5,
-  backgroundGlow = 0.5,
-  opacity = 1,
+  speed = 0.4,
+  streakCount = 3,
+  streakWidth = 0.9,
+  streakLength = 0.9,
+  glow = 0.5,
+  density = 0.35,
+  twinkle = 0.8,
+  zoom = 1.8,
+  backgroundGlow = 0.0,
+  opacity = 0.4,
   mouseInteraction = true,
-  mouseStrength = 0.5,
-  mouseRadius = 1,
+  mouseStrength = 0.4,
+  mouseRadius = 0.8,
   mouseDampening = 0.15,
   mixBlendMode,
 }: LightfallProps) {
@@ -226,10 +227,13 @@ export default function Lightfall({
     const container = containerRef.current;
     if (!container) return;
 
+    // Lightweight DPR cap to prevent GPU lag spikes on high-DPI screens
+    const effectiveDpr = dpr ?? (typeof window !== "undefined" ? Math.min(window.devicePixelRatio || 1, 1.25) : 1);
+
     const renderer = new Renderer({
-      dpr: dpr ?? (typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1),
+      dpr: effectiveDpr,
       alpha: true,
-      antialias: true,
+      antialias: false,
     });
     rendererRef.current = renderer;
     const gl = renderer.gl;
@@ -258,7 +262,7 @@ export default function Lightfall({
       uBgColor: { value: hexToRGB(backgroundColor) },
       uMouseColor: { value: avg },
       uSpeed: { value: speed },
-      uStreakCount: { value: Math.max(1, Math.min(16, Math.round(streakCount))) },
+      uStreakCount: { value: Math.max(1, Math.min(12, Math.round(streakCount))) },
       uStreakWidth: { value: streakWidth },
       uStreakLength: { value: streakLength },
       uGlow: { value: glow },
@@ -281,6 +285,7 @@ export default function Lightfall({
     meshRef.current = mesh;
 
     const resize = () => {
+      if (!container || !renderer) return;
       const rect = container.getBoundingClientRect();
       renderer.setSize(rect.width, rect.height);
       uniforms.iResolution.value = [gl.drawingBufferWidth, gl.drawingBufferHeight, 1];
@@ -296,65 +301,44 @@ export default function Lightfall({
       const x = (e.clientX - rect.left) * scale;
       const y = (rect.height - (e.clientY - rect.top)) * scale;
       mouseTargetRef.current = [x, y];
-      if (mouseDampening <= 0) {
-        uniforms.iMouse.value = [x, y];
-      }
     };
+
     if (mouseInteraction) {
-      canvas.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("pointermove", onPointerMove);
     }
 
-    const loop = (t: number) => {
-      rafRef.current = requestAnimationFrame(loop);
-      uniforms.iTime.value = t * 0.001;
-      if (mouseDampening > 0) {
-        if (!lastTimeRef.current) lastTimeRef.current = t;
-        const dt = (t - lastTimeRef.current) / 1000;
+    let animationFrameId: number;
+
+    const update = (t: number) => {
+      if (!paused && rendererRef.current && meshRef.current) {
+        const delta = t - (lastTimeRef.current || t);
         lastTimeRef.current = t;
-        const tau = Math.max(1e-4, mouseDampening);
-        let factor = 1 - Math.exp(-dt / tau);
-        if (factor > 1) factor = 1;
-        const target = mouseTargetRef.current;
-        const cur = uniforms.iMouse.value;
-        cur[0] += (target[0] - cur[0]) * factor;
-        cur[1] += (target[1] - cur[1]) * factor;
-      } else {
-        lastTimeRef.current = t;
-      }
-      if (!paused && programRef.current && meshRef.current) {
-        try {
-          renderer.render({ scene: meshRef.current });
-        } catch (e) {
-          console.error(e);
+        uniforms.iTime.value += delta * 0.001;
+
+        if (mouseInteraction) {
+          const cur = uniforms.iMouse.value;
+          const target = mouseTargetRef.current;
+          cur[0] += (target[0] - cur[0]) * 0.1;
+          cur[1] += (target[1] - cur[1]) * 0.1;
         }
+
+        renderer.render({ scene: mesh });
       }
+      animationFrameId = requestAnimationFrame(update);
     };
-    rafRef.current = requestAnimationFrame(loop);
+
+    animationFrameId = requestAnimationFrame(update);
+    rafRef.current = animationFrameId;
 
     return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      if (mouseInteraction) canvas.removeEventListener("pointermove", onPointerMove);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (mouseInteraction) window.removeEventListener("pointermove", onPointerMove);
       ro.disconnect();
-      if (canvas.parentElement === container) {
-        container.removeChild(canvas);
+      if (canvas && canvas.parentNode) {
+        canvas.parentNode.removeChild(canvas);
       }
-      const callIfFn = (obj: any, key: string) => {
-        if (obj && typeof obj[key] === "function") {
-          obj[key].call(obj);
-        }
-      };
-      callIfFn(programRef.current, "remove");
-      callIfFn(geometryRef.current, "remove");
-      callIfFn(meshRef.current, "remove");
-      callIfFn(rendererRef.current, "destroy");
-      programRef.current = null;
-      geometryRef.current = null;
-      meshRef.current = null;
-      rendererRef.current = null;
     };
   }, [
-    dpr,
-    paused,
     colors,
     backgroundColor,
     speed,
@@ -370,16 +354,15 @@ export default function Lightfall({
     mouseInteraction,
     mouseStrength,
     mouseRadius,
-    mouseDampening,
+    paused,
+    dpr,
   ]);
 
   return (
     <div
       ref={containerRef}
-      className={`lightfall-container ${className ?? ""}`}
-      style={{
-        ...(mixBlendMode && { mixBlendMode }),
-      }}
+      className={`lightfall-container ${className}`}
+      style={{ mixBlendMode }}
     />
   );
 }
