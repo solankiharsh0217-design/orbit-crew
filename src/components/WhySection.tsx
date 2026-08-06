@@ -83,7 +83,7 @@ export default function WhySection() {
   ];
 
   return (
-    <section ref={sectionRef} id="why" className="home-why relative page-section scroll-mt-[250px] overflow-hidden py-[120px]">
+    <section ref={sectionRef} id="why" className="home-why relative page-section scroll-mt-[250px] overflow-hidden py-[120px] bg-black">
       {/* Background Stars Texture */}
       <div className="home-why__background-stars absolute inset-0 pointer-events-none">
         <img
@@ -128,67 +128,17 @@ export default function WhySection() {
           </div>
         </div>
 
-        {/* 5 Floating Cards Container */}
+        {/* 5 Clean Floating Cards Container (Zero SVG Circular Rings) */}
         <div
           ref={cardsRef}
-          className="home-why__floating-cards relative min-h-[700px] mt-[-100px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-3 max-[1080px]:mt-8 max-[1080px]:min-h-0 max-[640px]:grid-cols-1"
+          className="home-why__floating-cards relative min-h-[700px] mt-[-100px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-4 max-[1080px]:mt-8 max-[1080px]:min-h-0 max-[640px]:grid-cols-1"
         >
-          {/* High-Visibility SVG Connecting Lines Network Layer */}
-          <svg
-            viewBox="0 0 1000 700"
-            preserveAspectRatio="none"
-            className="absolute inset-0 w-full h-full pointer-events-none overflow-visible hidden md:block z-0"
-          >
-            <defs>
-              <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#2377F6" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#995cf5" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#2377F6" stopOpacity="0.4" />
-              </linearGradient>
-              <linearGradient id="lineGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#74dc9e" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#2377F6" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#995cf5" stopOpacity="0.4" />
-              </linearGradient>
-              <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
-                <feGaussianBlur stdDeviation="4" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-
-            {/* Background Soft Glow Aura Lines */}
-            <path d="M 500 30 C 400 30, 300 50, 220 90" stroke="#2377F6" strokeWidth="6" opacity="0.3" fill="none" filter="url(#neonGlow)" />
-            <path d="M 500 30 C 600 30, 700 50, 780 130" stroke="#2377F6" strokeWidth="6" opacity="0.3" fill="none" filter="url(#neonGlow)" />
-            <path d="M 220 120 C 140 230, 140 310, 220 400" stroke="#74dc9e" strokeWidth="6" opacity="0.3" fill="none" filter="url(#neonGlow)" />
-            <path d="M 780 160 C 860 260, 860 340, 780 440" stroke="#995cf5" strokeWidth="6" opacity="0.3" fill="none" filter="url(#neonGlow)" />
-            <path d="M 240 430 C 400 520, 600 520, 760 470" stroke="#2377F6" strokeWidth="6" opacity="0.3" fill="none" filter="url(#neonGlow)" />
-
-            {/* Sharp Pulsing Neon Connecting Lines */}
-            <path d="M 500 30 C 400 30, 300 50, 220 90" stroke="url(#lineGrad1)" strokeWidth="2.5" fill="none" strokeDasharray="8 6" filter="url(#neonGlow)" />
-            <path d="M 500 30 C 600 30, 700 50, 780 130" stroke="url(#lineGrad1)" strokeWidth="2.5" fill="none" strokeDasharray="8 6" filter="url(#neonGlow)" />
-            <path d="M 220 120 C 140 230, 140 310, 220 400" stroke="url(#lineGrad2)" strokeWidth="2.5" fill="none" strokeDasharray="6 6" filter="url(#neonGlow)" />
-            <path d="M 780 160 C 860 260, 860 340, 780 440" stroke="url(#lineGrad2)" strokeWidth="2.5" fill="none" strokeDasharray="6 6" filter="url(#neonGlow)" />
-            <path d="M 240 430 C 400 520, 600 520, 760 470" stroke="url(#lineGrad1)" strokeWidth="2.5" fill="none" strokeDasharray="10 8" filter="url(#neonGlow)" />
-
-            {/* Glowing Connection Nodes */}
-            <circle cx="500" cy="30" r="7" fill="#2377F6" filter="url(#neonGlow)" />
-            <circle cx="220" cy="90" r="6" fill="#995cf5" filter="url(#neonGlow)" />
-            <circle cx="780" cy="130" r="6" fill="#2377F6" filter="url(#neonGlow)" />
-            <circle cx="220" cy="400" r="6" fill="#74dc9e" filter="url(#neonGlow)" />
-            <circle cx="780" cy="440" r="6" fill="#995cf5" filter="url(#neonGlow)" />
-          </svg>
-
-          {/* Cards */}
           {cards.map((card) => (
             <div
               key={card.id}
               className={`home-why__floating-card-wrapper absolute will-change-transform max-[1080px]:relative max-[1080px]:inset-auto z-10 ${card.positionClass}`}
             >
-              <div className="home-why__floating-card relative w-[min(30vw,470px)] max-[1080px]:w-full p-6 flex flex-col gap-3 bg-[#1c1c1c] rounded-2xl shadow-[0_12px_16px_-5px_rgba(0,0,0,0.24),0_8px_12px_-4px_rgba(0,0,0,0.2),inset_0_-1px_0_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.32)] transition-transform duration-200 hover:-translate-y-1">
+              <div className="home-why__floating-card relative w-[min(30vw,470px)] max-[1080px]:w-full p-6 flex flex-col gap-3 bg-[#1c1c1c] rounded-2xl border border-white/10 shadow-[0_12px_24px_-8px_rgba(0,0,0,0.6)] transition-transform duration-200 hover:-translate-y-1">
                 <h3 className="home-why__floating-card-title text-lg text-white font-medium font-display">
                   {card.title}
                 </h3>

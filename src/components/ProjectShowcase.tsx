@@ -19,46 +19,46 @@ export interface ProjectItem {
 export const PROJECTS: ProjectItem[] = [
   {
     id: "local-service-website",
-    title: "High-Conversion Local Business Site",
+    title: "Apex Plumbing & Home Services",
     category: "Website Builds",
     metric: "+310%",
-    metricLabel: "More Customer Inquiries",
-    description: "Re-architected a slow legacy site into a high-speed website built for local service bookings and instant call button clicks.",
-    deliverables: ["Instant Sub-Second Load", "Mobile Ready", "Call Button Layout", "Lead Guarantee"],
-    image: "/hugo-assets/images/activate.png",
+    metricLabel: "More Local Calls",
+    description: "Built a high-conversion mobile website with instant 'Call Now' buttons, customer reviews, and zero-friction appointment booking for local homeowners.",
+    deliverables: ["Sub-Second Load", "100% Mobile Ready", "Call Now Button", "Lead Guarantee"],
+    image: "/hugo-assets/images/web_build_local_service.jpg",
     objectPosition: "object-top",
   },
   {
-    id: "omniagent-ai-platform",
-    title: "24/7 AI Phone Voice Assistant",
-    category: "AI Phone Agents",
-    metric: "24/7",
-    metricLabel: "Phone Answering & Booking",
-    description: "Connected an intelligent voice assistant to a live business phone number to answer customer calls after hours and schedule appointments.",
-    deliverables: ["Live Phone Line Sync", "Zero Missed Calls", "Appointment Booking", "SMS Confirmations"],
-    image: "/ai-agent dashboard.png",
-    objectPosition: "object-[center_top]",
+    id: "health-clinic-website",
+    title: "Lumina Dental & Health Clinic",
+    category: "Website Builds",
+    metric: "2x",
+    metricLabel: "Patient Appointments",
+    description: "Engineered a luxury clinic website with an interactive 24/7 calendar appointment booking widget and automated SMS patient reminders.",
+    deliverables: ["24/7 Booking Calendar", "Mobile Optimized", "Patient SMS Alerts", "SEO Ready"],
+    image: "/hugo-assets/images/web_build_health_clinic.jpg",
+    objectPosition: "object-top",
   },
   {
     id: "ecommerce-funnel-build",
-    title: "E-Commerce Customer Funnel",
+    title: "Luxury Brand Retail Store",
     category: "Website Builds",
     metric: "4.8%",
     metricLabel: "Checkout Conversion Rate",
-    description: "Designed ultra-fast product pages engineered to make purchasing effortless on smartphones and tablets.",
-    deliverables: ["Fast Mobile Checkout", "High Conversion UX", "Instant Cart Sync", "SEO Ready"],
-    image: "/hugo-assets/images/train.png",
+    description: "Designed ultra-fast product pages engineered to make purchasing effortless on smartphones and tablets with 1-click checkout.",
+    deliverables: ["Fast 1-Click Checkout", "High Conversion UX", "Instant Cart Sync", "Mobile First"],
+    image: "/hugo-assets/images/web_build_ecommerce.jpg",
     objectPosition: "object-top",
   },
   {
-    id: "crm-workflow-automation",
-    title: "Instant Lead Alert System",
+    id: "consulting-firm-website",
+    title: "Vanguard Legal & Advisory Group",
     category: "Lead Automations",
     metric: "< 2s",
     metricLabel: "Lead Forwarding Time",
-    description: "Automated lead alert system that forwards every new website inquiry and call transcript directly to the owner's smartphone.",
-    deliverables: ["Instant SMS Alerts", "Email Forwarding", "CRM Logging", "Zero Manual Copying"],
-    image: "/hugo-assets/images/workflow.png",
+    description: "High-trust corporate consulting site connected to instant smartphone lead alerts and automated CRM contact logging.",
+    deliverables: ["Instant Lead Forwarding", "High Trust Layout", "CRM Logging", "Zero Data Loss"],
+    image: "/hugo-assets/images/web_build_consulting.jpg",
     objectPosition: "object-top",
   },
 ];
@@ -98,30 +98,30 @@ export default function ProjectShowcase({ limit }: { limit?: number }) {
         })}
       </div>
 
-      {/* Grid of Projects with Controlled Browser Device Frames */}
+      {/* Grid of Projects with Clean Browser Device Frames */}
       <div className="grid grid-cols-2 gap-8 max-[1080px]:grid-cols-1">
         {displayedProjects.map((project) => (
           <div
             key={project.id}
-            className="group relative flex flex-col rounded-2xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-[0_12px_24px_-8px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2377F6]/50 hover:shadow-[0_20px_32px_-10px_rgba(35,119,246,0.2)]"
+            className="group relative flex flex-col rounded-2xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-[0_12px_24px_-8px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#2377F6]/50 hover:shadow-[0_20px_32px_-10px_rgba(35,119,246,0.3)]"
           >
             {/* Glassmorphic Browser Device Frame Bar */}
-            <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a]/90 border-b border-white/10 flex-shrink-0">
+            <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a]/95 border-b border-white/10 flex-shrink-0">
               <div className="flex items-center gap-1.5">
                 <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
                 <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
                 <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
               </div>
               <div className="px-3 py-0.5 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-[#a8a8a8] max-w-[220px] truncate">
-                https://orbitcrew.io/projects/{project.id}
+                https://orbitcrew.io/builds/{project.id}
               </div>
               <span className="text-xs text-[#2377F6] font-mono font-medium px-2 py-0.5 rounded bg-[#2377F6]/10">
                 {project.category}
               </span>
             </div>
 
-            {/* Project Image Canvas with Fixed Aspect Ratio & Cropping */}
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black/60 flex-shrink-0">
+            {/* Project Image Canvas */}
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black flex-shrink-0">
               <img
                 src={project.image}
                 alt={project.title}
@@ -169,7 +169,7 @@ export default function ProjectShowcase({ limit }: { limit?: number }) {
       {limit && limit < filteredProjects.length && (
         <div className="mt-12 text-center">
           <Link href="/capabilities" className="common-button common-button--secondary-dark inline-flex">
-            Explore All Projects &amp; Capabilities →
+            Explore All Builds &amp; Capabilities →
           </Link>
         </div>
       )}

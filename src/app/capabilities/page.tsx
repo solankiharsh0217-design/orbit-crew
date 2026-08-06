@@ -4,55 +4,46 @@ import ProjectShowcase from "@/components/ProjectShowcase";
 import Link from "next/link";
 
 export default function CapabilitiesPage() {
-  const omniagentDeliverables = [
+  const coreCapabilities = [
     {
-      title: "Multi-Modal AI Agent Orchestration",
-      desc: "Multi-LLM backend integration: Groq (Llama 3.3 70B, Llama 3.1 8B), NVIDIA NIM (Nemotron 3, Qwen 3 80B), and Sarvam AI Indic models. Custom System Prompt engineering, temperature control (0.1 factual vs 0.7 creative), context memory windows, and function tool calling (Live Web Search & Scraping).",
+      title: "Sub-Second Mobile & Desktop Loading Speed",
+      desc: "Built on high-performance Next.js web architectures. Every asset, image, and script is optimized so your website loads in under 1 second on every mobile phone and laptop.",
     },
     {
-      title: "RAG Knowledge Base & Vector Indexing",
-      desc: "Document parsing for .pdf, .txt, .md, .csv, .json. Automated semantic chunking and vector embeddings for factual, hallucination-free retrieval.",
+      title: "Conversion Psychology & High-Impact CTA Buttons",
+      desc: "Strategic placement of 'Call Now' buttons, appointment booking forms, and customer trust badges right where your clients look first to maximize inquiries.",
     },
     {
-      title: "Real-Time WebRTC Voice Agent Calls & Telephony",
-      desc: "Low-latency WebRTC voice call rooms with real-time audio visualizers. Voice Activity Detection (VAD) turn-taking, Sarvam AI & Deepgram STT/TTS models. PSTN phone trunking integration (Twilio, Exotel, Plivo, Telnyx) with dedicated phone line provisioning.",
+      title: "Optional 24/7 AI Phone Voice Line Answering",
+      desc: "Direct connection to your business phone line. Natural human voice conversation that handles incoming calls 24/7, answers questions, and books appointments automatically.",
     },
     {
-      title: "Embeddable AI Web Widget Engine",
-      desc: "Single <script> tag deployment for client websites. Dual interaction modes (Text Chatbot vs WebRTC Voice Call), custom color pickers, and CORS domain whitelist protection.",
+      title: "24/7 Web & WhatsApp Chatbot Assistants",
+      desc: "Smart chat assistant deployed directly on your website and WhatsApp business number to answer customer questions and capture lead contact details around the clock.",
     },
     {
-      title: "Multi-Tenant SaaS Control Plane & Dual Theme",
-      desc: "Super Admin management, real-time token/speech meter tracking, audit logs, and Razorpay tier subscription billing (Free, Pro, Enterprise). Dual theme engine: Midnight Sapphire (Dark) and Crystal Slate (Light).",
+      title: "Instant Smartphone & CRM Lead Forwarding",
+      desc: "Automated alert system that forwards every new lead, form submission, or call transcript directly to your smartphone via SMS or email with zero manual copying.",
     },
-  ];
-
-  const techStack = [
-    { category: "Frontend Framework", technology: "Next.js 14 (App Router), TypeScript 5, React 18" },
-    { category: "Styling & Design System", technology: "Tailwind CSS, Dual Light/Dark Theme Engine with CSS Variables" },
-    { category: "Auth & Workspace", technology: "Clerk Authentication, Multi-tenant Organization RBAC" },
-    { category: "Analytics & Payments", technology: "PostHog Analytics Provider, Razorpay Subscriptions & Checkout" },
-    { category: "AI Inference & LLMs", technology: "Groq LPU (Llama 3.3 70B), NVIDIA NIM Microservices, Sarvam AI" },
-    { category: "Voice & Telephony", technology: "WebRTC Streaming, Sarvam Indic STT/TTS, Deepgram Nova/Aura, Twilio/Exotel" },
   ];
 
   const leadershipTeam = [
     {
       name: "Nikhil Lathwal",
       role: "CEO & Founder",
-      bio: "Leads OrbitCrew's strategic growth, high-conversion web architectures, and agency partner execution pods.",
+      bio: "Leads OrbitCrew's strategic growth, high-conversion web architectures, and client partner delivery.",
       image: "/Nikhil Lathwal.jpeg",
     },
     {
       name: "Mohit Lathwal",
       role: "Marketing Manager",
-      bio: "Spearheads performance funnel optimization, conversion psychology, and partner acquisition growth.",
+      bio: "Spearheads performance funnel optimization, conversion psychology, and client acquisition growth.",
       image: "/Mohit Lathwal.png",
     },
     {
       name: "Harsh Solanki",
       role: "AI Engineer",
-      bio: "Architects multi-modal LLM pipelines, real-time WebRTC voice engines, and PSTN telephony integrations.",
+      bio: "Architects 24/7 AI voice phone answering systems, chatbot engines, and automated lead pipelines.",
       image: "/Harsh Solanki.jpeg",
     },
   ];
@@ -61,39 +52,39 @@ export default function CapabilitiesPage() {
     <div className="page-wrapper py-16">
       {/* Hero Header */}
       <div className="text-center max-w-[850px] mx-auto mb-20">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-          Flagship Engineering &amp; Portfolio
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
+          Capabilities &amp; Client Portfolio
         </div>
         <h1 className="common-title common-title--2xl common-title--white font-display mb-6">
-          OmniAgent AI &amp; Web Dev Portfolio
+          High-conversion website builds &amp; client portfolio.
         </h1>
         <p className="text-lg leading-7 text-[#a8a8a8]">
-          Explore OmniAgent AI — our autonomous multi-modal AI agent and voice telephony platform — along with our high-conversion Next.js client builds.
+          Explore our client website builds engineered to turn traffic into phone calls, bookings, and revenue growth.
         </p>
       </div>
 
-      {/* Flagship Showcase Card: OmniAgent AI */}
+      {/* Flagship Showcase Card: High-Conversion Website Package */}
       <section className="mb-24 p-8 md:p-12 rounded-3xl bg-gradient-to-b from-[#1c1c1c] to-[#0a0a0a] border border-[#2377F6]/40 shadow-[0_0_50px_rgba(35,119,246,0.15)] relative overflow-hidden">
         <div className="flex flex-col gap-8">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <span className="px-3 py-1 rounded-full bg-[#2377F6] text-white text-xs font-mono font-medium">
-              FLAGSHIP PLATFORM
+              CORE PRIMARY OFFERING
             </span>
             <span className="text-xs font-mono text-[#74dc9e] bg-[#74dc9e]/10 border border-[#74dc9e]/30 px-3 py-1 rounded-full">
-              Sub-300ms Inference &amp; PSTN Voice
+              Sub-Second Load &amp; 100% Mobile Ready
             </span>
           </div>
 
           <div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-3">
-              OmniAgent AI — Autonomous Multi-Modal AI Agent &amp; Voice Platform
+              High-Conversion Website Build Package
             </h2>
             <p className="text-lg text-[#2377F6] font-medium leading-7">
-              Enterprise-Grade Autonomous AI Agents, Real-Time WebRTC Voice Infrastructure, RAG Knowledge Base Retrieval, and Embeddable Web Widget Engine.
+              A complete, modern website built specifically to convert site traffic into phone calls, customer inquiries, and booked appointments.
             </p>
           </div>
 
-          {/* Browser Device Frame with Real Dashboard Image */}
+          {/* Browser Device Frame with Local Service Mockup */}
           <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-black">
             <div className="flex items-center justify-between px-4 py-3 bg-[#0a0a0a] border-b border-white/10">
               <div className="flex items-center gap-1.5">
@@ -102,55 +93,30 @@ export default function CapabilitiesPage() {
                 <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
               </div>
               <div className="px-4 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-[#a8a8a8]">
-                https://omniagent.orbitcrew.io/dashboard
+                https://apexservices.com
               </div>
-              <span className="text-xs font-mono text-white/60">OmniAgent Control Plane</span>
+              <span className="text-xs font-mono text-white/60">High-Conversion Build</span>
             </div>
             <img
-              src="/ai-agent dashboard.png"
-              alt="OmniAgent AI Dashboard"
-              className="w-full h-auto object-cover"
+              src="/hugo-assets/images/web_build_local_service.jpg"
+              alt="High Conversion Website Build"
+              className="w-full h-auto object-cover max-h-[500px]"
             />
           </div>
 
-          {/* Key Deliverables Grid */}
+          {/* Key Capabilities Grid */}
           <div className="mt-6">
             <h3 className="text-xl font-display font-bold text-white mb-6">
-              🔑 Key Capabilities &amp; Architecture
+              🔑 Core Capabilities Included In Every Build
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {omniagentDeliverables.map((item, idx) => (
+              {coreCapabilities.map((item, idx) => (
                 <div key={idx} className="p-6 rounded-xl bg-[#1c1c1c] border border-white/10 flex flex-col gap-2">
                   <span className="text-xs font-mono text-[#2377F6] font-bold">0{idx + 1}</span>
                   <h4 className="text-lg font-medium text-white">{item.title}</h4>
                   <p className="text-sm text-[#a8a8a8] leading-6">{item.desc}</p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Tech Stack Specifications Table */}
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <h3 className="text-xl font-display font-bold text-white mb-6">
-              🛠️ Technology Specifications Table
-            </h3>
-            <div className="overflow-x-auto rounded-xl border border-white/10">
-              <table className="w-full text-left text-sm text-[#a8a8a8]">
-                <thead className="bg-white/5 text-white font-mono text-xs uppercase">
-                  <tr>
-                    <th className="p-4 border-b border-white/10">Category</th>
-                    <th className="p-4 border-b border-white/10">Technology &amp; Integration</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white/10">
-                  {techStack.map((row) => (
-                    <tr key={row.category} className="hover:bg-white/5 transition-colors">
-                      <td className="p-4 font-medium text-white">{row.category}</td>
-                      <td className="p-4 font-mono text-[#c4c4c4]">{row.technology}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
@@ -160,10 +126,10 @@ export default function CapabilitiesPage() {
       <section className="mb-24">
         <div className="text-center mb-12">
           <h2 className="common-title common-title--large common-title--white font-display mb-3">
-            More Web Dev &amp; Automation Builds
+            Recent Client Website Builds
           </h2>
           <p className="text-base text-[#707070]">
-            Explore client applications built for high conversion velocity.
+            Explore website builds engineered for customer conversion velocity.
           </p>
         </div>
         <ProjectShowcase />
@@ -177,13 +143,13 @@ export default function CapabilitiesPage() {
       <section className="py-12">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-            OrbitCrew Leadership Team
+            OrbitCrew Executive Team
           </div>
           <h2 className="common-title common-title--large common-title--white font-display mb-4">
             Meet our executive &amp; engineering leadership.
           </h2>
           <p className="text-base text-[#707070] max-w-[600px] mx-auto">
-            The team driving web conversion science, voice AI telephony, and white-label execution.
+            The team driving website conversion science, 24/7 AI phone answering, and client growth.
           </p>
         </div>
 
@@ -219,13 +185,13 @@ export default function CapabilitiesPage() {
       {/* Final Call to Action */}
       <div className="mt-20 text-center p-12 rounded-3xl bg-[#1c1c1c] border border-white/10">
         <h2 className="common-title common-title--large common-title--white font-display mb-4">
-          Ready to deploy OmniAgent AI or build your high-converting site?
+          Ready to get more leads from your website?
         </h2>
         <p className="text-base text-[#a8a8a8] max-w-[550px] mx-auto mb-8">
-          Book a discovery call with Nikhil Lathwal (CEO) and our engineering team today.
+          Book a free 15-minute strategy audit with Nikhil Lathwal (CEO) and our engineering team today.
         </p>
         <Link href="/contact" className="common-button common-button--primary inline-flex">
-          Book a Discovery Call →
+          Get Free Website Audit →
         </Link>
       </div>
     </div>
