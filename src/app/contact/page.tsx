@@ -1,292 +1,209 @@
-'use client'
+"use client";
 
-import { useState, useRef, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
-
-function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] as const }}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
-const inputStyle = {
-  width: '100%',
-  padding: '18px 20px',
-  borderRadius: '10px',
-  border: '1px solid rgba(255,255,255,0.1)',
-  background: 'rgba(255,255,255,0.04)',
-  color: '#f0efe8',
-  fontSize: '1rem',
-  fontFamily: 'var(--font-body)',
-  outline: 'none',
-  transition: 'border-color 0.3s ease',
-}
-
-const contactInfo = [
-  { label: 'Email', value: 'hello@orbitcrew.io' },
-  { label: 'Response time', value: 'Within 24 hours' },
-  { label: 'Timezone', value: 'IST / GMT+5:30' },
-]
-
-const needOptions = [
-  'Project-based delivery support',
-  'Dedicated execution pod',
-  'Capability expansion',
-  'Not sure — let\'s talk',
-]
-
-function CustomSelect({ value, onChange, options, placeholder }: { value: string; onChange: (v: string) => void; options: string[]; placeholder: string }) {
-  const [open, setOpen] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
-    }
-    document.addEventListener('mousedown', handler)
-    return () => document.removeEventListener('mousedown', handler)
-  }, [])
-
-  return (
-    <div ref={ref} style={{ position: 'relative' }}>
-      <motion.button
-        type="button"
-        onClick={() => setOpen(!open)}
-        style={{
-          ...inputStyle,
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          width: '100%',
-          borderColor: open ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)',
-        }}
-      >
-        <span style={{ color: value ? '#f0efe8' : 'rgba(255,255,255,0.4)' }}>
-          {value || placeholder}
-        </span>
-        <ChevronDown
-          size={18}
-          style={{
-            transition: 'transform 0.2s',
-            transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
-            opacity: 0.5,
-          }}
-        />
-      </motion.button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{
-            position: 'absolute',
-            top: 'calc(100% + 8px)',
-            left: 0,
-            right: 0,
-            background: 'rgba(15, 15, 20, 0.98)',
-            backdropFilter: 'blur(20px)',
-            borderRadius: 10,
-            border: '1px solid rgba(255,255,255,0.1)',
-            overflow: 'hidden',
-            zIndex: 50,
-          }}
-        >
-          {options.map((opt) => (
-            <button
-              key={opt}
-              type="button"
-              onClick={() => { onChange(opt); setOpen(false) }}
-              style={{
-                width: '100%',
-                padding: '14px 20px',
-                background: 'transparent',
-                border: 'none',
-                color: '#f0efe8',
-                fontSize: '1rem',
-                fontFamily: 'var(--font-body)',
-                textAlign: 'left',
-                cursor: 'pointer',
-                transition: 'background 0.15s',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,75,31,0.15)')}
-              onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
-            >
-              {opt}
-            </button>
-          ))}
-        </motion.div>
-      )}
-    </div>
-  )
-}
+import { useState } from "react";
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false)
-  const [focusedField, setFocusedField] = useState<string | null>(null)
-  const [selectedNeed, setSelectedNeed] = useState('')
+  const [formData, setFormData] = useState({
+    name: "",
+    agencyName: "",
+    email: "",
+    serviceNeed: "High-Conversion Web Development",
+    bottleneck: "",
+    ndaAccepted: true,
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--color-bg-dark)' }}>
-
-      {/* BACKGROUND */}
-      <div className="mesh-bg" aria-hidden>
-        <div className="blob" />
+    <div className="page-wrapper py-16">
+      {/* Hero Header */}
+      <div className="text-center max-w-[700px] mx-auto mb-16">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
+          Contact &amp; Discovery Call
+        </div>
+        <h1 className="common-title common-title--2xl common-title--white font-display mb-6">
+          Let&apos;s build together.
+        </h1>
+        <p className="text-lg leading-7 text-[#a8a8a8]">
+          Tell us about your business or agency pipeline. We&apos;ll schedule a discovery call and let you know if we&apos;re a fit — no pressure, no pitch.
+        </p>
       </div>
 
-      <div className="container" style={{ paddingTop: '140px', paddingBottom: '100px', position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
-
-          {/* LEFT: Info */}
+      <div className="grid grid-cols-12 gap-12 max-[1080px]:grid-cols-1 max-w-[1100px] mx-auto">
+        {/* Left Column: Trust Badges & Contact Info */}
+        <div className="col-span-5 flex flex-col justify-between gap-8 p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 shadow-2xl">
           <div>
-            <Reveal>
-              <span className="label">Contact</span>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h1 className="h1" style={{ marginTop: 20, lineHeight: 1.05 }}>
-                Let's build<br />together.
-              </h1>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="body-large" style={{ marginTop: 28, opacity: 0.6, maxWidth: 420 }}>
-                Tell us about your agency and your pipeline. We'll let you know if we're a fit — no pressure, no pitch.
-              </p>
-            </Reveal>
+            <span className="text-xs font-mono text-[#2377F6] uppercase tracking-wider block mb-2 font-bold">
+              Direct Contact
+            </span>
+            <h2 className="text-2xl font-display font-medium text-white mb-6">
+              Partner Communications
+            </h2>
 
-            <Reveal delay={0.3}>
-              <div style={{ marginTop: 60, display: 'flex', flexDirection: 'column', gap: 28 }}>
-                {contactInfo.map((item, i) => (
-                  <div key={i}>
-                    <p className="label" style={{ color: '#888', marginBottom: 6 }}>{item.label}</p>
-                    <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', fontWeight: 600 }}>{item.value}</p>
-                  </div>
-                ))}
+            <div className="flex flex-col gap-6 text-sm text-[#a8a8a8]">
+              <div>
+                <span className="text-xs text-[#707070] block mb-1">Email Inquiry</span>
+                <a href="mailto:hello@orbitcrew.io" className="text-white text-lg underline font-medium hover:text-[#2377F6]">
+                  hello@orbitcrew.io
+                </a>
               </div>
-            </Reveal>
 
-            <Reveal delay={0.4}>
-              <div style={{ marginTop: 60, padding: '24px', borderRadius: 12, border: '1px solid rgba(255,75,31,0.2)', background: 'rgba(255,75,31,0.05)' }}>
-                <p className="label" style={{ marginBottom: 8 }}>NDA first</p>
-                <p style={{ opacity: 0.6, fontSize: '0.95rem' }}>We sign NDAs before reviewing any client materials. Your client relationships are fully protected.</p>
+              <div>
+                <span className="text-xs text-[#707070] block mb-1">Response SLA</span>
+                <span className="text-white text-base font-medium">Within 24 Hours</span>
               </div>
-            </Reveal>
+
+              <div>
+                <span className="text-xs text-[#707070] block mb-1">Timezone</span>
+                <span className="text-white text-base font-medium">IST / GMT+5:30 (Async Friendly)</span>
+              </div>
+            </div>
           </div>
 
-          {/* RIGHT: Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
-          >
-            {submitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                className="glass-card"
-                style={{ padding: 60, borderRadius: 20, textAlign: 'center' }}
-              >
-                <div style={{ fontSize: 48, marginBottom: 24 }}>✓</div>
-                <h2 className="h2" style={{ fontSize: '2rem' }}>Message sent.</h2>
-                <p className="body-large" style={{ marginTop: 16, opacity: 0.6 }}>We'll be in touch within 24 hours.</p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="btn-secondary"
-                  style={{ marginTop: 32 }}
-                >
-                  Send another
-                </button>
-              </motion.div>
-            ) : (
-              <div className="glass-card" style={{ padding: 'clamp(32px,4vw,52px)', borderRadius: 20 }}>
-                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: 700, marginBottom: 32 }}>
-                  Start the conversation
-                </h2>
-                <form
-                  onSubmit={(e) => { e.preventDefault(); setSubmitted(true) }}
-                  style={{ display: 'flex', flexDirection: 'column', gap: 20 }}
-                >
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                    <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                      <span className="label" style={{ color: '#888' }}>Your name</span>
-                      <input
-                        required
-                        type="text"
-                        placeholder="Alex Chen"
-                        style={{ ...inputStyle, borderColor: focusedField === 'name' ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)' }}
-                        onFocus={() => setFocusedField('name')}
-                        onBlur={() => setFocusedField(null)}
-                      />
-                    </label>
-                    <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                      <span className="label" style={{ color: '#888' }}>Agency name</span>
-                      <input
-                        required
-                        type="text"
-                        placeholder="Studio XYZ"
-                        style={{ ...inputStyle, borderColor: focusedField === 'agency' ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)' }}
-                        onFocus={() => setFocusedField('agency')}
-                        onBlur={() => setFocusedField(null)}
-                      />
-                    </label>
-                  </div>
+          {/* Trust Guarantees */}
+          <div className="pt-6 border-t border-white/10 flex flex-col gap-3">
+            <span className="text-xs font-mono text-[#c4c4c4] uppercase tracking-wider block mb-1">
+              Guarantees &amp; Security:
+            </span>
+            <div className="flex items-center gap-2 text-xs text-white">
+              <span className="text-[#2377F6] font-bold">✓</span>
+              <span>NDAs signed upfront before reviewing materials</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-white">
+              <span className="text-[#2377F6] font-bold">✓</span>
+              <span>100% White-Label &amp; invisible execution</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-white">
+              <span className="text-[#2377F6] font-bold">✓</span>
+              <span>Strict zero client poaching policy</span>
+            </div>
+          </div>
+        </div>
 
-                  <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    <span className="label" style={{ color: '#888' }}>Email</span>
-                    <input
-                      required
-                      type="email"
-                      placeholder="alex@studioxyz.com"
-                      style={{ ...inputStyle, borderColor: focusedField === 'email' ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)' }}
-                      onFocus={() => setFocusedField('email')}
-                      onBlur={() => setFocusedField(null)}
-                    />
-                  </label>
-
-                  <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    <span className="label" style={{ color: '#888' }}>What do you need?</span>
-                    <CustomSelect
-                      value={selectedNeed}
-                      onChange={setSelectedNeed}
-                      options={needOptions}
-                      placeholder="Select an option"
-                    />
-                  </label>
-
-                  <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    <span className="label" style={{ color: '#888' }}>What bottleneck is constraining your agency's growth right now?</span>
-                    <textarea
-                      rows={5}
-                      placeholder="e.g. 'We keep turning away complex Next.js builds because our team only knows Webflow' or 'We need 3 landing pages a week but can't hire fast enough.'"
-                      style={{ ...inputStyle, borderColor: focusedField === 'msg' ? 'rgba(255,75,31,0.5)' : 'rgba(255,255,255,0.1)', resize: 'vertical' }}
-                      onFocus={() => setFocusedField('msg')}
-                      onBlur={() => setFocusedField(null)}
-                    />
-                  </label>
-
-                  <button type="submit" className="btn-primary" style={{ marginTop: 8 }}>
-                    Send inquiry →
-                  </button>
-                </form>
+        {/* Right Column: Interactive Form */}
+        <div className="col-span-7 p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 shadow-2xl">
+          {isSubmitted ? (
+            <div className="h-full flex flex-col items-center justify-center text-center p-8">
+              <div className="w-16 h-16 rounded-full bg-[#2377F6]/20 border border-[#2377F6] text-[#2377F6] text-3xl flex items-center justify-center mb-6">
+                ✓
               </div>
-            )}
-          </motion.div>
+              <h3 className="text-2xl font-display font-medium text-white mb-2">
+                Inquiry Received
+              </h3>
+              <p className="text-base text-[#a8a8a8] max-w-[400px] mb-8">
+                Thank you, {formData.name}. We have received your inquiry for &ldquo;{formData.serviceNeed}&rdquo; and will respond within 24 hours.
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsSubmitted(false)}
+                className="common-button common-button--secondary-dark"
+              >
+                Send Another Inquiry
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <h2 className="text-xl font-display font-medium text-white mb-2">
+                Book a Discovery Call
+              </h2>
+
+              <div className="grid grid-cols-2 gap-4 max-[640px]:grid-cols-1">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="name" className="text-xs text-[#c4c4c4]">Your Name *</label>
+                  <input
+                    id="name"
+                    type="text"
+                    required
+                    placeholder="Alex Chen"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="p-3 rounded-lg bg-black/50 border border-white/10 text-white text-sm focus:outline-none focus:border-[#2377F6]"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="agencyName" className="text-xs text-[#c4c4c4]">Company / Agency Name *</label>
+                  <input
+                    id="agencyName"
+                    type="text"
+                    required
+                    placeholder="Studio XYZ"
+                    value={formData.agencyName}
+                    onChange={(e) => setFormData({ ...formData, agencyName: e.target.value })}
+                    className="p-3 rounded-lg bg-black/50 border border-white/10 text-white text-sm focus:outline-none focus:border-[#2377F6]"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label htmlFor="email" className="text-xs text-[#c4c4c4]">Work Email Address *</label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="alex@studioxyz.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="p-3 rounded-lg bg-black/50 border border-white/10 text-white text-sm focus:outline-none focus:border-[#2377F6]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label htmlFor="serviceNeed" className="text-xs text-[#c4c4c4]">Primary Need / Offering</label>
+                <select
+                  id="serviceNeed"
+                  value={formData.serviceNeed}
+                  onChange={(e) => setFormData({ ...formData, serviceNeed: e.target.value })}
+                  className="p-3 rounded-lg bg-black/50 border border-white/10 text-white text-sm focus:outline-none focus:border-[#2377F6]"
+                >
+                  <option value="High-Conversion Web Development">High-Conversion Web Development</option>
+                  <option value="Voice & Text AI Telephony">Voice &amp; Text AI Mobile Telephony</option>
+                  <option value="Workflow Automations & CRM">Workflow Automations &amp; CRM Sync</option>
+                  <option value="White-Label Execution Pod">White-Label Execution Pod</option>
+                  <option value="Not Sure — Let's Talk">Not Sure — Let&apos;s Talk</option>
+                </select>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label htmlFor="bottleneck" className="text-xs text-[#c4c4c4]">Describe Your Website or AI Bottleneck</label>
+                <textarea
+                  id="bottleneck"
+                  rows={4}
+                  placeholder="e.g. 'Our current site has low conversion rates and we want to deploy an AI voice agent on our business mobile line...'"
+                  value={formData.bottleneck}
+                  onChange={(e) => setFormData({ ...formData, bottleneck: e.target.value })}
+                  className="p-3 rounded-lg bg-black/50 border border-white/10 text-white text-sm focus:outline-none focus:border-[#2377F6]"
+                />
+              </div>
+
+              <div className="flex items-center gap-3">
+                <input
+                  id="ndaAccepted"
+                  type="checkbox"
+                  checked={formData.ndaAccepted}
+                  onChange={(e) => setFormData({ ...formData, ndaAccepted: e.target.checked })}
+                  className="w-4 h-4 accent-[#2377F6]"
+                />
+                <label htmlFor="ndaAccepted" className="text-xs text-[#a8a8a8]">
+                  Request NDA upfront before sharing project materials
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="common-button common-button--primary justify-center py-3 text-base mt-2"
+              >
+                Send Inquiry &amp; Book Call →
+              </button>
+            </form>
+          )}
         </div>
       </div>
-
-      {/* Responsive */}
-      <style>{`
-        @media (max-width: 900px) {
-          .contact-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
-    </main>
-  )
+    </div>
+  );
 }

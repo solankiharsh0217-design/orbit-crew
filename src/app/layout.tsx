@@ -1,44 +1,38 @@
-import type { Metadata } from 'next'
-import { Syne, Inter } from 'next/font/google'
-import '@/styles/globals.css'
-import Nav from '@/components/Nav'
-import Footer from '@/components/Footer'
-import SmoothScroll from '@/components/SmoothScroll'
-import PageLoadAnimation from '@/components/PageLoadAnimation'
-
-const syne = Syne({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-display'
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-body'
-})
+import type { Metadata } from "next";
+import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BackgroundGlow from "@/components/BackgroundGlow";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: 'OrbitCrewDigital - White-Label Execution Partner for Agencies',
-  description: 'A white-label execution partner helping agencies scale delivery without hiring in-house developers.',
-}
+  title: "OrbitCrew — High-Conversion Websites & AI Text/Voice Agents",
+  description: "Transform low-converting websites into 24/7 revenue engines. We build high-conversion Next.js websites and deploy AI text & voice agents connected directly to your mobile numbers.",
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${inter.variable}`}>
+      <body className="antialiased bg-black text-[#a8a8a8]">
         <SmoothScroll>
-          <PageLoadAnimation>
-            <Nav />
-            <main>{children}</main>
-            <Footer />
-          </PageLoadAnimation>
+          <div className="page-container relative bg-black min-h-screen text-[#a8a8a8]">
+            <BackgroundGlow />
+            <div className="page-content pt-[60px] relative z-1">
+              <Header />
+              <main className="home relative min-h-[calc(100vh-200px)]">
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <CookieBanner />
+          </div>
         </SmoothScroll>
       </body>
     </html>
-  )
+  );
 }

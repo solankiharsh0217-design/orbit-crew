@@ -1,0 +1,2570 @@
+[
+  {
+    "url": "https://hugo.ai/_ipx/s_92x28/common/logos/logo_full_white.svg",
+    "file": "svgs\\logo_full_white.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_184x56/common/logos/logo_full_white.svg",
+    "file": "svgs\\logo_full_white.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_60x16/common/logos/logo_crisp_full_light_blue.svg",
+    "file": "svgs\\logo_crisp_full_light_blue.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_120x32/common/logos/logo_crisp_full_light_blue.svg",
+    "file": "svgs\\logo_crisp_full_light_blue.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_209x40/components/home/HomeCustomers/reedsy.svg",
+    "file": "svgs\\reedsy.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_418x80/components/home/HomeCustomers/reedsy.svg",
+    "file": "svgs\\reedsy.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_209x40/components/home/HomeCustomers/oxio.svg",
+    "file": "svgs\\oxio.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_418x80/components/home/HomeCustomers/oxio.svg",
+    "file": "svgs\\oxio.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_209x40/components/home/HomeCustomers/decathlon.svg",
+    "file": "svgs\\decathlon.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_418x80/components/home/HomeCustomers/decathlon.svg",
+    "file": "svgs\\decathlon.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_209x40/components/home/HomeCustomers/g4educacao.svg",
+    "file": "svgs\\g4educacao.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_418x80/components/home/HomeCustomers/g4educacao.svg",
+    "file": "svgs\\g4educacao.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_209x40/components/home/HomeCustomers/emma.svg",
+    "file": "svgs\\emma.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_418x80/components/home/HomeCustomers/emma.svg",
+    "file": "svgs\\emma.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_209x40/components/home/HomeCustomers/gomoworld.svg",
+    "file": "svgs\\gomoworld.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_418x80/components/home/HomeCustomers/gomoworld.svg",
+    "file": "svgs\\gomoworld.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/_/components/home/HomeWhy/logo_glass.svg",
+    "file": "svgs\\logo_glass.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_80x80/components/home/HomeSolutions/badge_security.svg",
+    "file": "svgs\\badge_security.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_160x160/components/home/HomeSolutions/badge_security.svg",
+    "file": "svgs\\badge_security.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_80x80/components/home/HomeSolutions/badge_compliance.svg",
+    "file": "svgs\\badge_compliance.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_160x160/components/home/HomeSolutions/badge_compliance.svg",
+    "file": "svgs\\badge_compliance.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_80x80/components/home/HomeSolutions/badge_hosting.svg",
+    "file": "svgs\\badge_hosting.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_160x160/components/home/HomeSolutions/badge_hosting.svg",
+    "file": "svgs\\badge_hosting.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/components/home/HomeIntegrations/orbit_intelligence.webp",
+    "file": "images\\orbit_intelligence.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png&q_100/components/home/HomePricing/card_background_blue.png",
+    "file": "images\\card_background_blue.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_92x28/common/logos/logo_crisp_full_white.svg",
+    "file": "svgs\\logo_crisp_full_white.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/s_184x56/common/logos/logo_crisp_full_white.svg",
+    "file": "svgs\\logo_crisp_full_white.svg",
+    "category": "svgs",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png&q_100/components/home/HomePricing/card_background_orange.png",
+    "file": "images\\card_background_orange.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_png&q_100/components/home/HomePricing/card_background_pink.png",
+    "file": "images\\card_background_pink.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/_/common/logos/logo_half_big.svg",
+    "file": "svgs\\logo_half_big.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp&q_95/components/home/HomeHero/scene_raster.webp",
+    "file": "images\\scene_raster.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeWhy/background_stars.png",
+    "file": "images\\background_stars.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeWhy/clouds.webp",
+    "file": "images\\clouds.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeFeatures/integrations.png",
+    "file": "images\\integrations.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeFeatures/activate.png",
+    "file": "images\\activate.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeFeatures/configure.png",
+    "file": "images\\configure.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeFeatures/workflow.png",
+    "file": "images\\workflow.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeFeatures/analytics.png",
+    "file": "images\\analytics.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeFeatures/train.png",
+    "file": "images\\train.png",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeHow/feed.webp",
+    "file": "images\\feed.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeHow/customize.webp",
+    "file": "images\\customize.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeHow/test.webp",
+    "file": "images\\test.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeHow/run.webp",
+    "file": "images\\run.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp&q_95/components/home/HomeIntegrations/hugo_ai_engine.webp",
+    "file": "images\\hugo_ai_engine.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeCases/afs_foil.webp",
+    "file": "images\\afs_foil.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeCases/emma.webp",
+    "file": "images\\emma.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomeCases/spidervo.webp",
+    "file": "images\\spidervo.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_540&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_640&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_880&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1080&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1280&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1400&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_1760&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2160&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2560&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/_ipx/w_2800&f_webp/components/home/HomePricing/bill_background.webp",
+    "file": "images\\bill_background.webp",
+    "category": "images",
+    "status": "exists"
+  },
+  {
+    "url": "https://hugo.ai/common/backgrounds/grain_fragment.png",
+    "file": "images\\grain_fragment.png",
+    "category": "images",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/common/backgrounds/cookie_banner_icon_bg.svg",
+    "file": "svgs\\cookie_banner_icon_bg.svg",
+    "category": "svgs",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/inter_light.JXIeQN5R.woff2",
+    "file": "fonts\\inter_light_JXIeQN5R.woff2",
+    "category": "fonts",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/inter_regular.dG2RS-gk.woff2",
+    "file": "fonts\\inter_regular_dG2RS-gk.woff2",
+    "category": "fonts",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/inter_medium.BZciD7gR.woff2",
+    "file": "fonts\\inter_medium_BZciD7gR.woff2",
+    "category": "fonts",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/inter_bold.uIQEQu1t.woff2",
+    "file": "fonts\\inter_bold_uIQEQu1t.woff2",
+    "category": "fonts",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/featuredisplay_regular.D5c_265i.woff2",
+    "file": "fonts\\featuredisplay_regular_D5c_265i.woff2",
+    "category": "fonts",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/roboto_mono_regular.CsPG_Ds2.woff2",
+    "file": "fonts\\roboto_mono_regular_CsPG_Ds2.woff2",
+    "category": "fonts",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/en/_payload.json?a3fde220-bd8b-4680-9220-b312789ac856",
+    "file": "other\\_payload.json",
+    "category": "other",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://hugo.ai/_hugo/builds/meta/a3fde220-bd8b-4680-9220-b312789ac856.json",
+    "file": "other\\a3fde220-bd8b-4680-9220-b312789ac856.json",
+    "category": "other",
+    "status": "downloaded"
+  },
+  {
+    "url": "https://client.crisp.chat/l.js",
+    "file": "other\\l.js",
+    "category": "other",
+    "status": "downloaded"
+  }
+]
