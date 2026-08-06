@@ -6,7 +6,7 @@ import Link from "next/link";
 export interface ProjectItem {
   id: string;
   title: string;
-  category: "Voice & Text AI" | "Web Development" | "Automations";
+  category: "Website Builds" | "AI Phone Agents" | "Lead Automations";
   metric: string;
   metricLabel: string;
   description: string;
@@ -18,69 +18,47 @@ export interface ProjectItem {
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "omniagent-ai-platform",
-    title: "OmniAgent AI — Multi-Modal AI Agent & Voice Platform",
-    category: "Voice & Text AI",
-    metric: "< 300ms",
-    metricLabel: "Inference & PSTN Telephony",
-    description: "Enterprise-grade autonomous AI SaaS platform with real-time WebRTC voice rooms, PSTN phone trunking (Twilio/Exotel), RAG vector indexing, and single <script> embeddable widget engine.",
-    deliverables: ["Next.js 14", "WebRTC Voice", "Groq Llama 3.3", "Sarvam AI", "PSTN Trunking", "RAG Indexing"],
-    image: "/ai-agent dashboard.png",
-    objectPosition: "object-[center_top]",
-  },
-  {
-    id: "saas-conversion-engine",
-    title: "High-Conversion SaaS Platform",
-    category: "Web Development",
+    id: "local-service-website",
+    title: "High-Conversion Local Business Site",
+    category: "Website Builds",
     metric: "+310%",
-    metricLabel: "Lead Conversion Surge",
-    description: "Re-architected a legacy slow marketing site into a sub-second Next.js web application with conversion science UI and instant call scheduling.",
-    deliverables: ["Next.js 16", "React 19", "GSAP Animations", "Tailwind CSS"],
+    metricLabel: "More Customer Inquiries",
+    description: "Re-architected a slow legacy site into a high-speed website built for local service bookings and instant call button clicks.",
+    deliverables: ["Instant Sub-Second Load", "Mobile Ready", "Call Button Layout", "Lead Guarantee"],
     image: "/hugo-assets/images/activate.png",
     objectPosition: "object-top",
   },
   {
-    id: "telephony-voice-ai",
-    title: "Mobile Telephony Voice AI Hub",
-    category: "Voice & Text AI",
-    metric: "65%",
-    metricLabel: "Incoming Calls Automated",
-    description: "Connected 24/7 natural voice AI agents to business mobile phone numbers. Handles incoming phone calls, schedules leads, and sends SMS summaries.",
-    deliverables: ["Twilio PSTN", "Vapi Voice Engine", "WhatsApp/SMS", "CRM Logging"],
-    image: "/hugo-assets/images/analytics.png",
-    objectPosition: "object-top",
+    id: "omniagent-ai-platform",
+    title: "24/7 AI Phone Voice Assistant",
+    category: "AI Phone Agents",
+    metric: "24/7",
+    metricLabel: "Phone Answering & Booking",
+    description: "Connected an intelligent voice assistant to a live business phone number to answer customer calls after hours and schedule appointments.",
+    deliverables: ["Live Phone Line Sync", "Zero Missed Calls", "Appointment Booking", "SMS Confirmations"],
+    image: "/ai-agent dashboard.png",
+    objectPosition: "object-[center_top]",
   },
   {
-    id: "agency-execution-portal",
-    title: "White-Label Agency Client Portal",
-    category: "Web Development",
-    metric: "3x",
-    metricLabel: "Faster Delivery Speed",
-    description: "Built an invisible white-label client portal and dashboard for enterprise growth agencies to deliver client builds with zero recruiting drag.",
-    deliverables: ["Next.js App Router", "TypeScript", "Tailwind CSS", "Role Security"],
-    image: "/hugo-assets/images/configure.png",
+    id: "ecommerce-funnel-build",
+    title: "E-Commerce Customer Funnel",
+    category: "Website Builds",
+    metric: "4.8%",
+    metricLabel: "Checkout Conversion Rate",
+    description: "Designed ultra-fast product pages engineered to make purchasing effortless on smartphones and tablets.",
+    deliverables: ["Fast Mobile Checkout", "High Conversion UX", "Instant Cart Sync", "SEO Ready"],
+    image: "/hugo-assets/images/train.png",
     objectPosition: "object-top",
   },
   {
     id: "crm-workflow-automation",
-    title: "Automated CRM & Lead Pipeline",
-    category: "Automations",
+    title: "Instant Lead Alert System",
+    category: "Lead Automations",
     metric: "< 2s",
-    metricLabel: "Lead Response Time",
-    description: "Constructed automated n8n & Zapier connective tissue linking web form submissions, voice call transcripts, and CRM pipeline stages instantly.",
-    deliverables: ["n8n Workflows", "HubSpot API", "Salesforce Sync", "Slack Alerts"],
+    metricLabel: "Lead Forwarding Time",
+    description: "Automated lead alert system that forwards every new website inquiry and call transcript directly to the owner's smartphone.",
+    deliverables: ["Instant SMS Alerts", "Email Forwarding", "CRM Logging", "Zero Manual Copying"],
     image: "/hugo-assets/images/workflow.png",
-    objectPosition: "object-top",
-  },
-  {
-    id: "ecommerce-funnel-build",
-    title: "High-Speed E-Commerce Landing Funnel",
-    category: "Web Development",
-    metric: "4.8%",
-    metricLabel: "Checkout Conversion Rate",
-    description: "Designed sub-second loading product funnels engineered to slash cost-per-acquisition (CPA) and boost average order value.",
-    deliverables: ["Next.js Storefront", "Framer Motion", "Conversion Science", "SEO Architecture"],
-    image: "/hugo-assets/images/train.png",
     objectPosition: "object-top",
   },
 ];
@@ -88,7 +66,7 @@ export const PROJECTS: ProjectItem[] = [
 export default function ProjectShowcase({ limit }: { limit?: number }) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const categories = ["All", "Voice & Text AI", "Web Development", "Automations"];
+  const categories = ["All", "Website Builds", "AI Phone Agents", "Lead Automations"];
 
   const filteredProjects = PROJECTS.filter((p) => {
     if (selectedCategory === "All") return true;

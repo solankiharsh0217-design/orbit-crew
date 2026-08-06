@@ -1,112 +1,74 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState } from "react";
 
 const faqs = [
   {
-    q: "How do AI voice agents connect to mobile phone numbers?",
-    a: "We integrate AI voice agents directly with your existing business mobile phone numbers via secure telephony gateways (Twilio, Vapi, PSTN). The AI answers incoming calls 24/7 in natural, zero-latency human speech and sends SMS summaries to your mobile.",
+    q: "What is included in the High-Conversion Website Package?",
+    a: "The core package includes a custom-built, modern website designed for mobile phones and laptops, ultra-fast loading speed, clear 'Call Now' buttons, inquiry forms, SEO search setup, domain connection, and launch.",
   },
   {
-    q: "How does your high-conversion web development solve low-converting websites?",
-    a: "Static sites lose visitors due to slow page speeds, cluttered UI, and weak CTAs. We replace leaky sites with high-performance Next.js architectures built around conversion science, instant loading, and seamless lead capture.",
+    q: "How fast will my new website be launched?",
+    a: "Most website builds are completed, tested, and launched in 7 to 14 business days once we receive your business details and service list.",
   },
   {
-    q: "Can the AI agent handle both text chat and phone calls simultaneously?",
-    a: "Yes. OrbitCrew AI agents operate omnichannels — engaging website visitors via live web chat, following up via SMS/WhatsApp, and answering live voice calls on your mobile numbers with full shared conversation context.",
+    q: "Will my website look great on mobile phones?",
+    a: "Yes, 100%. Every site we build is mobile-first, ensuring smartphone visitors can easily click to call your business, view your services, or submit inquiries in seconds.",
   },
   {
-    q: "Will OrbitCrew ever contact our agency's clients directly?",
-    a: "Never. We operate as an invisible white-label execution arm under strict NDAs signed upfront. We never contact, pitch, or poach your clients — all deliverables are strictly branded under your agency.",
+    q: "How does the optional 24/7 AI Phone Voice Agent work?",
+    a: "The AI voice assistant connects directly to your business phone line. When you're busy or after hours, the AI answers incoming calls, answers customer questions, and books appointments automatically.",
   },
   {
-    q: "What workflow automations can be linked to our CRM?",
-    a: "We automate lead qualification, calendar appointment booking, phone call transcription logging, and real-time alerts into HubSpot, Salesforce, Pipedrive, Slack, and custom n8n/Zapier workflows.",
+    q: "Do I need any technical skills or coding knowledge?",
+    a: "Zero technical skills needed. We handle 100% of the design, build, hosting, and domain connection for you. If you ever need updates, our team handles them for you.",
   },
 ];
 
 export default function FAQSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const groupsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const groups = groupsRef.current?.querySelectorAll(".home-faq__group");
-      if (groups) {
-        groups.forEach((group) => {
-          gsap.fromTo(
-            group,
-            { opacity: 0, y: 30 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.6,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: group,
-                start: "top 80%",
-                toggleActions: "play none none reverse",
-              },
-            }
-          );
-        });
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section ref={sectionRef} id="faq" className="home-faq page-section">
-      <div className="page-wrapper">
-        <div className="home-faq__wrapper flex items-start justify-between gap-16 max-[1080px]:flex-col max-[1080px]:gap-12">
-          
-          {/* Sticky Left Title */}
-          <div className="home-faq__title flex flex-col items-start sticky top-[84px] flex-shrink-0 max-[1080px]:static max-[1080px]:w-full">
-            <h2 className="common-title common-title--large common-title--white font-display">
-              Got questions?
-            </h2>
-            <p className="text-base text-[#707070] mt-2">
-              We have the answers.
-            </p>
-            <div className="home-faq__title-cta mt-8">
-              <a href="#contact" className="common-button common-button--secondary-dark">
-                Got more questions? Ask OrbitCrew ↗
-              </a>
-            </div>
+    <section id="faq" className="home-faq page-section">
+      <div className="page-wrapper max-w-[900px] mx-auto">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
+            Frequently Asked Questions
           </div>
+          <h2 className="common-title common-title--large common-title--white font-display">
+            Clear answers. Zero jargon.
+          </h2>
+          <p className="text-base text-[#a8a8a8] mt-3">
+            Everything you need to know about our website package and add-ons.
+          </p>
+        </div>
 
-          {/* Right Chat Bubbles Grid */}
-          <div ref={groupsRef} className="home-faq__content flex flex-col gap-12 w-full max-w-[640px] max-[640px]:gap-6">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="home-faq__group flex flex-col gap-6 w-full">
-                
-                {/* Question Bubble (Right Aligned) */}
-                <div className="home-faq__message home-faq__message--question flex justify-end w-full">
-                  <div className="home-faq__message-container home-faq__message-container--question bg-black border border-[#383838] rounded-[12px_4px_12px_12px] p-4 max-w-[85%] shadow">
-                    <p className="home-faq__message-text text-white text-base font-sans">
-                      {faq.q}
-                    </p>
+        <div className="flex flex-col gap-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <div
+                key={idx}
+                className="rounded-2xl bg-[#1c1c1c] border border-white/10 overflow-hidden transition-all duration-200"
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="w-full p-6 text-left flex justify-between items-center gap-4 text-white font-display text-lg font-medium hover:text-[#2377F6] transition-colors"
+                >
+                  <span>{faq.q}</span>
+                  <span className="text-xl text-[#2377F6] font-bold">
+                    {isOpen ? "−" : "+"}
+                  </span>
+                </button>
+                {isOpen && (
+                  <div className="px-6 pb-6 text-sm leading-6 text-[#a8a8a8] border-t border-white/5 pt-4">
+                    {faq.a}
                   </div>
-                </div>
-
-                {/* Answer Bubble (Left Aligned) */}
-                <div className="home-faq__message home-faq__message--answer flex justify-start w-full">
-                  <div className="home-faq__message-container home-faq__message-container--answer bg-gradient-to-b from-[#1c1c1c] to-[#383838] border border-white/10 rounded-[4px_12px_12px_12px] p-4 max-w-[85%] max-[1080px]:max-w-full shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12),0_1px_2px_-1px_rgba(0,0,0,0.08),inset_0_-1px_0_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.32)]">
-                    <p className="home-faq__message-text text-white text-base font-sans leading-6">
-                      {faq.a}
-                    </p>
-                  </div>
-                </div>
-
+                )}
               </div>
-            ))}
-          </div>
-
+            );
+          })}
         </div>
       </div>
     </section>

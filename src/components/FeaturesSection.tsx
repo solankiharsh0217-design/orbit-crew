@@ -8,36 +8,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
-    title: "High-Conversion Next.js Web Architecture.",
-    description: "Replace low-converting, leaky websites with sub-second Next.js web builds. Designed with conversion science, responsive layout math, and frictionless CTA flows to turn passive traffic into qualified calls.",
+    title: "High-Speed Mobile & Desktop Design.",
+    description: "Built to load in less than 1 second on every smartphone and laptop. No lag, no long waiting times — visitors see your services immediately and never leave for competitors.",
     bgClass: "home-features__card--brown bg-[#2c150c]",
     gradientColor: "#2c150c",
     image: "/hugo-assets/images/integrations.png",
   },
   {
-    title: "Voice AI Agents Connected to Mobile Numbers.",
-    description: "Deploy natural conversational voice AI agents connected directly to your business mobile phone lines. Handle incoming calls 24/7, answer customer inquiries instantly, and route urgent calls to live staff.",
+    title: "Frictionless Call & Booking Buttons.",
+    description: "We place high-converting 'Call Now' and 'Book Appointment' buttons right where your customers look first. Zero friction between browsing your site and becoming a client.",
     bgClass: "home-features__card--light-blue bg-[#032b35]",
     gradientColor: "#032b35",
     image: "/hugo-assets/images/activate.png",
   },
   {
-    title: "Omnichannel Text AI Chatbots (Web, SMS, WhatsApp).",
-    description: "Multi-turn intelligent AI text agents that engage visitors on your website and follow up via SMS or WhatsApp directly from your mobile business number with zero delay.",
+    title: "Optional 24/7 AI Phone Answering Add-On.",
+    description: "Never miss a customer phone call again. Our AI phone assistant answers calls on your business line 24/7, answers questions, and schedules appointments automatically.",
     bgClass: "home-features__card--light-orange bg-[#361e02]",
     gradientColor: "#361e02",
     image: "/hugo-assets/images/configure.png",
   },
   {
-    title: "Automated CRM & Workflow Pipeline Sync.",
-    description: "Connect lead form submissions, phone call transcripts, and chatbot conversations directly into your CRM, Google Calendar, and Slack via custom n8n and Zapier automations.",
+    title: "Optional AI Web & WhatsApp Chatbot.",
+    description: "An intelligent chat assistant on your website and WhatsApp that answers customer questions 24/7 and captures contact details even while you sleep.",
     bgClass: "home-features__card--light-green bg-[#1d2c0c]",
     gradientColor: "#1d2c0c",
     image: "/hugo-assets/images/workflow.png",
   },
   {
-    title: "Real-Time Call Transcripts & Conversion Analytics.",
-    description: "Track phone call recordings, AI conversation accuracy, lead conversion rates, and ROI metrics in real time with transparent analytics dashboards.",
+    title: "Instant Lead Alerts Directly To Your Phone.",
+    description: "Every new website inquiry, appointment booking, or phone call transcript is forwarded to your phone immediately via SMS or email so you can close deals fast.",
     bgClass: "home-features__card--red bg-[#34040b]",
     gradientColor: "#34040b",
     image: "/hugo-assets/images/analytics.png",
@@ -76,14 +76,14 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="features" className="home-features page-section flex flex-col gap-[84px] max-[640px]:gap-10">
+    <section ref={sectionRef} id="how-we-do-it" className="home-features page-section flex flex-col gap-[84px] max-[640px]:gap-10">
       <div className="page-wrapper">
         <div className="home-features__title sticky top-[10vh] text-center z-1 mb-[84px]">
           <h2 className="common-title common-title--large common-title--white font-display">
-            Built for growth. Engineered to convert.
+            How We Turn Your Website Into A Customer Generator.
           </h2>
-          <p className="text-base text-text-secondary mt-3">
-            Here&apos;s how OrbitCrew scales your revenue pipeline.
+          <p className="text-base text-[#a8a8a8] mt-3">
+            Here&apos;s how OrbitCrew builds high-conversion websites for your business.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function FeaturesSection() {
                 <h3 className="common-title common-title--small common-title--white font-display">
                   {feature.title}
                 </h3>
-                <p className="home-features__card-description text-white/60 text-base leading-6">
+                <p className="home-features__card-description text-white/70 text-base leading-6">
                   {feature.description}
                 </p>
               </div>

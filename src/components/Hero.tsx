@@ -79,17 +79,12 @@ export default function Hero() {
             {/* Left Content Column */}
             <div className="home-hero__text relative z-1 pointer-events-none flex flex-col flex-1 justify-center max-[880px]:static max-[880px]:text-left">
               <div className="pointer-events-auto">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/15 border border-[#2377F6]/40 text-[#2377F6] text-xs font-mono mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(35,119,246,0.2)]">
-                  <span className="w-2 h-2 rounded-full bg-[#2377F6] animate-pulse" />
-                  OrbitCrew Digital Execution
-                </div>
-
                 <h1
                   ref={titleRef}
-                  className="home-hero__title common-title common-title--2xl common-title--white w-[calc(75%-80px)] max-w-full mb-6 max-[880px]:w-full font-display font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]"
+                  className="home-hero__title common-title common-title--2xl common-title--white w-[calc(80%-60px)] max-w-full mb-6 max-[880px]:w-full font-display font-bold leading-[1.1] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]"
                   style={{ textWrap: "balance" }}
                 >
-                  Turn low-converting websites into 24/7 revenue engines.
+                  We Build Websites That Get You More Customers — Guaranteed.
                 </h1>
 
                 <p
@@ -97,22 +92,22 @@ export default function Hero() {
                   className="home-hero__subtitle w-1/2 max-w-[540px] text-lg leading-7 text-[#c4c4c4] mb-8 max-[880px]:w-full max-[880px]:max-w-full font-sans drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
                   style={{ textWrap: "balance" }}
                 >
-                  We build high-conversion Next.js websites and deploy AI text &amp; voice conversational agents connected directly to your mobile numbers and workflow automations.
+                  Stop losing leads to slow, outdated websites. We build fast, high-converting websites for businesses and local services engineered to turn visitors into phone calls and booked appointments.
                 </p>
 
                 <div ref={ctasRef} className="home-hero__ctas flex flex-col items-start gap-4">
                   <div className="common-trial-cta flex gap-4 items-center max-[540px]:flex-col max-[540px]:w-full">
                     <div className="common-trial-cta__buttons-group flex gap-4 min-w-[200px] max-[540px]:w-full max-[540px]:flex-col">
                       <a href="/contact" className="common-button common-button--primary shadow-[0_4px_20px_rgba(35,119,246,0.4)]">
-                        Book a Discovery Call
+                        Get Free Website Audit →
                       </a>
-                      <a href="/services" className="common-button common-button--secondary-dark">
-                        See How It Works
+                      <a href="#pricing" className="common-button common-button--secondary-dark">
+                        See Package Pricing
                       </a>
                     </div>
                   </div>
                   <p className="text-xs text-[#8c8c8c] tracking-wide">
-                    100% White-Label &middot; NDA Signed Upfront &middot; Zero Client Poaching
+                    Fast Turnaround &middot; 100% Mobile Ready &middot; Guaranteed Conversion Boost
                   </p>
                 </div>
               </div>
@@ -126,19 +121,19 @@ export default function Hero() {
               <div className="home-hero__scene-image home-hero__scene-image--raster pt-[60px] text-right max-[880px]:pt-8 max-[880px]:text-center relative">
                 <img
                   src="/hugo-assets/images/scene_raster.webp"
-                  alt="OrbitCrew AI Ecosystem"
+                  alt="High-Conversion Website Build"
                   className="inline-block max-w-[760px] max-h-full aspect-[2407/2084] translate-x-[5%] max-[1280px]:max-w-[640px] max-[1080px]:max-w-[540px] max-[880px]:max-w-full max-[880px]:translate-x-0 filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
                 />
 
-                {/* Floating Service Badges Overlay */}
+                {/* Floating Badges Overlay (Non-Technical) */}
                 <div className="absolute top-[35%] right-[10%] bg-[#1c1c1c]/90 border border-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs text-white shadow-[0_10px_25px_rgba(0,0,0,0.5)] max-[880px]:hidden">
-                  <span className="text-[#2377F6] font-bold">⚡ High Conversion</span> Website Dev
+                  <span className="text-[#2377F6] font-bold">⚡ High-Conversion</span> Website Build
                 </div>
                 <div className="absolute top-[60%] right-[35%] bg-[#1c1c1c]/90 border border-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs text-white shadow-[0_10px_25px_rgba(0,0,0,0.5)] max-[880px]:hidden">
-                  <span className="text-[#74dc9e] font-bold">📞 Voice &amp; Text</span> Mobile Telephony
+                  <span className="text-[#74dc9e] font-bold">📞 Optional 24/7</span> AI Phone Answering
                 </div>
                 <div className="absolute top-[78%] right-[15%] bg-[#1c1c1c]/90 border border-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl text-xs text-white shadow-[0_10px_25px_rgba(0,0,0,0.5)] max-[880px]:hidden">
-                  <span className="text-[#995cf5] font-bold">⚙️ Automated</span> CRM &amp; Workflows
+                  <span className="text-[#995cf5] font-bold">🔔 Instant</span> Lead Alerts to Phone
                 </div>
               </div>
             </div>

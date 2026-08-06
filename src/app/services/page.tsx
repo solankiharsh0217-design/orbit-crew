@@ -7,17 +7,17 @@ export default function ServicesPage() {
     {
       id: "web-dev",
       num: "01",
-      title: "High-Conversion Web Development",
-      eyebrow: "SOLVING LOW-CONVERTING WEBSITES",
-      tagline: "Turn passive website visitors into qualified paying clients.",
-      description: "Generic, slow, or outdated websites lose up to 90% of your paid and organic traffic. We re-architect leaky sites using cutting-edge Next.js 16 code, conversion psychology, responsive layout math, and sub-second page speeds.",
+      title: "High-Conversion Website Build Package (Foundation)",
+      eyebrow: "CORE PRIMARY SERVICE",
+      tagline: "Turn passive website visitors into paying customers.",
+      description: "Slow, outdated websites lose up to 90% of prospective clients. We build custom, ultra-fast websites engineered specifically to grab attention, showcase your services, and make calling or booking effortless.",
       deliverables: [
-        "Full-stack Next.js & React App Router builds",
-        "Sub-second load speeds & 100/100 Lighthouse performance",
-        "Mobile-first responsive UX math",
-        "High-impact landing pages & A/B conversion funnels",
-        "Headless CMS integration (Webflow, Sanity, Contentful)",
-        "SEO architecture & structured data micro-formats",
+        "Custom mobile-first website design",
+        "Sub-second page load speeds",
+        "High-visibility 'Call Now' & appointment buttons",
+        "Contact form & inquiry setup",
+        "Google Search (SEO) setup & registration",
+        "Domain & hosting launch assistance",
       ],
       badgeColor: "border-[#2377F6]/30 text-[#2377F6] bg-[#2377F6]/10",
       image: "/hugo-assets/images/activate.png",
@@ -25,17 +25,17 @@ export default function ServicesPage() {
     {
       id: "voice-ai",
       num: "02",
-      title: "OmniAgent AI & Mobile Telephony Voice Agents",
-      eyebrow: "WEBRTC & PSTN PHONE NUMBER INTEGRATION",
-      tagline: "24/7 intelligent voice calls & text messaging on your mobile lines.",
-      description: "Powered by OmniAgent AI — our autonomous multi-modal AI platform with WebRTC real-time voice call rooms, Voice Activity Detection (VAD), and PSTN phone trunking (Twilio/Exotel). The AI answers incoming mobile calls 24/7 with sub-300ms inference.",
+      title: "24/7 AI Phone Voice Agent Add-On",
+      eyebrow: "OPTIONAL POWER ADD-ON",
+      tagline: "Never lose a customer phone call after hours or when you're busy.",
+      description: "Connect an intelligent AI phone assistant directly to your business phone line. When you can't answer, the AI answers customer calls 24/7, answers questions, and schedules appointments automatically.",
       deliverables: [
-        "Direct connection to your business mobile phone lines",
-        "Low-latency WebRTC streaming & natural voice synthesis",
-        "Groq Llama 3.3 70B & Sarvam AI Indic STT/TTS models",
-        "PSTN telephone line trunking (Twilio, Exotel, Plivo, Telnyx)",
-        "RAG document parsing (.pdf, .txt, .md, .csv, .json)",
-        "Single <script> tag embeddable web widget engine",
+        "Direct connection to your business phone line",
+        "Natural 24/7 human-like voice conversation",
+        "Automated customer appointment booking",
+        "Answers FAQs about your services & pricing",
+        "SMS appointment confirmation texts to clients",
+        "Instant call summaries sent to your phone",
       ],
       badgeColor: "border-[#74dc9e]/30 text-[#74dc9e] bg-[#74dc9e]/10",
       image: "/ai-agent dashboard.png",
@@ -43,17 +43,16 @@ export default function ServicesPage() {
     {
       id: "automations",
       num: "03",
-      title: "Workflow Automations & CRM Integration",
-      eyebrow: "END-TO-END OPERATIONAL CONNECTIVITY",
-      tagline: "Seamless connective pipelines linking web leads, calls, and CRMs.",
-      description: "Stop wasting hours transferring lead data manually across disconnected tools. We construct automated connective workflows linking your high-converting website, mobile phone lines, voice AI transcripts, CRM, and internal communication channels.",
+      title: "Automated Lead & Phone Sync Add-On",
+      eyebrow: "OPTIONAL POWER ADD-ON",
+      tagline: "Instant alerts delivered straight to your smartphone.",
+      description: "Stop losing track of customer leads. We set up automated notifications so every new website form inquiry or phone call transcript is forwarded to your phone immediately.",
       deliverables: [
-        "n8n & Zapier custom automated pipelines",
-        "Instant CRM sync (HubSpot, Salesforce, Pipedrive)",
-        "Google Calendar & Calendly automated scheduling",
-        "Real-time Slack & email notifications on hot leads",
-        "Phone call transcript logging & lead scoring",
-        "Custom REST API & Webhook integrations",
+        "Instant SMS & email alerts on new leads",
+        "CRM database synchronization (HubSpot, Salesforce)",
+        "Google Calendar automated booking sync",
+        "Phone transcript logging to your email",
+        "Zero manual data copy-pasting required",
       ],
       badgeColor: "border-[#995cf5]/30 text-[#995cf5] bg-[#995cf5]/10",
       image: "/hugo-assets/images/workflow.png",
@@ -65,13 +64,13 @@ export default function ServicesPage() {
       {/* Hero Header */}
       <div className="text-center max-w-[800px] mx-auto mb-20">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-          Core Services &amp; Delivery
+          Services &amp; Growth Packages
         </div>
         <h1 className="common-title common-title--2xl common-title--white font-display mb-6">
-          High-performance services engineered for growth.
+          Simple packages built to grow your business.
         </h1>
         <p className="text-lg leading-7 text-[#a8a8a8]">
-          We focus strictly on 3 core pillars: transforming low-converting websites into high-velocity engines, deploying voice &amp; text AI agents connected to mobile phone lines, and orchestrating workflow automations.
+          Start with our core High-Conversion Website Package, then add 24/7 AI phone answering or lead alerts to build your complete customer generator.
         </p>
       </div>
 
@@ -111,7 +110,7 @@ export default function ServicesPage() {
               {/* Deliverables List */}
               <div className="mt-4 pt-6 border-t border-white/10">
                 <h3 className="text-sm font-mono text-[#c4c4c4] uppercase tracking-wider mb-4">
-                  Key Capabilities &amp; Features:
+                  What You Get:
                 </h3>
                 <ul className="grid grid-cols-2 gap-3 max-[640px]:grid-cols-1">
                   {service.deliverables.map((item) => (
@@ -125,7 +124,7 @@ export default function ServicesPage() {
 
               <div className="mt-4">
                 <Link href="/contact" className="common-button common-button--primary inline-flex">
-                  Book a Discovery Call for {service.title} →
+                  Get Started With {service.title} →
                 </Link>
               </div>
             </div>
@@ -147,80 +146,16 @@ export default function ServicesPage() {
         <div className="common-dotted-divider common-dotted-divider--dark" />
       </div>
 
-      {/* Comparison Matrix Section */}
-      <section className="py-12">
-        <div className="text-center mb-16">
-          <h2 className="common-title common-title--large common-title--white font-display mb-4">
-            Traditional Agencies vs OrbitCrew Execution
-          </h2>
-          <p className="text-base text-[#707070]">
-            Why modern businesses and growth agencies partner with OrbitCrew.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-8 max-[880px]:grid-cols-1">
-          {/* Traditional Agency */}
-          <div className="p-8 rounded-2xl bg-[#1c1c1c]/50 border border-white/5 flex flex-col gap-6">
-            <h3 className="text-xl font-display font-medium text-white/50">
-              Traditional Hiring &amp; Agencies
-            </h3>
-            <ul className="flex flex-col gap-4 text-sm text-[#707070]">
-              <li className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                Slow 6-8 week recruiting cycles and high developer overhead
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                Low-converting websites that lose 90% of paid ad traffic
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                No after-hours phone support or missed mobile voice calls
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-red-400 font-bold">✕</span>
-                Disconnected tools requiring manual lead copy-pasting
-              </li>
-            </ul>
-          </div>
-
-          {/* OrbitCrew Execution */}
-          <div className="p-8 rounded-2xl bg-gradient-to-b from-[#2377F6]/10 to-transparent border border-[#2377F6]/40 shadow-[0_0_30px_rgba(35,119,246,0.15)] flex flex-col gap-6">
-            <h3 className="text-xl font-display font-medium text-[#2377F6]">
-              OrbitCrew Execution Pod
-            </h3>
-            <ul className="flex flex-col gap-4 text-sm text-white">
-              <li className="flex items-center gap-3">
-                <span className="text-[#2377F6] font-bold">✓</span>
-                Instant execution capacity in days with 0 hiring overhead
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-[#2377F6] font-bold">✓</span>
-                High-converting Next.js websites built with conversion science
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-[#2377F6] font-bold">✓</span>
-                24/7 OmniAgent AI voice agents connected to your mobile numbers
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-[#2377F6] font-bold">✓</span>
-                100% white-label execution &amp; NDAs signed upfront
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Final Call To Action */}
       <div className="mt-20 text-center p-12 rounded-3xl bg-[#1c1c1c] border border-white/10">
         <h2 className="common-title common-title--large common-title--white font-display mb-4">
-          Ready to transform your delivery pipeline?
+          Ready to get more leads from your website?
         </h2>
         <p className="text-base text-[#a8a8a8] max-w-[550px] mx-auto mb-8">
-          Book a discovery call to discuss your high-conversion web development or mobile voice AI requirements.
+          Book a free strategy audit with our team to discover how much revenue your site is leaving on the table.
         </p>
         <Link href="/contact" className="common-button common-button--primary inline-flex">
-          Book a Discovery Call →
+          Get Free Website Audit →
         </Link>
       </div>
     </div>

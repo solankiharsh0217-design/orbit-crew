@@ -52,32 +52,32 @@ export default function WhySection() {
   const cards = [
     {
       id: 1,
-      title: "Built for the real world.",
-      description: "AI doesn't live in slides or sandboxes. Hugo was designed to handle real conversations, real data, and real customers, without breaking when things get complex.",
+      title: "Guaranteed Conversion Boost.",
+      description: "We don't just build pretty pages. Every layout, headline, and button is engineered with conversion science to maximize incoming leads and phone calls.",
       positionClass: "-top-[2%] left-[36%]",
     },
     {
       id: 4,
-      title: "Grounded in truth.",
-      description: "Every answer comes from your own data, not from hallucinated guesses. Hugo connects to the systems that define your business, keeping responses accurate and trustworthy.",
+      title: "100% Mobile & Tablet Ready.",
+      description: "Over 70% of your prospective clients visit on mobile phones. Our websites load instantly and look flawless on every iOS and Android device.",
       positionClass: "top-[4%] left-[2%]",
     },
     {
       id: 3,
-      title: "Transparent by design.",
-      description: "You deserve to understand how your AI works. Hugo's logic is visible, editable, and accountable, so you can always stay in control.",
+      title: "Zero Technical Drag.",
+      description: "You don't need any technical skills. We handle all design, setup, domain connection, and launch so you can focus on running your business.",
       positionClass: "top-[10%] right-[2%]",
     },
     {
       id: 2,
-      title: "Engineered for longevity.",
-      description: "Hugo isn't built for trends. It's built to be fast, modular, and designed to evolve with how businesses support their customers in the next decade.",
+      title: "Optional 24/7 Phone Answering.",
+      description: "Add an optional AI voice agent to your business line. Never lose a customer inquiry or appointment after hours or when your staff is busy.",
       positionClass: "top-[46%] left-[2%]",
     },
     {
       id: 5,
-      title: "Autonomy with responsibility.",
-      description: "Automation should serve people, not erase them. Hugo handles the routine, learns from outcomes, and involves humans if required.",
+      title: "White-Label & NDA Protected.",
+      description: "Working as an agency or business partner? We sign NDAs upfront, never contact your clients, and deliver everything under your brand name.",
       positionClass: "top-[52%] right-[2%]",
     },
   ];
@@ -128,7 +128,7 @@ export default function WhySection() {
           </div>
         </div>
 
-        {/* 5 Original Floating Cards Container */}
+        {/* 5 Floating Cards Container */}
         <div
           ref={cardsRef}
           className="home-why__floating-cards relative min-h-[700px] mt-[-100px] max-[1080px]:grid max-[1080px]:grid-cols-2 max-[1080px]:gap-3 max-[1080px]:mt-8 max-[1080px]:min-h-0 max-[640px]:grid-cols-1"

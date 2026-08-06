@@ -1,31 +1,26 @@
 "use client";
 
+import Link from "next/link";
+
 const steps = [
   {
     num: "01",
-    title: "Audit & Conversion Strategy.",
-    desc: "We analyze conversion leaks on your existing site and map out custom text & voice AI workflows.",
+    title: "Free 15-Min Strategy Audit.",
+    desc: "We analyze your current website (or starting brief), review your target customers, and identify exact conversion bottlenecks.",
     image: "/hugo-assets/images/feed.webp",
     stepClass: "home-how__step--feed",
   },
   {
     num: "02",
-    title: "High-Conversion Build.",
-    desc: "We develop your ultra-fast Next.js website and train AI voice & text engines on your exact data.",
+    title: "Custom Build & Launch.",
+    desc: "We design, write, and launch your high-converting website with mobile optimization, fast speeds, and optional 24/7 AI phone answering.",
     image: "/hugo-assets/images/customize.webp",
     stepClass: "home-how__step--customize",
   },
   {
     num: "03",
-    title: "Connect Telephony & Automations.",
-    desc: "We link your business mobile phone numbers, SMS/WhatsApp gateways, and CRM automations.",
-    image: "/hugo-assets/images/test.webp",
-    stepClass: "home-how__step--test",
-  },
-  {
-    num: "04",
-    title: "Launch & Scale Revenue.",
-    desc: "Watch your website conversion rate surge while AI agents handle calls and chat 24/7.",
+    title: "You Get More Customers.",
+    desc: "Your new website starts generating more phone calls, inquiries, and booked appointments 24/7 with zero technical hassle.",
     image: "/hugo-assets/images/run.webp",
     stepClass: "home-how__step--run",
   },
@@ -40,14 +35,14 @@ export default function HowItWorks() {
           {/* Header Title */}
           <div className="home-how__title flex flex-col justify-end max-[1080px]:col-span-2 max-[1080px]:text-center max-[880px]:col-span-1">
             <h2 className="common-title common-title--large common-title--white font-display">
-              Four steps to 24/7 execution.
+              3 Simple Steps To Get Started.
             </h2>
             <p className="text-base text-[#707070] mt-2">
-              From audit to live voice AI and high-converting site in days.
+              From free strategy audit to live customer-getting website in days.
             </p>
           </div>
 
-          {/* Steps 01 to 04 */}
+          {/* Steps 01 to 03 */}
           {steps.map((step) => (
             <div key={step.num} className={`home-how__grid-item ${step.stepClass}`}>
               <div className="home-how__step flex flex-col gap-6">
@@ -60,7 +55,7 @@ export default function HowItWorks() {
                   <div className="home-how__step-line flex-grow h-[1px] bg-[#e0e0e0] relative" />
                 </div>
 
-                {/* Illustration with Film Grain */}
+                {/* Illustration */}
                 <div className="home-how__step-illustration max-w-full aspect-square bg-[#f5f5f5] rounded-2xl shadow overflow-hidden relative">
                   <div className="home-how__step-illustration-inner relative w-full h-full rounded-2xl overflow-hidden">
                     <div className="home-how__step-illustration-ui absolute inset-0 w-full h-full">
@@ -91,17 +86,17 @@ export default function HowItWorks() {
           <div className="home-how__cta flex flex-col items-end max-[1080px]:col-span-2 max-[1080px]:items-center max-[1080px]:text-center max-[880px]:col-span-1">
             <div className="home-how__cta-content max-w-[296px] max-[1080px]:max-w-none">
               <h3 className="common-title common-title--small common-title--white font-display">
-                Ready to scale?
+                Ready for more leads?
               </h3>
               <p className="text-sm text-[#707070] mt-2">
-                Add delivery capacity and 24/7 voice AI without hiring overhead.
+                Get a free website strategy audit with zero commitment.
               </p>
               <div className="home-how__trial mt-6">
-                <a href="#pricing" className="common-button common-button--primary inline-flex">
-                  Book a Partner Call
-                </a>
+                <Link href="/contact" className="common-button common-button--primary inline-flex">
+                  Get Free Audit →
+                </Link>
                 <p className="text-xs text-[#707070] mt-2">
-                  100% White-Label &middot; NDA Signed Upfront
+                  Fast Response &middot; 100% Free
                 </p>
               </div>
             </div>
