@@ -34,9 +34,6 @@ export default function IntegrationsSection() {
       <div className="page-wrapper relative z-1">
         {/* Title & Header */}
         <div className="text-center max-w-[800px] mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-            Zero Friction Ecosystem
-          </div>
           <h2 className="common-title common-title--large common-title--white font-display mb-4">
             Works with your stack, not against it.
           </h2>
@@ -45,7 +42,7 @@ export default function IntegrationsSection() {
           </p>
         </div>
 
-        {/* Central Circuit Engine Container (Matching Image 1) */}
+        {/* Central Circuit Engine Container */}
         <div className="relative w-full max-w-[1200px] mx-auto aspect-[2.4/1] rounded-3xl bg-[#0a0a0a] border border-white/10 p-8 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden max-[880px]:aspect-auto max-[880px]:flex-col max-[880px]:gap-12">
           
           {/* Subtle Grid Background Pattern */}
@@ -88,7 +85,7 @@ export default function IntegrationsSection() {
             ))}
           </div>
 
-          {/* Central OrbitCrew Core Engine Node (Image 1 Style) */}
+          {/* Central OrbitCrew Core Engine Node */}
           <div className="relative z-10 flex flex-col items-center justify-center p-8 rounded-3xl bg-[#1c1c1c] border border-[#2377F6]/50 shadow-[0_0_50px_rgba(35,119,246,0.3)] max-w-[280px] text-center">
             <div className="w-16 h-16 rounded-2xl bg-black border border-[#2377F6] flex items-center justify-center mb-4 shadow-[0_0_25px_rgba(35,119,246,0.4)] animate-pulse">
               <img src="/logo.png" alt="OrbitCrew Core" className="w-10 h-auto object-contain" />

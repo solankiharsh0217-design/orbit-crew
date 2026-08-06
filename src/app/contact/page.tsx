@@ -20,12 +20,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="page-wrapper py-16">
+    <div className="page-wrapper pb-16 pt-[160px] max-[640px]:pt-[120px]">
       {/* Hero Header */}
       <div className="text-center max-w-[700px] mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-          Free Website Strategy Audit
-        </div>
         <h1 className="common-title common-title--2xl common-title--white font-display mb-6">
           Get your free website strategy audit.
         </h1>

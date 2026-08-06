@@ -49,12 +49,9 @@ export default function CapabilitiesPage() {
   ];
 
   return (
-    <div className="page-wrapper py-16">
+    <div className="page-wrapper pb-16 pt-[160px] max-[640px]:pt-[120px]">
       {/* Hero Header */}
       <div className="text-center max-w-[850px] mx-auto mb-20">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-          Capabilities &amp; Client Portfolio
-        </div>
         <h1 className="common-title common-title--2xl common-title--white font-display mb-6">
           High-conversion website builds &amp; client portfolio.
         </h1>
@@ -142,9 +139,6 @@ export default function CapabilitiesPage() {
       {/* OrbitCrew Leadership & Execution Team */}
       <section className="py-12">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-            OrbitCrew Executive Team
-          </div>
           <h2 className="common-title common-title--large common-title--white font-display mb-4">
             Meet our executive &amp; engineering leadership.
           </h2>

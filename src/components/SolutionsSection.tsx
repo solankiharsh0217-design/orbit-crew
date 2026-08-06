@@ -31,9 +31,6 @@ export default function SolutionsSection() {
           
           {/* Main Core Package Headline */}
           <div className="text-center max-w-[800px] mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-              1 Complete Foundation + Optional Add-Ons
-            </div>
             <h2 className="common-title common-title--xl font-display font-bold text-white mb-4">
               1 Core Website Package. Unlimited Business Growth.
             </h2>

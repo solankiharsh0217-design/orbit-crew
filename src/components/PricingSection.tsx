@@ -19,9 +19,6 @@ export default function PricingSection() {
     <section id="pricing" className="home-pricing page-section">
       <div className="page-wrapper">
         <div className="text-center max-w-[700px] mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-            Interactive Package Configurator
-          </div>
           <h2 className="common-title common-title--large common-title--white font-display mb-4">
             Build your high-conversion website package.
           </h2>

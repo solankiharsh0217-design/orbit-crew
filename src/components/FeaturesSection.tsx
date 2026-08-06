@@ -11,35 +11,30 @@ const features = [
     title: "High-Speed Mobile & Desktop Design.",
     description: "Built to load in less than 1 second on every smartphone and laptop. No lag, no long waiting times — visitors see your services immediately and never leave for competitors.",
     bgClass: "home-features__card--brown bg-[#1c1c1c] border border-white/10",
-    gradientColor: "#0a0a0a",
     image: "/hugo-assets/images/card_mobile_speed.jpg",
   },
   {
     title: "Frictionless Call & Booking Buttons.",
     description: "We place high-converting 'Call Now' and 'Book Appointment' buttons right where your customers look first. Zero friction between browsing your site and becoming a client.",
     bgClass: "home-features__card--light-blue bg-[#1c1c1c] border border-white/10",
-    gradientColor: "#0a0a0a",
     image: "/hugo-assets/images/card_call_button.jpg",
   },
   {
     title: "Optional 24/7 AI Phone Answering Add-On.",
     description: "Never miss a customer phone call again. Our AI phone assistant answers calls on your business line 24/7, answers questions, and schedules appointments automatically.",
     bgClass: "home-features__card--light-orange bg-[#1c1c1c] border border-white/10",
-    gradientColor: "#0a0a0a",
     image: "/hugo-assets/images/card_ai_phone.jpg",
   },
   {
     title: "Optional AI Web & WhatsApp Chatbot.",
     description: "An intelligent chat assistant on your website and WhatsApp that answers customer questions 24/7 and captures contact details even while you sleep.",
     bgClass: "home-features__card--light-green bg-[#1c1c1c] border border-white/10",
-    gradientColor: "#0a0a0a",
     image: "/hugo-assets/images/card_whatsapp_chat.jpg",
   },
   {
     title: "Instant Lead Alerts Directly To Your Phone.",
     description: "Every new website inquiry, appointment booking, or phone call transcript is forwarded to your phone immediately via SMS or email so you can close deals fast.",
     bgClass: "home-features__card--red bg-[#1c1c1c] border border-white/10",
-    gradientColor: "#0a0a0a",
     image: "/hugo-assets/images/card_lead_alert.jpg",
   },
 ];
@@ -51,23 +46,21 @@ export default function FeaturesSection() {
     const ctx = gsap.context(() => {
       const cards = sectionRef.current?.querySelectorAll(".home-features__card");
       if (cards) {
-        cards.forEach((card, idx) => {
-          ScrollTrigger.create({
-            trigger: card,
-            start: "top 35%",
-            end: "bottom 35%",
-            onEnter: () => {
-              gsap.to(card, { scale: 1, opacity: 1, duration: 0.3 });
-            },
-            onLeave: () => {
-              if (idx < cards.length - 1) {
-                gsap.to(card, { scale: 0.96, duration: 0.3 });
-              }
-            },
-            onEnterBack: () => {
-              gsap.to(card, { scale: 1, opacity: 1, duration: 0.3 });
-            },
-          });
+        cards.forEach((card) => {
+          gsap.fromTo(
+            card,
+            { opacity: 0.85, scale: 0.98 },
+            {
+              opacity: 1,
+              scale: 1,
+              duration: 0.4,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 75%",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
         });
       }
     }, sectionRef);
@@ -76,12 +69,9 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="how-we-do-it" className="home-features page-section flex flex-col gap-[84px] max-[640px]:gap-10">
+    <section ref={sectionRef} id="how-we-do-it" className="home-features page-section flex flex-col gap-12 py-16">
       <div className="page-wrapper">
-        <div className="home-features__title sticky top-[10vh] text-center z-1 mb-[84px]">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-            Proven Conversion Blueprint
-          </div>
+        <div className="home-features__title text-center mb-16">
           <h2 className="common-title common-title--large common-title--white font-display">
             How We Turn Your Website Into A Customer Generator.
           </h2>
@@ -90,36 +80,36 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        <div className="home-features__stack relative flex flex-col gap-[160px] max-[640px]:gap-10">
+        <div className="home-features__stack relative flex flex-col gap-16">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className={`home-features__card sticky p-8 w-full aspect-[1256/480] transition-all duration-200 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden ${feature.bgClass} max-[640px]:h-[400px] max-[640px]:aspect-auto`}
-              style={{
-                top: `calc(30vh + ${idx * 16}px)`,
-                zIndex: idx + 2,
-              }}
+              className={`home-features__card p-8 w-full transition-all duration-300 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden ${feature.bgClass} max-[640px]:p-6`}
             >
-              {/* Isolated 3D Asset Image */}
-              <div className="home-features__card-screenshot absolute top-[5%] -right-[5%] w-[55%] max-[1080px]:w-[100%] max-[1080px]:left-[10%] pointer-events-none">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-full h-auto object-contain rounded-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
-                />
-              </div>
+              <div className="flex items-center justify-between gap-8 max-[1080px]:flex-col max-[1080px]:items-start">
+                
+                {/* Card Text Content */}
+                <div className="home-features__card-content flex-1 flex flex-col gap-4 z-10 max-w-[580px]">
+                  <span className="text-xs font-mono text-[#2377F6] font-bold">
+                    STEP 0{idx + 1}
+                  </span>
+                  <h3 className="common-title common-title--small common-title--white font-display">
+                    {feature.title}
+                  </h3>
+                  <p className="home-features__card-description text-white/80 text-base leading-7">
+                    {feature.description}
+                  </p>
+                </div>
 
-              {/* Card Text Content */}
-              <div className="home-features__card-content relative h-full flex flex-col justify-center gap-4 z-10 max-w-[580px]">
-                <span className="text-xs font-mono text-[#2377F6] font-bold">
-                  STEP 0{idx + 1}
-                </span>
-                <h3 className="common-title common-title--small common-title--white font-display">
-                  {feature.title}
-                </h3>
-                <p className="home-features__card-description text-white/80 text-base leading-7">
-                  {feature.description}
-                </p>
+                {/* Isolated 3D Asset Image */}
+                <div className="w-full max-w-[480px] pointer-events-none flex-shrink-0">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-auto object-contain rounded-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
+                  />
+                </div>
+
               </div>
             </div>
           ))}

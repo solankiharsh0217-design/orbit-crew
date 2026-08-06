@@ -33,9 +33,6 @@ export default function Home() {
       <section className="page-section py-20 relative">
         <div className="page-wrapper">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2377F6]/10 border border-[#2377F6]/30 text-[#2377F6] text-xs font-mono mb-4">
-              Featured Client Builds
-            </div>
             <h2 className="common-title common-title--large common-title--white font-display">
               High-converting website builds &amp; AI phone agents.
             </h2>
