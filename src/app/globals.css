@@ -80,7 +80,6 @@
   html {
     background: #000000 !important;
     background-color: #000000 !important;
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
